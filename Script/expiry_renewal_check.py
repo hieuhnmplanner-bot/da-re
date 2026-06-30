@@ -7,6 +7,7 @@ thoi diem muon hon Purchase Time cua don dang het han (cung UID).
 - gia_tri_don_cu       : gia tri don dang het han (REM Order Price x100)
 - gia_tri_don_gia_han  : gia tri don gia han ke tiep (paid GMV, hoac REM x100)
 Team: map ten Sale -> dim_sale (Co so) -> team chuan (giong DA1RP).
+Cung 1 ngay chay lai -> GHI DE (file theo ngay + tracking upsert), khong tao trung.
 Dung: python expiry_renewal_check.py Output/expiry_2026-07.csv [run_date]
 """
 from pathlib import Path
@@ -86,7 +87,6 @@ def main(exp_path, run_date=None):
         order_sale = (rr["Order Sale"] if rr is not None else "")
         cur_sale = (rr["Sale"] if rr is not None else "")
         gia_tri_cu = float(rem_price.get(oid, 0))
-        # ung vien gia han: (ngay, gia tri)
         g_cands = [(t, m) for t, m in gmv_by_uid.get(u, []) if pd.notna(boundary) and t > boundary and m > 0]
         r_cands = [(t, float(rem_price.get(oo, 0))) for oo, t in rem_orders_by_uid.get(u, []) if pd.notna(boundary) and t > boundary and oo != oid]
         cands = sorted(g_cands + r_cands, key=lambda x: x[0])
@@ -118,10 +118,8 @@ def main(exp_path, run_date=None):
 
     N = len(out)
     def kpis(col):
-        ren = out[col]
-        due = N
-        renewed = int(ren.sum())
-        crr = round(renewed/due*100, 1) if due else 0
+        ren = out[col]; renewed = int(ren.sum())
+        crr = round(renewed/N*100, 1) if N else 0
         exp_tot = out["gia_tri_don_cu"].sum()
         new_ren = out.loc[ren, "gia_tri_don_gia_han"].sum()
         old_ren = out.loc[ren, "gia_tri_don_cu"].sum()
@@ -129,20 +127,23 @@ def main(exp_path, run_date=None):
         ups = round(new_ren/old_ren*100, 1) if old_ren else 0
         return renewed, crr, rrr, ups, new_ren
     r90, crr90, rrr90, up90, rev90 = kpis("da_gia_han_M90")
-    print(f"List {month} | {N} đến hạn | mốc M+90 = {cutoff.date()}")
-    print(f"   [M+90] Gia han {r90} | CRR {crr90}% | RRR {rrr90}% | Upsell {up90}% | Renewal Rev {rev90:,.0f}đ")
+    print(f"List {month} | {N} den han | moc M+90 = {cutoff.date()}")
+    print(f"   [M+90] Gia han {r90} | CRR {crr90}% | RRR {rrr90}% | Upsell {up90}% | Renewal Rev {rev90:,.0f}d")
+    print(f"   -> {out_path}")
 
     track = BASE/"Output"/"renewal_rate_tracking.csv"
-    line = pd.DataFrame([{"month":month,"run_date":run_date.date(),"list_size":N,
+    line = pd.DataFrame([{"month":month,"run_date":str(run_date.date()),"list_size":N,
         "gia_han_M90":r90,"CRR_M90_%":crr90,"RRR_M90_%":rrr90,"Upsell_M90_%":up90,
         "renewal_revenue_M90":round(rev90),
         "gia_han_vo_han":int(out["da_gia_han_vo_han"].sum())}])
     if track.exists() and track.stat().st_size > 0:
-        line.to_csv(track, mode="a", header=False, index=False, encoding="utf-8-sig")
+        old = pd.read_csv(track, dtype={"month": str, "run_date": str})
+        old = old[~((old["month"].astype(str) == month) & (old["run_date"].astype(str) == str(run_date.date())))]
+        pd.concat([old, line], ignore_index=True).to_csv(track, index=False, encoding="utf-8-sig")
     else:
         line.to_csv(track, index=False, encoding="utf-8-sig")
-    print(f"   -> {out_path}")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2: sys.exit("Dung: python expiry_renewal_check.py <file> [run_date]")
+    if len(sys.argv) < 2:
+        sys.exit("Dung: python expiry_renewal_check.py <file> [run_date]")
     main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else None)

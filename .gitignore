@@ -1,7 +1,10 @@
-# Du lieu tho nhay cam (co UID/phone) + nang -> KHONG commit
+# Du lieu tho nhay cam (UID/phone) + nang -> KHONG commit
 Data_input/GMV.csv
 Data_input/REM.csv
-# State tai sinh local (log hang ngay, registry) - khong can cho dashboard
+# File ghep co cot phone -> KHONG commit (dashboard khong can)
+Output/GMV_x_REM.csv
+Output/GMV_x_REM_summary.csv
+# State tai sinh local (log hang ngay, registry)
 State/
 # Python
 __pycache__/
