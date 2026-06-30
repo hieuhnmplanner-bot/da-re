@@ -1,0 +1,8 @@
+﻿nhom,so_luong,ty_le_phan_tram,vao_list,month
+"Loại — remaining=0, idle>10",5609,50.0,False,2026-07
+Chưa hết hạn (remaining ≥ 10),4695,41.9,False,2026-07
+"Vào list — 1–9 buổi, idle≤90",488,4.4,True,2026-07
+"Loại — 1–9 buổi, idle>90",270,2.4,False,2026-07
+"Vào list — remaining=0, idle≤10",102,0.9,True,2026-07
+"Vào list — 1–9 buổi, idle≤90 [Frozen]",38,0.3,True,2026-07
+Loại — chưa từng học,8,0.1,False,2026-07

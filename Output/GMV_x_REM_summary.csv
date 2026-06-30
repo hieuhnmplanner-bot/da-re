@@ -1,0 +1,13 @@
+﻿Nhom,So_dong,Mau_so,Ty_le_%
+TONG GMV,15744,,
+TONG REM,17116,,
+Match-MultiOrder,8216,%GMV,52.2
+Match-Single,6578,%GMV,41.8
+REM Only - Lich su (truoc ky ghi GMV),1133,%REM,6.6
+GMV Only - UID co o REM,806,%GMV,5.1
+"REM Only - Audit (UID chung, khong khop)",791,%REM,4.6
+REM Only - UID khong co o GMV,398,%REM,2.3
+GMV Only - UID khong co o REM,144,%GMV,0.9
+  Confidence High,12768,%GMV,81.1
+  Confidence Med,1842,%GMV,11.7
+  Confidence Low,184,%GMV,1.2

@@ -1,0 +1,19 @@
+Bat dau tai REM tu Metabase...
+Dang dang nhap Metabase...
+Dang nhap thanh cong.
+Dang tai du lieu card 14393...
+OK Da luu: C:\Users\ASUS\Desktop\Palfish data\DA-RE\Data_input\REM.csv
+==================================================
+STEP 0 — Tai & ghep 3 file tu Google Sheets -> GMV.csv
+==================================================
+  Dang tai sheet 'SM Hanoi'...
+  OK SM Hanoi: 14,851 hang, 35 cot
+  Dang tai sheet 'HCM REV'...
+  OK HCM REV: 848 hang, 17 cot
+  Dang tai sheet 'Danang REV'...
+  OK Danang REV: 49 hang, 19 cot
+
+  Hanoi: 14,847 | HCM: 848 | Danang: 49
+  Tong: 15,744 hang
+
+OK Da luu: C:\Users\ASUS\Desktop\Palfish data\DA-RE\Data_input\GMV.csv

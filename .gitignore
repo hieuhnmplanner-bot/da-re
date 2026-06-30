@@ -1,0 +1,10 @@
+# Du lieu tho nhay cam (co UID/phone) + nang -> KHONG commit
+Data_input/GMV.csv
+Data_input/REM.csv
+# State tai sinh local (log hang ngay, registry) - khong can cho dashboard
+State/
+# Python
+__pycache__/
+*.pyc
+.DS_Store
+.ipynb_checkpoints/
