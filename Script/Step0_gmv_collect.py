@@ -67,11 +67,22 @@ def download_sheet(sheet_id, gid, sheet_name):
         raise RuntimeError(f"Khong tai duoc sheet '{sheet_name}' (gid={gid}). Loi: {e}\n  URL: {url}")
 
 
-def clean_vnd(series):
-    s = series.astype(str).str.strip()
-    for ch in (".", ",", " "):
-        s = s.str.replace(ch, "", regex=False)
-    return s
+def clean_vnd(series: pd.Series) -> pd.Series:
+    """Chuan hoa tien VND -> so nguyen (chuoi). Xu ly ca 3 dinh dang:
+    - So thuc float: '10080000.0' -> 10080000  (KHONG xoa dau cham thap phan!)
+    - VN nghin: '10.080.000' -> 10080000
+    - Dau phay: '10,080,000' -> 10080000
+    """
+    def fix(x):
+        s = str(x).strip().replace(" ", "").replace(",", "")
+        if s.count(".") > 1:          # VN: nhieu dau cham = phan cach nghin
+            s = s.replace(".", "")
+        try:
+            return str(int(round(float(s))))   # 1 dau cham = thap phan -> float xu ly dung
+        except Exception:
+            return "0"
+    return series.map(fix)
+
 
 
 def process_hanoi(df):
