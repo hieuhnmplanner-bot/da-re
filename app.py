@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
-"""DA-RE — Dashboard Hết hạn & Gia hạn (CRR / RRR / Upsell). KHÔNG dùng end_date.
-Đọc Output/: expiry_<month>_status_<date>.csv, situation_<month>.csv.
+"""DA-RE — Dashboard Gia hạn. KHÔNG dùng end_date. Chạy thật từ 2026-07.
+Tab1: Dữ liệu gia hạn (Đến hạn + Gia hạn sớm). Tab2: Chi tiết (có order_no_uid).
+Đọc Output/: expiry_<m>_status_<d>.csv, early_renewal_<m>_<d>.csv.
 """
 from pathlib import Path
 import glob, re, os
@@ -11,149 +12,149 @@ import plotly.express as px
 st.set_page_config(page_title="DA-RE — Dashboard Gia hạn", layout="wide")
 HERE = Path(__file__).resolve().parent
 OUT = HERE / "Output"
-REQUIRED = "gia_tri_don_cu"  # cot bat buoc -> bo qua file status cu thieu gia tri
 
-def _truthy(s):
-    return s.astype(str).str.strip().str.lower().isin(["true", "1", "yes"])
-
+def _truthy(s): return s.astype(str).str.strip().str.lower().isin(["true","1","yes"])
 def _vnd(x):
     try: return f"{x:,.0f}đ"
     except Exception: return x
 
-@st.cache_data
-def load_status():
-    files = glob.glob(str(OUT / "expiry_*_status_*.csv"))
-    best = {}  # month -> (mtime, file)
+def _latest_per_month(pattern, required=None):
+    files = glob.glob(str(OUT / pattern)); best = {}
     for f in files:
-        m = re.search(r"expiry_(\d{4}-\d{2})_status_\d{4}-\d{2}-\d{2}", Path(f).name)
-        if not m:
-            continue
+        m = re.search(r"_(\d{4}-\d{2})_.*?(\d{4}-\d{2}-\d{2})", Path(f).name) or re.search(r"(\d{4}-\d{2})_status_(\d{4}-\d{2}-\d{2})", Path(f).name)
+        mm = re.search(r"(\d{4}-\d{2})", Path(f).name)
+        if not mm: continue
         try:
-            head = pd.read_csv(f, nrows=0)
-        except Exception:
-            continue
-        if REQUIRED not in head.columns:
-            continue
-        mt = os.path.getmtime(f)
-        mth = m.group(1)
-        if mth not in best or mt > best[mth][0]:
-            best[mth] = (mt, f)
-    if not best:
-        return pd.DataFrame()
-    out = []
-    for mth, (_, f) in best.items():
-        d = pd.read_csv(f, dtype=str)
-        d["month"] = mth
-        out.append(d)
-    res = pd.concat(out, ignore_index=True)
-    for c in ["da_gia_han_M90", "da_gia_han_vo_han"]:
-        res[c] = _truthy(res[c])
-    for c in ["gia_tri_don_cu", "gia_tri_don_gia_han", "remaining", "idle_ngay", "so_ngay_den_gia_han"]:
-        if c in res.columns:
-            res[c] = pd.to_numeric(res[c], errors="coerce")
-    return res
+            if required and required not in pd.read_csv(f, nrows=0).columns: continue
+        except Exception: continue
+        mt = os.path.getmtime(f); mth = mm.group(1)
+        if mth not in best or mt > best[mth][0]: best[mth] = (mt, f)
+    frames = []
+    for mth,(_,f) in best.items():
+        try: d = pd.read_csv(f, dtype=str)
+        except Exception: continue
+        if len(d): d["month"] = mth; frames.append(d)
+    return pd.concat(frames, ignore_index=True) if frames else pd.DataFrame()
 
 @st.cache_data
-def load_situation():
-    files = glob.glob(str(OUT / "situation_*.csv"))
-    if not files:
-        return pd.DataFrame()
-    return pd.concat([pd.read_csv(f) for f in files], ignore_index=True)
+def load_expiry():
+    d = _latest_per_month("expiry_*_status_*.csv", required="gia_tri_don_cu")
+    if d.empty: return d
+    for c in ["da_gia_han_M90","da_gia_han_vo_han"]: d[c] = _truthy(d[c])
+    for c in ["gia_tri_don_cu","gia_tri_don_gia_han","remaining","order_no_uid"]:
+        if c in d.columns: d[c] = pd.to_numeric(d[c], errors="coerce")
+    if "nhom" not in d.columns: d["nhom"] = "Đến hạn"
+    return d
 
-def kpis(df, ren_col):
-    n = len(df)
-    ren = df[ren_col].fillna(False)
-    renewed = int(ren.sum())
-    crr = renewed / n * 100 if n else 0
-    exp_tot = df["gia_tri_don_cu"].sum()
-    new_ren = df.loc[ren, "gia_tri_don_gia_han"].sum()
-    old_ren = df.loc[ren, "gia_tri_don_cu"].sum()
-    rrr = new_ren / exp_tot * 100 if exp_tot else 0
-    ups = new_ren / old_ren * 100 if old_ren else 0
-    return dict(due=n, renewed=renewed, crr=crr, rrr=rrr, upsell=ups, revenue=new_ren)
+@st.cache_data
+def load_early():
+    d = _latest_per_month("early_renewal_*.csv")
+    if d.empty: return d
+    for c in ["gia_tri_don_cu","gia_tri_don_gia_han","order_no_uid"]:
+        if c in d.columns: d[c] = pd.to_numeric(d[c], errors="coerce")
+    if "nhom" not in d.columns: d["nhom"] = "Gia hạn sớm"
+    return d
 
-status = load_status()
-situation = load_situation()
-st.title("📊 DA-RE — Hết hạn & Tỷ lệ Gia hạn")
-if status.empty:
-    st.warning("Chưa có file expiry_*_status_*.csv (có cột giá trị) trong Output/. Chạy expiry_renewal_check.py trước.")
-    st.stop()
+def kpis_due(df, ren_col):
+    n = len(df); ren = df[ren_col].fillna(False); renewed = int(ren.sum())
+    exp_tot = df["gia_tri_don_cu"].sum(); new_ren = df.loc[ren,"gia_tri_don_gia_han"].sum(); old_ren = df.loc[ren,"gia_tri_don_cu"].sum()
+    return dict(due=n, renewed=renewed, crr=(renewed/n*100 if n else 0),
+                rrr=(new_ren/exp_tot*100 if exp_tot else 0), upsell=(new_ren/old_ren*100 if old_ren else 0), revenue=new_ren)
 
-# ---------- Sidebar ----------
+exp = load_expiry(); early = load_early()
+st.title("📊 DA-RE — Dữ liệu Gia hạn")
+if exp.empty and early.empty:
+    st.warning("Chưa có dữ liệu trong Output/. Chạy expiry_renewal_check.py / early_renewal.py trước."); st.stop()
+
+# ---- Sidebar ----
 st.sidebar.header("Bộ lọc")
-months = sorted(status["month"].unique())
-sel_months = st.sidebar.multiselect("Tháng (cohort)", months, default=months)
-ren_def = st.sidebar.radio("Định nghĩa gia hạn", ["M+90 (KPI cố định)", "Vô hạn (Real rate)"], index=0)
+months = sorted(set(exp["month"].unique() if not exp.empty else []) | set(early["month"].unique() if not early.empty else []))
+sel_months = st.sidebar.multiselect("Tháng", months, default=months)
+ren_def = st.sidebar.radio("Định nghĩa gia hạn (nhóm Đến hạn)", ["M+90 (KPI cố định)","Vô hạn (Real rate)"], index=0)
 REN = "da_gia_han_M90" if ren_def.startswith("M+90") else "da_gia_han_vo_han"
-teams = sorted(status["team_sale_quan_ly"].dropna().unique())
-sel_teams = st.sidebar.multiselect("Team (sale quản lý)", teams, default=teams)
-tags = sorted(status["tag"].dropna().unique())
-sel_tags = st.sidebar.multiselect("Tag", tags, default=tags)
+allteams = sorted(set(exp.get("team_sale_quan_ly", pd.Series(dtype=str)).dropna()) | set(early.get("team_sale_quan_ly", pd.Series(dtype=str)).dropna()))
+sel_teams = st.sidebar.multiselect("Team (sale quản lý)", allteams, default=allteams)
 
-f = status[status["month"].isin(sel_months) & status["team_sale_quan_ly"].isin(sel_teams) & status["tag"].isin(sel_tags)].copy()
+def filt(d):
+    if d.empty: return d
+    x = d[d["month"].isin(sel_months)]
+    if "team_sale_quan_ly" in x.columns and sel_teams: x = x[x["team_sale_quan_ly"].isin(sel_teams)]
+    return x
+fe = filt(exp); fr = filt(early)
 
-tab1, tab2, tab3 = st.tabs(["📊 Tổng quan & theo nhóm", "🧾 Danh sách chi tiết", "📈 Quy mô tình huống"])
+tab1, tab2 = st.tabs(["📊 Dữ liệu gia hạn", "🧾 Chi tiết"])
 
 with tab1:
-    K = kpis(f, REN)
+    K = kpis_due(fe, REN) if not fe.empty else dict(due=0,renewed=0,crr=0,rrr=0,upsell=0,revenue=0)
+    st.subheader("① Khách đến hạn (cohort cố định)")
     c = st.columns(5)
-    c[0].metric("Đến hạn (order_id)", f"{K['due']:,}")
-    c[1].metric("CRR – Gia hạn KH", f"{K['crr']:.1f}%", help="Số đơn gia hạn / Số đơn đến hạn")
-    c[2].metric("RRR – Gia hạn DT", f"{K['rrr']:.1f}%", help="Doanh thu gia hạn / Tổng giá trị đơn hết hạn")
-    c[3].metric("Upsell", f"{K['upsell']:.1f}%", help="Giá trị đơn gia hạn mới / Giá trị đơn cũ (nhóm đã gia hạn). >100% = chi nhiều hơn")
+    c[0].metric("Đến hạn", f"{K['due']:,}", help="Số đơn tới hạn cần chăm sóc gia hạn")
+    c[1].metric("CRR – Gia hạn KH", f"{K['crr']:.1f}%", help="Số đã gia hạn / Số đến hạn")
+    c[2].metric("RRR – Gia hạn DT", f"{K['rrr']:.1f}%", help="Doanh thu gia hạn / Tổng giá trị đơn đến hạn")
+    c[3].metric("Upsell", f"{K['upsell']:.1f}%", help=">100% = khách chi nhiều hơn lần trước")
     c[4].metric("Renewal Revenue", _vnd(K["revenue"]))
-    st.caption(f"Định nghĩa: **{ren_def}** · {len(sel_months)} tháng · {len(sel_teams)} team.")
 
-    # Trend theo thang (neu nhieu thang)
-    if len(months) > 1:
+    st.subheader("② Gia hạn sớm (luồng trong tháng)")
+    ne = len(fr); pend = int((fr.get("trang_thai_kich_hoat","")=="Chưa kích hoạt").sum()) if ne else 0
+    erev = fr["gia_tri_don_gia_han"].sum() if ne else 0
+    c = st.columns(4)
+    c[0].metric("Gia hạn sớm", f"{ne:,}", help="Số khách gia hạn TRƯỚC khi hết hạn (theo pay_time)")
+    c[1].metric("Doanh thu gia hạn sớm", _vnd(erev))
+    c[2].metric("Chưa kích hoạt", f"{pend:,}", help="Đã trả tiền nhưng chưa bắt đầu học đơn mới — CS cần nhắc kích hoạt")
+    c[3].metric("% chưa kích hoạt", f"{(pend/ne*100 if ne else 0):.1f}%")
+
+    st.subheader("③ Tổng hợp gia hạn trong kỳ")
+    tot_cust = K["renewed"] + ne; tot_rev = K["revenue"] + erev
+    c = st.columns(2)
+    c[0].metric("Tổng lượt gia hạn", f"{tot_cust:,}", help="Đã gia hạn (đến hạn) + gia hạn sớm")
+    c[1].metric("Tổng doanh thu gia hạn", _vnd(tot_rev))
+    st.caption(f"Định nghĩa nhóm đến hạn: **{ren_def}** · {len(sel_months)} tháng · {len(sel_teams)} team.")
+
+    # Bieu do theo thang
+    if not exp.empty:
         rows = []
         for mth in months:
-            g = status[status["month"] == mth]
-            kk = kpis(g, REN)
-            rows.append({"month": mth, "CRR %": round(kk["crr"], 1), "RRR %": round(kk["rrr"], 1), "Upsell %": round(kk["upsell"], 1)})
-        trend = pd.DataFrame(rows)
-        long = trend.melt(id_vars="month", value_vars=["CRR %", "RRR %", "Upsell %"], var_name="Chỉ số", value_name="%")
-        st.plotly_chart(px.line(long, x="month", y="%", color="Chỉ số", markers=True, title="Diễn biến theo tháng"), use_container_width=True)
+            g = exp[exp["month"]==mth]
+            kk = kpis_due(g, REN) if not g.empty else dict(due=0,renewed=0,crr=0)
+            e = len(early[early["month"]==mth]) if not early.empty else 0
+            rows.append({"month":mth,"Đến hạn":kk["due"],"Đã gia hạn":kk["renewed"],"CRR %":round(kk["crr"],1),"Gia hạn sớm":e})
+        tr = pd.DataFrame(rows)
+        cc = st.columns(2)
+        with cc[0]:
+            st.plotly_chart(px.bar(tr.melt(id_vars="month",value_vars=["Đến hạn","Đã gia hạn"],var_name="",value_name="Số đơn"),
+                x="month",y="Số đơn",color="",barmode="group",title="Đến hạn vs Đã gia hạn"), use_container_width=True)
+        with cc[1]:
+            st.plotly_chart(px.line(tr, x="month", y="CRR %", markers=True, title="CRR theo tháng"), use_container_width=True)
 
-    # Theo nhom
-    st.subheader("Theo nhóm")
-    dim = st.selectbox("Phân tích theo", ["team_sale_quan_ly", "team_sale_ban", "sale_quan_ly", "sale_ban_don", "teacher"], index=0)
-    grp = []
-    for name, g in f.groupby(dim):
-        kk = kpis(g, REN)
-        grp.append({dim: name, "Đến hạn": kk["due"], "Gia hạn": kk["renewed"],
-                    "CRR %": round(kk["crr"], 1), "RRR %": round(kk["rrr"], 1),
-                    "Upsell %": round(kk["upsell"], 1), "Renewal Revenue": round(kk["revenue"])})
-    gdf = pd.DataFrame(grp).sort_values("Đến hạn", ascending=False)
-    st.plotly_chart(px.bar(gdf.head(25), x=dim, y="CRR %", hover_data=["Đến hạn", "RRR %", "Upsell %"],
-                           title=f"CRR theo {dim} (top 25 theo số đến hạn)"), use_container_width=True)
-    st.dataframe(gdf, use_container_width=True)
+    st.subheader("Theo Team (nhóm đến hạn)")
+    if not fe.empty:
+        g = []
+        for name, sub in fe.groupby("team_sale_quan_ly"):
+            kk = kpis_due(sub, REN); g.append({"team":name,"Đến hạn":kk["due"],"Đã gia hạn":kk["renewed"],
+                "CRR %":round(kk["crr"],1),"RRR %":round(kk["rrr"],1),"Upsell %":round(kk["upsell"],1),"Renewal Revenue":round(kk["revenue"])})
+        st.dataframe(pd.DataFrame(g).sort_values("Đến hạn",ascending=False), use_container_width=True)
 
 with tab2:
-    cols = ["month", "order_id", "uid", "tag", "ly_do_vao_list", "ngay_mua", "ngay_kich_hoat",
-            "remaining", "last_study", "idle_ngay", "gia_tri_don_cu",
-            "sale_ban_don", "team_sale_ban", "sale_quan_ly", "team_sale_quan_ly", "teacher",
-            "da_gia_han_M90", "da_gia_han_vo_han", "ngay_gia_han", "gia_tri_don_gia_han",
-            "nguon_gia_han", "so_ngay_den_gia_han"]
-    cols = [c for c in cols if c in f.columns]
-    only_ren = st.checkbox("Chỉ hiện đơn đã gia hạn", value=False)
-    show = f[f[REN]] if only_ren else f
-    st.write(f"{len(show):,} dòng")
-    st.dataframe(show[cols], use_container_width=True, height=460)
-    st.download_button("⬇️ Tải CSV đang lọc", show[cols].to_csv(index=False).encode("utf-8-sig"),
-                       "expiry_filtered.csv", "text/csv")
-
-with tab3:
-    if situation.empty:
-        st.info("Chưa có situation_*.csv.")
+    view = st.radio("Xem nhóm", ["Cả hai","Đến hạn","Gia hạn sớm"], horizontal=True)
+    frames = []
+    if view in ("Cả hai","Đến hạn") and not fe.empty:
+        a = fe.copy(); a["trang_thai"] = a[REN].map({True:"Đã gia hạn",False:"Chưa"})
+        a["gia_han/kich_hoat"] = a.get("ngay_gia_han"); a["order_id_moi"] = ""
+        frames.append(a)
+    if view in ("Cả hai","Gia hạn sớm") and not fr.empty:
+        b = fr.copy(); b["trang_thai"] = b.get("trang_thai_kich_hoat")
+        b["gia_han/kich_hoat"] = b.get("ngay_kich_hoat"); b["ngay_mua"] = b.get("pay_time")
+        frames.append(b)
+    if not frames:
+        st.info("Không có dòng nào cho lựa chọn hiện tại.")
     else:
-        s = situation[situation["month"].isin(sel_months)] if "month" in situation.columns else situation
-        agg = s.groupby("nhom", as_index=False)["so_luong"].sum()
-        tot = agg["so_luong"].sum()
-        agg["ty_le_%"] = (agg["so_luong"] / tot * 100).round(1)
-        agg = agg.sort_values("so_luong", ascending=False)
-        st.plotly_chart(px.bar(agg, x="so_luong", y="nhom", orientation="h", text="ty_le_%",
-                               title=f"Quy mô tình huống (tổng {tot:,} UID)"), use_container_width=True)
-        st.dataframe(agg, use_container_width=True)
+        d = pd.concat(frames, ignore_index=True)
+        cols = ["month","nhom","order_id","order_no_uid","uid","order_id_moi","trang_thai",
+                "remaining","ngay_mua","gia_han/kich_hoat","gia_tri_don_cu","gia_tri_don_gia_han",
+                "sale_ban_don","team_sale_ban","sale_quan_ly","team_sale_quan_ly","teacher","tag"]
+        cols = [c for c in cols if c in d.columns]
+        st.write(f"{len(d):,} dòng")
+        st.dataframe(d[cols], use_container_width=True, height=480)
+        st.download_button("⬇️ Tải CSV", d[cols].to_csv(index=False).encode("utf-8-sig"), "chi_tiet_gia_han.csv", "text/csv")
 
-st.caption("DA-RE · không dùng end_date · CRR/RRR/Upsell theo định nghĩa DA-OD1RP · M+90 = cohort + 3 tháng.")
+st.caption("DA-RE · không dùng end_date · order_no_uid = đơn thứ mấy của UID · gia hạn sớm ghi theo pay_time, mã tạm TMP_ cho đơn chưa kích hoạt.")

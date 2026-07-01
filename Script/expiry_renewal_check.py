@@ -1,13 +1,10 @@
 # -*- coding: utf-8 -*-
-"""DA-RE — Trang thai GIA HAN + Sale/Team/Teacher + GIA TRI don (cho CRR/RRR/Upsell).
-Gia han chi tinh khi co THANH TOAN (GMV money>0) HOAC KICH HOAT don moi (REM),
-thoi diem muon hon Purchase Time cua don dang het han (cung UID).
-- da_gia_han_M90    : gia han <= het thang (cohort+3)  (KPI co dinh)
-- da_gia_han_vo_han : gia han bat ky luc nao (Real rate)
-- gia_tri_don_cu       : gia tri don dang het han (REM Order Price x100)
-- gia_tri_don_gia_han  : gia tri don gia han ke tiep (paid GMV, hoac REM x100)
-Team: map ten Sale -> dim_sale (Co so) -> team chuan (giong DA1RP).
-Cung 1 ngay chay lai -> GHI DE (file theo ngay + tracking upsert), khong tao trung.
+"""DA-RE — Trang thai GIA HAN (den han) + Sale/Team/Teacher + GIA TRI + order_no_uid.
+Gia han chi tinh khi co THANH TOAN (GMV) HOAC KICH HOAT don moi (REM), muon hon Purchase Time don cu.
+- da_gia_han_M90 / da_gia_han_vo_han ; gia_tri_don_cu ; gia_tri_don_gia_han
+- order_no_uid : don thu may cua UID (xep theo Purchase Time)
+- nhom = "Đến hạn"
+Cung 1 ngay chay lai -> ghi de (file theo ngay + tracking upsert).
 Dung: python expiry_renewal_check.py Output/expiry_2026-07.csv [run_date]
 """
 from pathlib import Path
@@ -64,6 +61,10 @@ def main(exp_path, run_date=None):
     rem["price"] = pd.to_numeric(rem["Order Price VND"].astype(str).str.replace(",","",regex=False).str.replace(".","",regex=False), errors="coerce").fillna(0) * 100
     rem_by_oid = rem.drop_duplicates("oid").set_index("oid")
     rem_price = rem_by_oid["price"].to_dict()
+    # don thu may cua UID (order_no_uid)
+    rs = rem.dropna(subset=["pt"]).drop_duplicates("oid").sort_values(["uidm", "pt"])
+    rs["order_no_uid"] = rs.groupby("uidm").cumcount() + 1
+    order_no = dict(zip(rs["oid"], rs["order_no_uid"]))
     rem_orders_by_uid = rem.dropna(subset=["pt"]).groupby("uidm").apply(
         lambda d: list(zip(d["oid"], d["pt"])), include_groups=False).to_dict()
 
@@ -96,7 +97,8 @@ def main(exp_path, run_date=None):
         else:
             ngay_gh, gia_tri_gh, src = pd.NaT, np.nan, ""
         recs.append({
-            "month": month, "order_id": oid, "uid": u, "tag": row.get("tag",""),
+            "month": month, "order_id": oid, "order_no_uid": order_no.get(oid, ""),
+            "uid": u, "nhom": "Đến hạn", "tag": row.get("tag",""),
             "ly_do_vao_list": row.get("reason",""),
             "ngay_mua": buy_date.get(oid, pd.NaT), "ngay_kich_hoat": boundary,
             "remaining": row.get("remaining"), "last_study": row.get("last_study"),
