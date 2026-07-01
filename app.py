@@ -25,7 +25,8 @@ LANG = {
   "view":"Xem nhóm","v_both":"Cả hai","v_due":"Đến hạn","v_early":"Gia hạn sớm","download":"⬇️ Tải CSV","rows":"dòng",
   "h_crr":"Số đã gia hạn / Số đến hạn","h_rrr":"Doanh thu gia hạn / Tổng giá trị đơn đến hạn","h_up":">100% = khách chi nhiều hơn lần trước",
   "h_early":"Số khách gia hạn TRƯỚC khi hết hạn (theo ngày mua)","h_pend":"Đã trả tiền nhưng chưa bắt đầu học đơn mới",
-  "def_now":"Định nghĩa nhóm đến hạn","warn":"Chưa có dữ liệu trong Output/. Chạy pipeline trước.","cap":"DA-RE · không dùng end_date · % = tỷ lệ, tiền = VND"},
+  "def_now":"Định nghĩa nhóm đến hạn","h_month":"Tháng","h_group":"Nhóm","h_reason":"Lý do","h_uid":"UID","h_oid":"Order ID","h_ono":"Đơn thứ mấy","h_status":"Trạng thái","h_oidnew":"Order ID mới","h_rendate":"Ngày gia hạn","h_remain":"Số buổi còn","h_buydate":"Ngày mua","h_valold":"Giá trị đơn","h_valnew":"Giá trị đơn gia hạn","h_sban":"Sale bán","h_tban":"Team bán","h_smgr":"Sale quản lý","h_tmgr":"Team quản lý","h_teacher":"Teacher","r_th1":"Còn 1–9 buổi, đang học","r_th2":"Vừa hết buổi (≤10 ngày)","r_frozen":" · Frozen","r_eact":"Gia hạn sớm · đã kích hoạt","r_epend":"Gia hạn sớm · chưa kích hoạt","s_renewed":"Đã gia hạn","s_not":"Chưa gia hạn","s_act":"Đã kích hoạt","s_notact":"Chưa kích hoạt",
+  "warn":"Chưa có dữ liệu trong Output/. Chạy pipeline trước.","cap":"DA-RE · không dùng end_date · % = tỷ lệ, tiền = VND"},
  "English": {
   "title":"📊 DA-RE — Renewal Data","filters":"Filters","language":"Language","month":"Month",
   "ren_def":"Renewal definition (Due group)","m90":"M+90 (fixed KPI)","inf":"Unlimited (Real rate)","team_f":"Team (managing sale)",
@@ -40,7 +41,8 @@ LANG = {
   "view":"View","v_both":"Both","v_due":"Due","v_early":"Early","download":"⬇️ Download CSV","rows":"rows",
   "h_crr":"Renewed / Due","h_rrr":"Renewal revenue / Total due value","h_up":">100% = spending more than before",
   "h_early":"Customers who renewed BEFORE expiring (by purchase date)","h_pend":"Paid but not yet started the new order",
-  "def_now":"Due-group definition","warn":"No data in Output/. Run the pipeline first.","cap":"DA-RE · no end_date · % = rate, money = VND"},
+  "def_now":"Due-group definition","h_month":"Month","h_group":"Group","h_reason":"Reason","h_uid":"UID","h_oid":"Order ID","h_ono":"Order # of UID","h_status":"Status","h_oidnew":"New Order ID","h_rendate":"Renewal date","h_remain":"Lessons left","h_buydate":"Purchase date","h_valold":"Order value","h_valnew":"Renewal order value","h_sban":"Selling sale","h_tban":"Selling team","h_smgr":"Managing sale","h_tmgr":"Managing team","h_teacher":"Teacher","r_th1":"1–9 lessons left, active","r_th2":"Just finished (≤10 days)","r_frozen":" · Frozen","r_eact":"Early renewal · activated","r_epend":"Early renewal · not activated","s_renewed":"Renewed","s_not":"Not renewed","s_act":"Activated","s_notact":"Not activated",
+  "warn":"No data in Output/. Run the pipeline first.","cap":"DA-RE · no end_date · % = rate, money = VND"},
  "中文": {
   "title":"📊 DA-RE — 续费数据","filters":"筛选","language":"语言","month":"月份",
   "ren_def":"续费定义（到期组）","m90":"M+90（固定KPI）","inf":"不限时（真实率）","team_f":"团队（在管销售）",
@@ -55,7 +57,8 @@ LANG = {
   "view":"查看","v_both":"全部","v_due":"到期","v_early":"提前续费","download":"⬇️ 下载CSV","rows":"行",
   "h_crr":"已续费 / 到期","h_rrr":"续费收入 / 到期总价值","h_up":">100% = 比上次消费更多",
   "h_early":"在到期前续费的客户（按购买日期）","h_pend":"已付款但尚未开始新订单",
-  "def_now":"到期组定义","warn":"Output/ 暂无数据，请先运行流程。","cap":"DA-RE · 不使用 end_date · % = 比率, 金额 = VND"},
+  "def_now":"到期组定义","h_month":"月份","h_group":"分组","h_reason":"原因","h_uid":"UID","h_oid":"订单ID","h_ono":"客户第几单","h_status":"状态","h_oidnew":"新订单ID","h_rendate":"续费日期","h_remain":"剩余课时","h_buydate":"购买日期","h_valold":"订单金额","h_valnew":"续费订单金额","h_sban":"成交销售","h_tban":"成交团队","h_smgr":"在管销售","h_tmgr":"在管团队","h_teacher":"老师","r_th1":"剩1–9课时，在学","r_th2":"刚上完（≤10天）","r_frozen":" · 冻结","r_eact":"提前续费 · 已激活","r_epend":"提前续费 · 未激活","s_renewed":"已续费","s_not":"未续费","s_act":"已激活","s_notact":"未激活",
+  "warn":"Output/ 暂无数据，请先运行流程。","cap":"DA-RE · 不使用 end_date · % = 比率, 金额 = VND"},
 }
 
 def _truthy(s): return s.astype(str).str.strip().str.lower().isin(["true","1","yes"])
@@ -191,21 +194,41 @@ with tab1:
 
 with tab2:
     view = st.radio(T["view"], [T["v_both"], T["v_due"], T["v_early"]], horizontal=True)
-    frames = []
+    def _reason(r):
+        if r.get("nhom") == "Đến hạn":
+            base = T["r_th2"] if "remaining=0" in str(r.get("ly_do_vao_list","")) else T["r_th1"]
+            if str(r.get("tag","")) == "Frozen": base += T["r_frozen"]
+            return base
+        return T["r_eact"] if str(r.get("trang_thai_kich_hoat","")) == "Đã kích hoạt" else T["r_epend"]
+    def _status(r, kind):
+        if kind == "due":
+            return T["s_renewed"] if bool(r.get(REN)) else T["s_not"]
+        return T["s_act"] if str(r.get("trang_thai_kich_hoat","")) == "Đã kích hoạt" else T["s_notact"]
+    def _mny(x):
+        return _vnd(x) if pd.notna(x) else ""
+    def _row(r, kind):
+        rdate = r.get("ngay_gia_han") if kind == "due" else r.get("ngay_kich_hoat")
+        bdate = r.get("ngay_mua") if kind == "due" else r.get("pay_time")
+        return {
+            T["h_month"]: r.get("month"), T["h_group"]: r.get("nhom"), T["h_reason"]: _reason(r),
+            T["h_uid"]: r.get("uid"), T["h_oid"]: r.get("order_id"), T["h_ono"]: r.get("order_no_uid"),
+            T["h_status"]: _status(r, kind), T["h_oidnew"]: r.get("order_id_moi", ""), T["h_rendate"]: rdate,
+            T["h_remain"]: (int(r["remaining"]) if kind == "due" and pd.notna(r.get("remaining")) else ""),
+            T["h_buydate"]: bdate, T["h_valold"]: _mny(r.get("gia_tri_don_cu")), T["h_valnew"]: _mny(r.get("gia_tri_don_gia_han")),
+            T["h_sban"]: r.get("sale_ban_don"), T["h_tban"]: r.get("team_sale_ban"),
+            T["h_smgr"]: r.get("sale_quan_ly"), T["h_tmgr"]: r.get("team_sale_quan_ly"), T["h_teacher"]: r.get("teacher"),
+        }
+    recs = []
     if view in (T["v_both"], T["v_due"]) and not fe.empty:
-        a = fe.copy(); a["trang_thai"] = a[REN].map({True:T["renewed"], False:"—"}); a["order_id_moi"]=""
-        a["ngay_gh"] = a.get("ngay_gia_han"); frames.append(a)
+        for _, r in fe.iterrows(): recs.append(_row(r, "due"))
     if view in (T["v_both"], T["v_early"]) and not fr.empty:
-        b = fr.copy(); b["trang_thai"] = b.get("trang_thai_kich_hoat"); b["ngay_mua"]=b.get("pay_time"); b["ngay_gh"]=b.get("ngay_kich_hoat"); frames.append(b)
-    if not frames: st.info("—")
+        for _, r in fr.iterrows(): recs.append(_row(r, "early"))
+    if not recs:
+        st.info("—")
     else:
-        d = pd.concat(frames, ignore_index=True)
-        cols = ["month","nhom","order_id","order_no_uid","uid","order_id_moi","trang_thai","remaining",
-                "ngay_mua","ngay_gh","gia_tri_don_cu","gia_tri_don_gia_han",
-                "sale_ban_don","team_sale_ban","sale_quan_ly","team_sale_quan_ly","teacher","tag"]
-        cols = [c for c in cols if c in d.columns]
-        st.write(f"{len(d):,} {T['rows']}")
-        st.dataframe(d[cols], use_container_width=True, height=470)
-        st.download_button(T["download"], d[cols].to_csv(index=False).encode("utf-8-sig"), "chi_tiet.csv","text/csv")
+        disp = pd.DataFrame(recs)
+        st.write(f"{len(disp):,} {T['rows']}")
+        st.dataframe(disp, use_container_width=True, height=470, hide_index=True)
+        st.download_button(T["download"], disp.to_csv(index=False).encode("utf-8-sig"), "chi_tiet.csv", "text/csv")
 
 st.caption(T["cap"])
