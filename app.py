@@ -26,6 +26,7 @@ LANG = {
   "h_crr":"Số đã gia hạn / Số đến hạn","h_rrr":"Doanh thu gia hạn / Tổng giá trị đơn đến hạn","h_up":">100% = khách chi nhiều hơn lần trước",
   "h_early":"Số khách gia hạn TRƯỚC khi hết hạn (theo ngày mua)","h_pend":"Đã trả tiền nhưng chưa bắt đầu học đơn mới",
   "def_now":"Định nghĩa nhóm đến hạn","h_month":"Tháng","h_group":"Nhóm","h_reason":"Lý do","h_uid":"UID","h_oid":"Order ID","h_ono":"Đơn thứ mấy","h_status":"Trạng thái","h_oidnew":"Order ID mới","h_rendate":"Ngày gia hạn","h_remain":"Số buổi còn","h_buydate":"Ngày mua","h_valold":"Giá trị đơn","h_valnew":"Giá trị đơn gia hạn","h_sban":"Sale bán","h_tban":"Team bán","h_smgr":"Sale quản lý","h_tmgr":"Team quản lý","h_teacher":"Teacher","r_th1":"Còn 1–9 buổi, đang học","r_th2":"Vừa hết buổi (≤10 ngày)","r_frozen":" · Frozen","r_eact":"Gia hạn sớm · đã kích hoạt","r_epend":"Gia hạn sớm · chưa kích hoạt","s_renewed":"Đã gia hạn","s_not":"Chưa gia hạn","s_act":"Đã kích hoạt","s_notact":"Chưa kích hoạt",
+  "ono_f":"Đơn thứ mấy của UID",
   "warn":"Chưa có dữ liệu trong Output/. Chạy pipeline trước.","cap":"DA-RE · không dùng end_date · % = tỷ lệ, tiền = VND"},
  "English": {
   "title":"📊 DA-RE — Renewal Data","filters":"Filters","language":"Language","month":"Month",
@@ -42,6 +43,7 @@ LANG = {
   "h_crr":"Renewed / Due","h_rrr":"Renewal revenue / Total due value","h_up":">100% = spending more than before",
   "h_early":"Customers who renewed BEFORE expiring (by purchase date)","h_pend":"Paid but not yet started the new order",
   "def_now":"Due-group definition","h_month":"Month","h_group":"Group","h_reason":"Reason","h_uid":"UID","h_oid":"Order ID","h_ono":"Order # of UID","h_status":"Status","h_oidnew":"New Order ID","h_rendate":"Renewal date","h_remain":"Lessons left","h_buydate":"Purchase date","h_valold":"Order value","h_valnew":"Renewal order value","h_sban":"Selling sale","h_tban":"Selling team","h_smgr":"Managing sale","h_tmgr":"Managing team","h_teacher":"Teacher","r_th1":"1–9 lessons left, active","r_th2":"Just finished (≤10 days)","r_frozen":" · Frozen","r_eact":"Early renewal · activated","r_epend":"Early renewal · not activated","s_renewed":"Renewed","s_not":"Not renewed","s_act":"Activated","s_notact":"Not activated",
+  "ono_f":"Order # of UID",
   "warn":"No data in Output/. Run the pipeline first.","cap":"DA-RE · no end_date · % = rate, money = VND"},
  "中文": {
   "title":"📊 DA-RE — 续费数据","filters":"筛选","language":"语言","month":"月份",
@@ -58,6 +60,7 @@ LANG = {
   "h_crr":"已续费 / 到期","h_rrr":"续费收入 / 到期总价值","h_up":">100% = 比上次消费更多",
   "h_early":"在到期前续费的客户（按购买日期）","h_pend":"已付款但尚未开始新订单",
   "def_now":"到期组定义","h_month":"月份","h_group":"分组","h_reason":"原因","h_uid":"UID","h_oid":"订单ID","h_ono":"客户第几单","h_status":"状态","h_oidnew":"新订单ID","h_rendate":"续费日期","h_remain":"剩余课时","h_buydate":"购买日期","h_valold":"订单金额","h_valnew":"续费订单金额","h_sban":"成交销售","h_tban":"成交团队","h_smgr":"在管销售","h_tmgr":"在管团队","h_teacher":"老师","r_th1":"剩1–9课时，在学","r_th2":"刚上完（≤10天）","r_frozen":" · 冻结","r_eact":"提前续费 · 已激活","r_epend":"提前续费 · 未激活","s_renewed":"已续费","s_not":"未续费","s_act":"已激活","s_notact":"未激活",
+  "ono_f":"客户第几单",
   "warn":"Output/ 暂无数据，请先运行流程。","cap":"DA-RE · 不使用 end_date · % = 比率, 金额 = VND"},
 }
 
@@ -122,11 +125,15 @@ ren_def = st.sidebar.radio(T["ren_def"], [T["m90"], T["inf"]], index=0)
 REN = "da_gia_han_M90" if ren_def == T["m90"] else "da_gia_han_vo_han"
 allteams = sorted(set(exp.get("team_sale_quan_ly", pd.Series(dtype=str)).dropna()) | set(early.get("team_sale_quan_ly", pd.Series(dtype=str)).dropna()))
 sel_teams = st.sidebar.multiselect(T["team_f"], allteams, default=allteams)
+onos = sorted({int(x) for x in pd.concat([(exp["order_no_uid"] if not exp.empty else pd.Series(dtype=float)),(early["order_no_uid"] if not early.empty else pd.Series(dtype=float))]).dropna().tolist()})
+sel_ono = st.sidebar.multiselect(T["ono_f"], onos, default=onos)
 
 def filt(d):
     if d.empty: return d
     x = d[d["month"].isin(sel_months)]
     if "team_sale_quan_ly" in x.columns and sel_teams: x = x[x["team_sale_quan_ly"].isin(sel_teams)]
+    if "order_no_uid" in x.columns and sel_ono:
+        x = x[pd.to_numeric(x["order_no_uid"], errors="coerce").isin(sel_ono)]
     return x
 fe = filt(exp); fr = filt(early)
 
