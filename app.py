@@ -35,8 +35,8 @@ K = {
  "sec_funnel": L("Phễu chuyển đổi","Conversion funnel","转化漏斗"),
  "src_den": L("Đến hạn (đầu tháng)","Due (month start)","到期(月初)"), "src_mid": L("Hết hạn phát sinh","Mid-month expiry","月中到期"),
  "tot_mau": L("Tổng mẫu số","Total denominator","分母合计"),
- "tim_dung": L("Gia hạn đúng hạn","On-time renewal","按时续费"), "tim_som": L("Gia hạn sớm","Early renewal","提前续费"), "tim_muon": L("Gia hạn muộn","Late renewal","延迟续费"), "tot_tu": L("Tổng đã gia hạn","Total renewed","已续费合计"),
- "cap_den": L("Còn <10 buổi vào ngày đầu tháng","<10 lessons at month start","月初剩<10课时"), "cap_mid": L("Đang học thì hết sạch buổi (về 0) giữa tháng","Ran out (0) mid-month","月中上完(归0)"), "cap_early": L("Mua đơn mới khi chưa nằm trong Đến hạn","Bought while not in Due list","不在到期名单却已购新单"), "cap_totmau": L("Tổng khách tới điểm gia hạn trong kỳ","All at renewal point","当期到达续费点客户"), "cap_dung": L("Thuộc Đến hạn / HH phát sinh, gia hạn NGAY trong tháng","In Due/Mid-expiry, renewed same month","到期/月中到期,当月续费"), "cap_som": L("Nhóm Gia hạn sớm (mua trước khi tới hạn)","Early renewers","提前续费组"), "cap_muon": L("Thuộc Đến hạn / HH phát sinh, gia hạn ở THÁNG SAU","In Due/Mid-expiry, renewed later month","到期/月中到期,次月续费"), "cap_tottu": L("= Đúng hạn + Sớm + Muộn","= On-time + Early + Late","=按时+提前+延迟"),
+ "tim_dung": L("Gia hạn đúng hạn","On-time renewal","按时续费"), "tim_som": L("Gia hạn sớm / trước hạn","Early / before due","提前/到期前"), "tim_muon": L("Gia hạn muộn","Late renewal","延迟续费"), "tot_tu": L("Tổng đã gia hạn","Total renewed","已续费合计"),
+ "cap_den": L("Còn <10 buổi vào ngày đầu tháng","<10 lessons at month start","月初剩<10课时"), "cap_mid": L("Đang học thì hết sạch buổi (về 0) giữa tháng","Ran out (0) mid-month","月中上完(归0)"), "cap_early": L("Mua đơn mới khi chưa nằm trong Đến hạn","Bought while not in Due list","不在到期名单却已购新单"), "cap_totmau": L("Tổng khách tới điểm gia hạn trong kỳ","All at renewal point","当期到达续费点客户"), "cap_dung": L("Gia hạn ĐÚNG trong tháng tới hạn","Renewed exactly in the due month","恰在到期月续费"), "cap_som": L("Gia hạn TRƯỚC tháng tới hạn (nhóm ngoài danh sách + khách trong danh sách mua từ tháng trước)","Renewed BEFORE due month (out-of-list group + in-list who bought earlier)","到期月之前续费(名单外组+名单内提前购买)"), "cap_muon": L("Thuộc Đến hạn / HH phát sinh, gia hạn ở THÁNG SAU","In Due/Mid-expiry, renewed later month","到期/月中到期,次月续费"), "cap_tottu": L("= Đúng hạn + Sớm + Muộn","= On-time + Early + Late","=按时+提前+延迟"),
  "explain": L("📖 Công thức tính CRR/RRR/Upsell (bấm để xem)","📖 CRR/RRR/Upsell formula (click)","📖 CRR/RRR/Upsell 公式（点击）"),
  "explain_body": L(
    "**CRR** = Tử số / Mẫu số.\n\n**Mẫu số** = Đến hạn (đầu tháng) + Hết hạn phát sinh (về 0 buổi giữa tháng) + Gia hạn sớm (mua đơn mới khi chưa tới hạn).\n\n**Tử số** = số đã gia hạn = Đúng hạn (gia hạn trong tháng cohort) + Sớm (nhóm gia hạn sớm) + Muộn (gia hạn ở tháng sau).\n\n**RRR** = TỔNG doanh thu TẤT CẢ đơn gia hạn (Đúng hạn + Sớm + Muộn, theo chế độ M+90/Real đang chọn) / Tổng giá trị các đơn tới hạn.\n\n**Upsell** = Giá trị đơn gia hạn mới / Giá trị đơn cũ (của nhóm đã gia hạn). >100% = chi nhiều hơn.\n\nHai chế độ: **M+90** khóa trong ~3 tháng (KPI cố định); **Real** tính mọi lúc.",
@@ -80,9 +80,9 @@ DEFS = {
 - **Gia hạn sớm:** khách **KHÔNG** nằm trong Đến hạn nhưng **đã mua đơn mới trong tháng** (tính theo ngày mua).
 
 #### TỬ SỐ — Đã gia hạn (theo thời điểm)
-- **Gia hạn đúng hạn:** khách thuộc Đến hạn / Hết hạn phát sinh, gia hạn **trong hoặc trước khi hết** tháng tới hạn (không trễ).
-- **Gia hạn sớm:** chính là nhóm Gia hạn sớm ở mẫu số.
-- **Gia hạn muộn:** khách thuộc Đến hạn / Hết hạn phát sinh, gia hạn ở **THÁNG SAU** tháng tới hạn.
+- **Gia hạn đúng hạn:** gia hạn **ĐÚNG trong** tháng tới hạn.
+- **Gia hạn sớm / trước hạn:** gia hạn **TRƯỚC** tháng tới hạn — gồm (a) nhóm Gia hạn sớm (chưa từng vào Đến hạn) và (b) khách trong Đến hạn/Hết hạn phát sinh nhưng đã mua từ **tháng trước**.
+- **Gia hạn muộn:** gia hạn ở **THÁNG SAU** tháng tới hạn.
 
 #### CHỈ SỐ
 - **CRR** = Tổng đã gia hạn ÷ Tổng mẫu số. (Tỷ lệ giữ chân khách.)
@@ -113,9 +113,9 @@ Chỉ tính khi có **THANH TOÁN** (ghi trong GMV) **HOẶC KÍCH HOẠT** đơ
 - **Early renewals:** customer **NOT** in Due but **bought a new order during the month** (by purchase date).
 
 #### NUMERATOR — Renewed (by timing)
-- **On-time renewal:** Due / Mid-expiry customer, renewed **on or before end of** the due month.
-- **Early renewal:** the Early-renewals group above.
-- **Late renewal:** Due / Mid-expiry customer, renewed in a **LATER month**.
+- **On-time renewal:** renewed **exactly in** the due month.
+- **Early / before due:** renewed **BEFORE** the due month — includes (a) the Early-renewals group and (b) in-list customers who bought in an **earlier month**.
+- **Late renewal:** renewed in a **LATER month**.
 
 #### METRICS
 - **CRR** = Total renewed ÷ Total denominator.
@@ -146,9 +146,9 @@ Only when there is **PAYMENT** (in GMV) **OR ACTIVATION** of a new order (REM). 
 - **提前续费：** **不在**到期名单，但**当月购买了新订单**（按购买日期）。
 
 #### 分子 — 已续费（按时间）
-- **按时续费：** 到期/月中到期客户，在到期月**当月或之前**续费。
-- **提前续费：** 上面的提前续费组。
-- **延迟续费：** 到期/月中到期客户，在**次月及以后**续费。
+- **按时续费：** **恰在**到期月续费。
+- **提前/到期前续费：** 在到期月**之前**续费 — 含(a)提前续费组 与(b)名单内但在**更早月份**购买的客户。
+- **延迟续费：** 在**次月及以后**续费。
 
 #### 指标
 - **CRR** = 已续费合计 ÷ 分母合计。
@@ -300,10 +300,12 @@ def cohort(fe, fr, fm, REN):
     if not ren_fe.empty:
         ghp = pd.to_datetime(ren_fe["ngay_gia_han"], errors="coerce").dt.to_period("M")
         cop = ren_fe["month"].astype(str).map(lambda m: pd.Period(m, "M"))
-        late = [(pd.notna(g) and g > c) for g, c in zip(ghp, cop)]   # gia han o THANG SAU thang toi han
-        muon = int(sum(late)); dung = len(ren_fe) - muon             # dung han = gia han trong/truoc thang toi han
-    else: dung = muon = 0
-    som = n_early; num = dung + som + muon
+        before = int(sum(pd.notna(g) and g < c for g, c in zip(ghp, cop)))   # gia han TRUOC thang toi han
+        after  = int(sum(pd.notna(g) and g > c for g, c in zip(ghp, cop)))   # gia han THANG SAU
+        inmonth = len(ren_fe) - before - after                               # gia han DUNG trong thang
+    else: before = after = inmonth = 0
+    dung = inmonth; muon = after; som = n_early + before   # som/truoc han = ngoai danh sach + trong danh sach mua truoc
+    num = dung + som + muon
     rev = (ren_fe["gia_tri_don_gia_han"].sum() if not ren_fe.empty else 0) + (fr["gia_tri_don_gia_han"].sum() if not fr.empty else 0)
     exp_val = (fe["gia_tri_don_cu"].sum() if not fe.empty else 0) + (fr["gia_tri_don_cu"].sum() if not fr.empty else 0)
     old_ren = (ren_fe["gia_tri_don_cu"].sum() if not ren_fe.empty else 0) + (fr["gia_tri_don_cu"].sum() if not fr.empty else 0)
