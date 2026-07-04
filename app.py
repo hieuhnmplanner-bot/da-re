@@ -50,8 +50,8 @@ K = {
  # detail headers (giu tu ban truoc)
  "h_month":L("Tháng","Month","月份"),"h_group":L("Nhóm","Group","分组"),"h_reason":L("Lý do","Reason","原因"),"h_uid":L("UID","UID","UID"),
  "h_oid":L("Order ID","Order ID","订单ID"),"h_ono":L("Đơn thứ mấy","Order #","第几单"),"h_status":L("Trạng thái","Status","状态"),
- "h_oidnew":L("Order ID mới","New Order ID","新订单ID"),"h_rendate":L("Ngày gia hạn","Renewal date","续费日期"),
- "h_remain":L("Số buổi còn","Lessons left","剩余课时"),"h_buydate":L("Ngày mua","Purchase date","购买日期"),
+ "h_oidnew":L("Order ID mới","New Order ID","新订单ID"),"h_rendate":L("Ngày mua đơn kế","Next-order date","下单日期"),
+ "h_remain":L("Số buổi đầu tháng","Lessons at month start","月初课时"),"h_remain_now":L("Số buổi hiện tại (UID)","Current lessons (UID)","当前课时(UID)"),"h_buydate":L("Ngày mua đơn này","Purchase date","本单购买日"),
  "h_valold":L("Giá trị đơn","Order value","订单金额"),"h_valnew":L("Giá trị đơn gia hạn","Renewal value","续费金额"),
  "h_sban":L("Sale bán","Selling sale","成交销售"),"h_tban":L("Team bán","Selling team","成交团队"),
  "h_smgr":L("Sale quản lý","Managing sale","在管销售"),"h_tmgr":L("Team quản lý","Managing team","在管团队"),"h_teacher":L("Teacher","Teacher","老师"),
@@ -359,13 +359,21 @@ with tab_detail:
     def _row(r, kind):
         rdate = r.get("ngay_gia_han") if kind=="due" else r.get("ngay_kich_hoat")
         bdate = r.get("ngay_mua") if kind=="due" else r.get("pay_time")
-        return {T["h_month"]:r.get("month"), T["h_group"]:r.get("nhom"), T["h_reason"]:_reason(r), T["h_uid"]:r.get("uid"),
-            T["h_oid"]:r.get("order_id"), T["h_ono"]:r.get("order_no_uid"), T["h_status"]:_status(r,kind),
-            T["h_oidnew"]:r.get("order_id_moi",""), T["h_rendate"]:rdate,
-            T["h_remain"]:(int(r["remaining"]) if kind=="due" and pd.notna(r.get("remaining")) else ""),
-            T["h_buydate"]:bdate, T["h_valold"]:_mny(r.get("gia_tri_don_cu")), T["h_valnew"]:_mny(r.get("gia_tri_don_gia_han")),
-            T["h_sban"]:r.get("sale_ban_don"), T["h_tban"]:r.get("team_sale_ban"), T["h_smgr"]:r.get("sale_quan_ly"),
-            T["h_tmgr"]:r.get("team_sale_quan_ly"), T["h_teacher"]:r.get("teacher")}
+        def _int(x): return int(x) if pd.notna(x) and str(x)!="" else ""
+        return {
+            # (1) Dinh danh
+            T["h_month"]:r.get("month"), T["h_group"]:r.get("nhom"), T["h_reason"]:_reason(r),
+            T["h_uid"]:r.get("uid"), T["h_oid"]:r.get("order_id"), T["h_ono"]:r.get("order_no_uid"),
+            # (2) So buoi & ngay mua
+            T["h_remain"]:(_int(r.get("remaining")) if kind=="due" else ""),
+            T["h_remain_now"]:_int(r.get("so_buoi_hien_tai")),
+            T["h_buydate"]:bdate,
+            # (3) Gia han
+            T["h_status"]:_status(r,kind), T["h_oidnew"]:r.get("order_id_moi",""), T["h_rendate"]:rdate,
+            T["h_valold"]:_mny(r.get("gia_tri_don_cu")), T["h_valnew"]:_mny(r.get("gia_tri_don_gia_han")),
+            # (4) Phu trach
+            T["h_sban"]:r.get("sale_ban_don"), T["h_tban"]:r.get("team_sale_ban"),
+            T["h_smgr"]:r.get("sale_quan_ly"), T["h_tmgr"]:r.get("team_sale_quan_ly"), T["h_teacher"]:r.get("teacher")}
     recs = []
     if view in (T["v_both"],T["v_due"]) and not fe.empty:
         for _,r in fe.iterrows(): recs.append(_row(r,"due"))

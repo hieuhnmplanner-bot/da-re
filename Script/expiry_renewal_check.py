@@ -1,12 +1,8 @@
 # -*- coding: utf-8 -*-
-"""DA-RE — Trang thai GIA HAN (den han) + Sale/Team/Teacher + GIA TRI + order_no_uid.
-Gia han chi tinh khi co THANH TOAN (GMV) HOAC KICH HOAT don moi (REM), muon hon Purchase Time don cu.
-- da_gia_han_M90 / da_gia_han_vo_han ; gia_tri_don_cu ; gia_tri_don_gia_han
-- order_no_uid : don thu may cua UID (xep theo Purchase Time)
-- nhom = "Đến hạn"
-Cung 1 ngay chay lai -> ghi de (file theo ngay + tracking upsert).
-Dung: python expiry_renewal_check.py Output/expiry_2026-07.csv [run_date]
-"""
+"""DA-RE — Trang thai GIA HAN (den han) + Sale/Team/Teacher + GIA TRI + order_no_uid
++ order_id_moi (don gia han ke tiep: id that neu da kich hoat, TMP_ neu chua)
++ so_buoi_hien_tai (so buoi con hien tai cua UID, cap UID, live tu REM).
+Dung: python expiry_renewal_check.py Output/expiry_2026-07.csv [run_date]"""
 from pathlib import Path
 from datetime import date
 import sys
@@ -22,7 +18,6 @@ BASE = Path(__file__).resolve().parent.parent
 def cu(v):
     if pd.isna(v): return ""
     return "".join(ch for ch in str(v).split(".")[0] if ch.isdigit())
-
 def nsale(s):
     if pd.isna(s): return ""
     return " ".join(unidecode(str(s)).split()).strip()
@@ -35,13 +30,8 @@ def build_team_mapper():
         k = nsale(name)
         if k == "": return "Not have Sale care"
         cs = coso.get(k)
-        if cs in ("HN-An Bình", "HN-Linh Đàm"): return "Offline Team HaNoi"
-        if cs == "HN-Team 2": return "Inhouse 2"
-        if cs == "HN-Inhouse": return "Inhouse 1"
-        if cs == "HCM": return "Ho Chi Minh"
-        if cs == "IND": return "IND"
-        if cs == "DN": return "DN"
-        return "Other"
+        return {"HN-An Bình":"Offline Team HaNoi","HN-Linh Đàm":"Offline Team HaNoi","HN-Team 2":"Inhouse 2",
+                "HN-Inhouse":"Inhouse 1","HCM":"Ho Chi Minh","IND":"IND","DN":"DN"}.get(cs, "Other")
     return team_of
 
 def main(exp_path, run_date=None):
@@ -59,9 +49,10 @@ def main(exp_path, run_date=None):
     rem["oid"] = rem["Order ID"].astype(str).str.split(".").str[0]
     rem["pt"] = pd.to_datetime(rem["Purchase Time"], errors="coerce")
     rem["price"] = pd.to_numeric(rem["Order Price VND"].astype(str).str.replace(",","",regex=False).str.replace(".","",regex=False), errors="coerce").fillna(0) * 100
+    rem["remnum"] = pd.to_numeric(rem["Remain lesson Number"], errors="coerce")
     rem_by_oid = rem.drop_duplicates("oid").set_index("oid")
     rem_price = rem_by_oid["price"].to_dict()
-    # don thu may cua UID (order_no_uid)
+    uid_now = rem.drop_duplicates("uidm").set_index("uidm")["remnum"].to_dict()   # so buoi hien tai cua UID
     rs = rem.dropna(subset=["pt"]).drop_duplicates("oid").sort_values(["uidm", "pt"])
     rs["order_no_uid"] = rs.groupby("uidm").cumcount() + 1
     order_no = dict(zip(rs["oid"], rs["order_no_uid"]))
@@ -89,27 +80,33 @@ def main(exp_path, run_date=None):
         cur_sale = (rr["Sale"] if rr is not None else "")
         gia_tri_cu = float(rem_price.get(oid, 0))
         g_cands = [(t, m) for t, m in gmv_by_uid.get(u, []) if pd.notna(boundary) and t > boundary and m > 0]
-        r_cands = [(t, float(rem_price.get(oo, 0))) for oo, t in rem_orders_by_uid.get(u, []) if pd.notna(boundary) and t > boundary and oo != oid]
-        cands = sorted(g_cands + r_cands, key=lambda x: x[0])
-        if cands:
-            ngay_gh, gia_tri_gh = cands[0]
+        r_cands = [(t, oo) for oo, t in rem_orders_by_uid.get(u, []) if pd.notna(boundary) and t > boundary and oo != oid]
+        if g_cands or r_cands:
+            ngay_gh = min([t for t, _ in g_cands] + [t for t, _ in r_cands])
+            if r_cands:
+                new_oid = min(r_cands, key=lambda x: x[0])[1]                    # don da KICH HOAT -> id that
+            else:
+                new_oid = "TMP_%s_%s" % (u, min(t for t, _ in g_cands).strftime("%Y%m%d"))
+            gia_tri_gh = (min(g_cands, key=lambda x: x[0])[1] if g_cands else float(rem_price.get(new_oid, 0)))
             src = "GMV+REM" if (g_cands and r_cands) else ("GMV" if g_cands else "REM")
         else:
-            ngay_gh, gia_tri_gh, src = pd.NaT, np.nan, ""
+            ngay_gh, new_oid, gia_tri_gh, src = pd.NaT, "", np.nan, ""
+        sbt = uid_now.get(u)
         recs.append({
             "month": month, "order_id": oid, "order_no_uid": order_no.get(oid, ""),
             "uid": u, "nhom": "Đến hạn", "tag": row.get("tag",""),
             "ly_do_vao_list": row.get("reason",""),
             "ngay_mua": buy_date.get(oid, pd.NaT), "ngay_kich_hoat": boundary,
-            "remaining": row.get("remaining"), "last_study": row.get("last_study"),
-            "idle_ngay": row.get("idle"),
+            "remaining": row.get("remaining"),
+            "so_buoi_hien_tai": (int(sbt) if pd.notna(sbt) else ""),
+            "last_study": row.get("last_study"), "idle_ngay": row.get("idle"),
             "sale_ban_don": order_sale, "team_sale_ban": team_of(order_sale),
             "sale_quan_ly": cur_sale, "team_sale_quan_ly": team_of(cur_sale),
             "teacher": (rr["Teacher"] if rr is not None else ""),
             "gia_tri_don_cu": gia_tri_cu,
-            "da_gia_han_M90": bool(cands) and (ngay_gh <= cutoff),
-            "da_gia_han_vo_han": bool(cands),
-            "ngay_gia_han": ngay_gh, "gia_tri_don_gia_han": gia_tri_gh,
+            "da_gia_han_M90": bool(g_cands or r_cands) and (ngay_gh <= cutoff),
+            "da_gia_han_vo_han": bool(g_cands or r_cands),
+            "order_id_moi": new_oid, "ngay_gia_han": ngay_gh, "gia_tri_don_gia_han": gia_tri_gh,
             "nguon_gia_han": src,
             "so_ngay_den_gia_han": ((ngay_gh - boundary).days if (pd.notna(ngay_gh) and pd.notna(boundary)) else np.nan),
             "run_date": run_date.date(),
@@ -123,29 +120,22 @@ def main(exp_path, run_date=None):
         ren = out[col]; renewed = int(ren.sum())
         crr = round(renewed/N*100, 1) if N else 0
         exp_tot = out["gia_tri_don_cu"].sum()
-        new_ren = out.loc[ren, "gia_tri_don_gia_han"].sum()
-        old_ren = out.loc[ren, "gia_tri_don_cu"].sum()
-        rrr = round(new_ren/exp_tot*100, 1) if exp_tot else 0
-        ups = round(new_ren/old_ren*100, 1) if old_ren else 0
-        return renewed, crr, rrr, ups, new_ren
+        new_ren = out.loc[ren, "gia_tri_don_gia_han"].sum(); old_ren = out.loc[ren, "gia_tri_don_cu"].sum()
+        return renewed, crr, round(new_ren/exp_tot*100,1) if exp_tot else 0, round(new_ren/old_ren*100,1) if old_ren else 0, new_ren
     r90, crr90, rrr90, up90, rev90 = kpis("da_gia_han_M90")
-    print(f"List {month} | {N} den han | moc M+90 = {cutoff.date()}")
-    print(f"   [M+90] Gia han {r90} | CRR {crr90}% | RRR {rrr90}% | Upsell {up90}% | Renewal Rev {rev90:,.0f}d")
-    print(f"   -> {out_path}")
+    print(f"List {month} | {N} den han | CRR {crr90}% | RRR {rrr90}% | Upsell {up90}% | Rev {rev90:,.0f}d -> {out_path}")
 
     track = BASE/"Output"/"renewal_rate_tracking.csv"
     line = pd.DataFrame([{"month":month,"run_date":str(run_date.date()),"list_size":N,
         "gia_han_M90":r90,"CRR_M90_%":crr90,"RRR_M90_%":rrr90,"Upsell_M90_%":up90,
-        "renewal_revenue_M90":round(rev90),
-        "gia_han_vo_han":int(out["da_gia_han_vo_han"].sum())}])
+        "renewal_revenue_M90":round(rev90),"gia_han_vo_han":int(out["da_gia_han_vo_han"].sum())}])
     if track.exists() and track.stat().st_size > 0:
         old = pd.read_csv(track, dtype={"month": str, "run_date": str})
-        old = old[~((old["month"].astype(str) == month) & (old["run_date"].astype(str) == str(run_date.date())))]
+        old = old[~((old["month"].astype(str)==month) & (old["run_date"].astype(str)==str(run_date.date())))]
         pd.concat([old, line], ignore_index=True).to_csv(track, index=False, encoding="utf-8-sig")
     else:
         line.to_csv(track, index=False, encoding="utf-8-sig")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        sys.exit("Dung: python expiry_renewal_check.py <file> [run_date]")
+    if len(sys.argv) < 2: sys.exit("Dung: python expiry_renewal_check.py <file> [run_date]")
     main(sys.argv[1], sys.argv[2] if len(sys.argv) > 2 else None)

@@ -63,6 +63,8 @@ def main(month, run_date=None):
     rem["oid"] = rem["Order ID"].astype(str).str.split(".").str[0]
     rem["pt"] = pd.to_datetime(rem["Purchase Time"], errors="coerce")
     rem["price"] = pd.to_numeric(rem["Order Price VND"].astype(str).str.replace(",","",regex=False).str.replace(".","",regex=False), errors="coerce").fillna(0) * 100
+    rem["remnum"] = pd.to_numeric(rem["Remain lesson Number"], errors="coerce")
+    uid_now = rem.drop_duplicates("uid").set_index("uid")["remnum"].to_dict()
     rem = rem[rem["uid"] != ""].dropna(subset=["pt"]).sort_values(["uid", "pt"])
     rem["order_no_uid"] = rem.groupby("uid").cumcount() + 1     # don thu may cua UID
     order_no = dict(zip(rem["oid"], rem["order_no_uid"]))
@@ -98,6 +100,7 @@ def main(month, run_date=None):
         recs.append({
             "month": month, "order_id": nm1, "order_no_uid": order_no.get(nm1, ""),
             "uid": u, "nhom": "Gia hạn sớm",
+            "so_buoi_hien_tai": (int(uid_now.get(u)) if pd.notna(uid_now.get(u)) else ""),
             "pay_time": t.date(), "gia_tri_don_cu": float(rr["price"]) if rr is not None else 0.0,
             "order_id_moi": order_id_moi, "gia_tri_don_gia_han": float(row["money"]),
             "trang_thai_kich_hoat": status, "ngay_kich_hoat": ngay_kh,
