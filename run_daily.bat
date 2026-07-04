@@ -13,6 +13,9 @@ echo [4/5] Cap nhat trang thai DEN HAN cho cac thang da co list...
 for %%f in (Output\expiry_20??-??.csv) do python "Script\expiry_renewal_check.py" "%%f"
 echo [5/5] Cap nhat GIA HAN SOM (moi thang) theo pay_time...
 python "Script\early_renewal.py" all
+echo [6/7] Ngu dong / hoi hop...
+python "Script\dormant.py"
+python "Script\mid_month_expiry.py" all
 echo === Day len GitHub (Streamlit tu cap nhat) ===
 git add -A
 git commit -m "daily update %date%"
