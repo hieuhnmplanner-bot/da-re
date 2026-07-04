@@ -21,7 +21,7 @@ K = {
  "team_f": L("Team (sale quản lý)","Team (managing sale)","团队（在管销售）"), "ono_f": L("Đơn thứ mấy của UID","Order # of UID","客户第几单"),
  "t_old": L("📊 Gia hạn (hiện tại)","📊 Renewal (current)","📊 续费(现版)"),
  "t_new": L("🆕 Gia hạn (bản mới)","🆕 Renewal (new)","🆕 续费(新版)"),
- "t_detail": L("🧾 Chi tiết","🧾 Detail","🧾 明细"), "t_dorm": L("😴 Ngủ đông / Rời bỏ","😴 Dormant / Churn","😴 冻结/流失"),
+ "t_detail": L("🧾 Chi tiết","🧾 Detail","🧾 明细"), "t_dorm": L("😴 Ngủ đông / Rời bỏ","😴 Dormant / Churn","😴 冻结/流失"), "t_defs": L("📖 Giải thích","📖 Definitions","📖 说明"),
  # cards
  "due": L("Đến hạn","Due","到期"), "renewed": L("Đã gia hạn","Renewed","已续费"),
  "crr": L("CRR – Gia hạn KH","CRR – Customer","CRR-客户续费率"), "rrr": L("RRR – Gia hạn DT","RRR – Revenue","RRR-收入续费率"),
@@ -68,6 +68,108 @@ K = {
  "h_crr": L("Đã gia hạn / Tới hạn","Renewed / Due","已续费/到期"), "h_rrr": L("DT gia hạn / Giá trị tới hạn","Renewal rev / due value","续费收入/到期价值"),
  "h_up": L(">100% = chi nhiều hơn",">100% = spending more",">100%=消费更多"), "h_early": L("Mua đơn mới khi chưa tới hạn","Bought before due","到期前购买"),
 }
+DEFS = {
+  "Tiếng Việt": r"""### 📖 Mô hình Gia hạn DA-RE — Định nghĩa
+
+**Nguyên tắc chung:** tính trên dữ liệu THẬT (không dự đoán). Mỗi order_id chỉ thuộc **đúng một tháng**. Áp dụng từ 07/2026.
+
+---
+#### MẪU SỐ — Khách tới hạn trong kỳ (3 nguồn, không trùng nhau)
+- **Đến hạn (đầu tháng):** đơn còn **dưới 10 buổi** vào ngày đầu tháng. (Học ~2 buổi/tuần nên <10 buổi ≈ sắp hết trong tháng.)
+- **Hết hạn phát sinh:** đầu tháng còn ≥10 buổi, nhưng học đến **hết sạch (0 buổi) giữa tháng** và chưa mua đơn mới. *(Cần log hằng ngày → chạy đều mỗi ngày.)*
+- **Gia hạn sớm:** khách **KHÔNG** nằm trong Đến hạn nhưng **đã mua đơn mới trong tháng** (tính theo ngày mua).
+
+#### TỬ SỐ — Đã gia hạn (theo thời điểm)
+- **Gia hạn đúng hạn:** khách thuộc Đến hạn / Hết hạn phát sinh, gia hạn **trong hoặc trước khi hết** tháng tới hạn (không trễ).
+- **Gia hạn sớm:** chính là nhóm Gia hạn sớm ở mẫu số.
+- **Gia hạn muộn:** khách thuộc Đến hạn / Hết hạn phát sinh, gia hạn ở **THÁNG SAU** tháng tới hạn.
+
+#### CHỈ SỐ
+- **CRR** = Tổng đã gia hạn ÷ Tổng mẫu số. (Tỷ lệ giữ chân khách.)
+- **RRR** = **Tổng doanh thu TẤT CẢ đơn gia hạn** (đúng hạn + sớm + muộn) ÷ Tổng giá trị đơn tới hạn.
+- **Upsell** = Giá trị đơn gia hạn mới ÷ Giá trị đơn cũ (nhóm đã gia hạn). **>100% = chi nhiều hơn.**
+- **Renewal Revenue** = Tổng giá trị các đơn gia hạn.
+- **M+90** = chỉ tính gia hạn trong ~3 tháng kể từ tới hạn (KPI cố định); **Real** = tính mọi lúc.
+
+#### Điều kiện "được tính là gia hạn"
+Chỉ tính khi có **THANH TOÁN** (ghi trong GMV) **HOẶC KÍCH HOẠT** đơn mới (REM). Quay lại học mà chưa mua thì **chưa** tính.
+
+#### NGỦ ĐÔNG / RỜI BỎ *(chỉ theo dõi, KHÔNG thuộc mẫu số)*
+- **Đóng băng chủ động:** tài khoản có tag Frozen (khách chủ động tạm dừng).
+- **Im lặng rời bỏ:** không đóng băng, **còn buổi**, nghỉ **>90 ngày**, chưa gia hạn.
+
+#### Vài cột hay gặp
+- **Đơn thứ mấy của UID:** thứ tự đơn của khách theo thời gian mua (1 = đơn đầu tiên).
+- **Order ID mới:** đơn gia hạn kế tiếp; nếu **chưa kích hoạt** thì để mã tạm `TMP_...`, khi kích hoạt sẽ đổi thành order_id thật.
+""",
+  "English": r"""### 📖 DA-RE Renewal Model — Definitions
+
+**Principle:** based on REAL data (no prediction). Each order_id belongs to **exactly one month**. Live from 2026-07.
+
+---
+#### DENOMINATOR — Customers due (3 disjoint sources)
+- **Due (month start):** order has **<10 lessons** on the 1st of the month.
+- **Mid-month expiry:** had ≥10 at month start but **ran out (0) mid-month** and didn't buy a new order. *(Needs the daily log → run daily.)*
+- **Early renewals:** customer **NOT** in Due but **bought a new order during the month** (by purchase date).
+
+#### NUMERATOR — Renewed (by timing)
+- **On-time renewal:** Due / Mid-expiry customer, renewed **on or before end of** the due month.
+- **Early renewal:** the Early-renewals group above.
+- **Late renewal:** Due / Mid-expiry customer, renewed in a **LATER month**.
+
+#### METRICS
+- **CRR** = Total renewed ÷ Total denominator.
+- **RRR** = Revenue of **ALL renewals** (on-time + early + late) ÷ total due value.
+- **Upsell** = New renewal value ÷ old value (of renewers). **>100% = spending more.**
+- **Renewal Revenue** = total value of renewal orders.
+- **M+90** = counts renewals within ~3 months of due (fixed KPI); **Real** = anytime.
+
+#### What counts as a renewal
+Only when there is **PAYMENT** (in GMV) **OR ACTIVATION** of a new order (REM). Returning to study without buying does **not** count yet.
+
+#### DORMANT / CHURN *(monitoring only, NOT in denominator)*
+- **Active freeze:** account has Frozen tag.
+- **Silent churn:** not frozen, **has lessons left**, idle **>90 days**, not renewed.
+
+#### Common columns
+- **Order # of UID:** the customer's order sequence by purchase time.
+- **New Order ID:** the next renewal order; if **not activated**, a temp id `TMP_...` is shown until it activates.
+""",
+  "中文": r"""### 📖 DA-RE 续费模型 — 定义
+
+**原则：** 基于真实数据（不预测）。每个 order_id 只属于**唯一一个月**。自 2026-07 起启用。
+
+---
+#### 分母 — 当期到期客户（3个互不重叠来源）
+- **到期(月初)：** 月初剩 **<10 课时**。
+- **月中到期：** 月初 ≥10，但月中**上完(归0)**且未购新单。*(需每日日志 → 每天运行。)*
+- **提前续费：** **不在**到期名单，但**当月购买了新订单**（按购买日期）。
+
+#### 分子 — 已续费（按时间）
+- **按时续费：** 到期/月中到期客户，在到期月**当月或之前**续费。
+- **提前续费：** 上面的提前续费组。
+- **延迟续费：** 到期/月中到期客户，在**次月及以后**续费。
+
+#### 指标
+- **CRR** = 已续费合计 ÷ 分母合计。
+- **RRR** = **所有续费**收入(按时+提前+延迟) ÷ 到期总价值。
+- **Upsell** = 新续费金额 ÷ 旧金额(续费者)。**>100%=消费更多。**
+- **续费收入** = 续费订单总价值。
+- **M+90** = 到期后约3个月内(固定KPI)；**Real** = 任意时间。
+
+#### 何为续费
+仅当有**付款**(GMV) **或激活**新订单(REM)。仅回来上课未购买**不**计入。
+
+#### 冻结 / 流失 *(仅监控，不计入分母)*
+- **主动冻结：** 账户有 Frozen 标签。
+- **静默流失：** 未冻结，**尚有课时**，停学 **>90天**，未续费。
+
+#### 常见列
+- **客户第几单：** 按购买时间的订单序号。
+- **新订单ID：** 下一续费单；若**未激活**显示临时ID `TMP_...`，激活后替换为真实 order_id。
+""",
+}
+
 def TR(lang): return {k: v[lang] for k, v in K.items()}
 
 def _truthy(s): return s.astype(str).str.strip().str.lower().isin(["true","1","yes"])
@@ -164,7 +266,7 @@ def group_table(dim):
         T["crr"]:df["crr"].map(_pct), T["rrr"]:df["rrr"].map(_pct), T["early"]:df["early"],
         T["c_totren"]:df["renewed"]+df["early"], T["c_totrev"]:(df["revd"]+df["reve"]).map(_vnd)})
 
-tab_old, tab_new, tab_detail, tab_dorm = st.tabs([T["t_old"], T["t_new"], T["t_detail"], T["t_dorm"]])
+tab_old, tab_new, tab_detail, tab_dorm, tab_defs = st.tabs([T["t_old"], T["t_new"], T["t_detail"], T["t_dorm"], T["t_defs"]])
 
 # ---------------- TAB HIỆN TẠI ----------------
 with tab_old:
@@ -196,8 +298,10 @@ def cohort(fe, fr, fm, REN):
     denom = n_den + n_mid + n_early
     ren_fe = fe[fe[REN].fillna(False)] if not fe.empty else fe
     if not ren_fe.empty:
-        ghm = pd.to_datetime(ren_fe["ngay_gia_han"], errors="coerce").dt.to_period("M").astype(str)
-        dung = int((ghm == ren_fe["month"]).sum()); muon = int((ghm != ren_fe["month"]).sum())
+        ghp = pd.to_datetime(ren_fe["ngay_gia_han"], errors="coerce").dt.to_period("M")
+        cop = ren_fe["month"].astype(str).map(lambda m: pd.Period(m, "M"))
+        late = [(pd.notna(g) and g > c) for g, c in zip(ghp, cop)]   # gia han o THANG SAU thang toi han
+        muon = int(sum(late)); dung = len(ren_fe) - muon             # dung han = gia han trong/truoc thang toi han
     else: dung = muon = 0
     som = n_early; num = dung + som + muon
     rev = (ren_fe["gia_tri_don_gia_han"].sum() if not ren_fe.empty else 0) + (fr["gia_tri_don_gia_han"].sum() if not fr.empty else 0)
@@ -288,5 +392,8 @@ with tab_dorm:
         st.write(f"{len(d):,} {T['rows']}")
         st.dataframe(d[cc].rename(columns=cols), use_container_width=True, height=440, hide_index=True)
         st.download_button(T["download"], d[cc].rename(columns=cols).to_csv(index=False).encode("utf-8-sig"), "ngu_dong.csv","text/csv")
+
+with tab_defs:
+    st.markdown(DEFS[lang])
 
 st.caption(T["cap"])
