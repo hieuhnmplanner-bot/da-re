@@ -35,12 +35,13 @@ K = {
  "sec_funnel": L("Phễu chuyển đổi","Conversion funnel","转化漏斗"),
  "src_den": L("Đến hạn (đầu tháng)","Due (month start)","到期(月初)"), "src_mid": L("Hết hạn phát sinh","Mid-month expiry","月中到期"),
  "tot_mau": L("Tổng mẫu số","Total denominator","分母合计"),
- "tim_dung": L("Đúng hạn","On-time","按时"), "tim_som": L("Sớm","Early","提前"), "tim_muon": L("Muộn","Late","延迟"), "tot_tu": L("Tổng đã gia hạn","Total renewed","已续费合计"),
+ "tim_dung": L("Gia hạn đúng hạn","On-time renewal","按时续费"), "tim_som": L("Gia hạn sớm","Early renewal","提前续费"), "tim_muon": L("Gia hạn muộn","Late renewal","延迟续费"), "tot_tu": L("Tổng đã gia hạn","Total renewed","已续费合计"),
+ "cap_den": L("Còn <10 buổi vào ngày đầu tháng","<10 lessons at month start","月初剩<10课时"), "cap_mid": L("Đang học thì hết sạch buổi (về 0) giữa tháng","Ran out (0) mid-month","月中上完(归0)"), "cap_early": L("Mua đơn mới khi chưa nằm trong Đến hạn","Bought while not in Due list","不在到期名单却已购新单"), "cap_totmau": L("Tổng khách tới điểm gia hạn trong kỳ","All at renewal point","当期到达续费点客户"), "cap_dung": L("Thuộc Đến hạn / HH phát sinh, gia hạn NGAY trong tháng","In Due/Mid-expiry, renewed same month","到期/月中到期,当月续费"), "cap_som": L("Nhóm Gia hạn sớm (mua trước khi tới hạn)","Early renewers","提前续费组"), "cap_muon": L("Thuộc Đến hạn / HH phát sinh, gia hạn ở THÁNG SAU","In Due/Mid-expiry, renewed later month","到期/月中到期,次月续费"), "cap_tottu": L("= Đúng hạn + Sớm + Muộn","= On-time + Early + Late","=按时+提前+延迟"),
  "explain": L("📖 Công thức tính CRR/RRR/Upsell (bấm để xem)","📖 CRR/RRR/Upsell formula (click)","📖 CRR/RRR/Upsell 公式（点击）"),
  "explain_body": L(
-   "**CRR** = Tử số / Mẫu số.\n\n**Mẫu số** = Đến hạn (đầu tháng) + Hết hạn phát sinh (về 0 buổi giữa tháng) + Gia hạn sớm (mua đơn mới khi chưa tới hạn).\n\n**Tử số** = số đã gia hạn = Đúng hạn (gia hạn trong tháng cohort) + Sớm (nhóm gia hạn sớm) + Muộn (gia hạn ở tháng sau).\n\n**RRR** = Doanh thu các đơn gia hạn / Tổng giá trị đơn tới hạn.\n\n**Upsell** = Giá trị đơn gia hạn mới / Giá trị đơn cũ (của nhóm đã gia hạn). >100% = chi nhiều hơn.\n\nHai chế độ: **M+90** khóa trong ~3 tháng (KPI cố định); **Real** tính mọi lúc.",
-   "**CRR** = Numerator / Denominator.\n\n**Denominator** = Due (month start) + Mid-month expiry (hit 0 mid-month) + Early renewals (bought before due).\n\n**Numerator** = renewed = On-time + Early + Late.\n\n**RRR** = renewal revenue / total due value.\n\n**Upsell** = new renewal value / old value of renewers. >100% = spending more.\n\nTwo modes: **M+90** locked ~3 months; **Real** anytime.",
-   "**CRR** = 分子 / 分母。\n\n**分母** = 到期(月初) + 月中到期(月中归零) + 提前续费。\n\n**分子** = 已续费 = 按时 + 提前 + 延迟。\n\n**RRR** = 续费收入 / 到期总价值。\n\n**Upsell** = 新续费金额 / 续费者旧金额。>100%=消费更多。\n\n两种模式：**M+90** 锁定约3个月；**Real** 任意时间。"),
+   "**CRR** = Tử số / Mẫu số.\n\n**Mẫu số** = Đến hạn (đầu tháng) + Hết hạn phát sinh (về 0 buổi giữa tháng) + Gia hạn sớm (mua đơn mới khi chưa tới hạn).\n\n**Tử số** = số đã gia hạn = Đúng hạn (gia hạn trong tháng cohort) + Sớm (nhóm gia hạn sớm) + Muộn (gia hạn ở tháng sau).\n\n**RRR** = TỔNG doanh thu TẤT CẢ đơn gia hạn (Đúng hạn + Sớm + Muộn, theo chế độ M+90/Real đang chọn) / Tổng giá trị các đơn tới hạn.\n\n**Upsell** = Giá trị đơn gia hạn mới / Giá trị đơn cũ (của nhóm đã gia hạn). >100% = chi nhiều hơn.\n\nHai chế độ: **M+90** khóa trong ~3 tháng (KPI cố định); **Real** tính mọi lúc.",
+   "**CRR** = Numerator / Denominator.\n\n**Denominator** = Due (month start) + Mid-month expiry (hit 0 mid-month) + Early renewals (bought before due).\n\n**Numerator** = renewed = On-time + Early + Late.\n\n**RRR** = TOTAL revenue of ALL renewals (On-time + Early + Late, per selected M+90/Real mode) / total due value.\n\n**Upsell** = new renewal value / old value of renewers. >100% = spending more.\n\nTwo modes: **M+90** locked ~3 months; **Real** anytime.",
+   "**CRR** = 分子 / 分母。\n\n**分母** = 到期(月初) + 月中到期(月中归零) + 提前续费。\n\n**分子** = 已续费 = 按时 + 提前 + 延迟。\n\n**RRR** = 所有续费订单总收入(按时+提前+延迟,按所选M+90/Real模式) / 到期总价值。\n\n**Upsell** = 新续费金额 / 续费者旧金额。>100%=消费更多。\n\n两种模式：**M+90** 锁定约3个月；**Real** 任意时间。"),
  # dormant
  "d_type": L("Loại","Type","类型"), "d_freeze": L("Đóng băng chủ động","Active freeze","主动冻结"), "d_silent": L("Im lặng rời bỏ","Silent churn","静默流失"),
  "d_total_left": L("Tổng buổi còn treo","Total lessons hanging","剩余课时合计"), "d_denhan": L("Thuộc Đến hạn tháng","In Due month","所属到期月"),
@@ -181,11 +182,13 @@ with tab_old:
     st.subheader(T["by_team"])
     tmap = {T["t_mgr"]:"team_sale_quan_ly", T["t_ban"]:"team_sale_ban"}
     tsel = st.selectbox(T["team_dim"], list(tmap.keys()), key="old_team")
-    g = group_table(tmap[tsel]);  st.dataframe(g, use_container_width=True, hide_index=True) if not g.empty else None
+    g = group_table(tmap[tsel])
+    if not g.empty: st.dataframe(g, use_container_width=True, hide_index=True)
     st.subheader(T["by_indiv"])
     imap = {T["d_teacher"]:"teacher", T["d_sban"]:"sale_ban_don", T["d_smgr"]:"sale_quan_ly"}
     isel = st.selectbox(T["indiv_dim"], list(imap.keys()), key="old_indiv")
-    g = group_table(imap[isel]); st.dataframe(g, use_container_width=True, hide_index=True) if not g.empty else None
+    g = group_table(imap[isel])
+    if not g.empty: st.dataframe(g, use_container_width=True, hide_index=True)
 
 # ---------------- TAB BẢN MỚI ----------------
 def cohort(fe, fr, fm, REN):
@@ -213,23 +216,26 @@ with tab_new:
     c[2].metric(T["upsell"], _pct(C["ups"]), help=T["h_up"]); c[3].metric(T["rev"], _vnd(C["rev"]))
     st.subheader(T["sec_mau"])
     c = st.columns(4)
-    c[0].metric(T["src_den"], f"{C['n_den']:,}"); c[1].metric(T["src_mid"], f"{C['n_mid']:,}")
-    c[2].metric(T["early"], f"{C['n_early']:,}"); c[3].metric(T["tot_mau"], f"{C['denom']:,}")
+    c[0].metric(T["src_den"], f"{C['n_den']:,}"); c[0].caption(T["cap_den"])
+    c[1].metric(T["src_mid"], f"{C['n_mid']:,}"); c[1].caption(T["cap_mid"])
+    c[2].metric(T["early"], f"{C['n_early']:,}"); c[2].caption(T["cap_early"])
+    c[3].metric(T["tot_mau"], f"{C['denom']:,}"); c[3].caption(T["cap_totmau"])
     st.subheader(T["sec_tu"])
     c = st.columns(4)
-    c[0].metric(T["tim_dung"], f"{C['dung']:,}"); c[1].metric(T["tim_som"], f"{C['som']:,}")
-    c[2].metric(T["tim_muon"], f"{C['muon']:,}"); c[3].metric(T["tot_tu"], f"{C['num']:,}")
-    st.subheader(T["sec_funnel"])
-    fig = go.Figure(go.Funnel(y=[T["tot_mau"], T["tot_tu"]], x=[C["denom"], C["num"]], textinfo="value+percent initial"))
-    fig.update_layout(height=260, margin=dict(l=10,r=10,t=10,b=10)); st.plotly_chart(fig, use_container_width=True)
+    c[0].metric(T["tim_dung"], f"{C['dung']:,}"); c[0].caption(T["cap_dung"])
+    c[1].metric(T["tim_som"], f"{C['som']:,}"); c[1].caption(T["cap_som"])
+    c[2].metric(T["tim_muon"], f"{C['muon']:,}"); c[2].caption(T["cap_muon"])
+    c[3].metric(T["tot_tu"], f"{C['num']:,}"); c[3].caption(T["cap_tottu"])
     st.subheader(T["by_team"])
     tmap = {T["t_mgr"]:"team_sale_quan_ly", T["t_ban"]:"team_sale_ban"}
     tsel = st.selectbox(T["team_dim"], list(tmap.keys()), key="new_team")
-    g = group_table(tmap[tsel]); st.dataframe(g, use_container_width=True, hide_index=True) if not g.empty else None
+    g = group_table(tmap[tsel])
+    if not g.empty: st.dataframe(g, use_container_width=True, hide_index=True)
     st.subheader(T["by_indiv"])
     imap = {T["d_teacher"]:"teacher", T["d_sban"]:"sale_ban_don", T["d_smgr"]:"sale_quan_ly"}
     isel = st.selectbox(T["indiv_dim"], list(imap.keys()), key="new_indiv")
-    g = group_table(imap[isel]); st.dataframe(g, use_container_width=True, hide_index=True) if not g.empty else None
+    g = group_table(imap[isel])
+    if not g.empty: st.dataframe(g, use_container_width=True, hide_index=True)
 
 # ---------------- TAB CHI TIẾT ----------------
 with tab_detail:
