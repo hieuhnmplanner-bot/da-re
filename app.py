@@ -56,6 +56,7 @@ K = {
  "h_sban":L("Sale bán","Selling sale","成交销售"),"h_tban":L("Team bán","Selling team","成交团队"),
  "h_smgr":L("Sale quản lý","Managing sale","在管销售"),"h_tmgr":L("Team quản lý","Managing team","在管团队"),"h_teacher":L("Teacher","Teacher","老师"),
  "r_th1":L("Còn 1–9 buổi, đang học","1–9 left, active","剩1–9,在学"),"r_th2":L("Vừa hết buổi (≤10 ngày)","Just finished","刚上完"),
+ "reason_f":L("Lý do vào list","Reason","入库原因"),
  "r_frozen":L(" · Frozen"," · Frozen"," · 冻结"),"r_eact":L("Gia hạn sớm · đã kích hoạt","Early · activated","提前·已激活"),"r_epend":L("Gia hạn sớm · chưa kích hoạt","Early · not activated","提前·未激活"),
  "s_renewed":L("Đã gia hạn","Renewed","已续费"),"s_not":L("Chưa gia hạn","Not renewed","未续费"),"s_act":L("Đã kích hoạt","Activated","已激活"),"s_notact":L("Chưa kích hoạt","Not activated","未激活"),
  "view":L("Xem nhóm","View","查看"),"v_both":L("Cả hai","Both","全部"),"v_due":L("Đến hạn","Due","到期"),"v_early":L("Gia hạn sớm","Early","提前"),
@@ -229,6 +230,12 @@ def kpis_due(df, ren_col):
     return dict(due=n, renewed=rn, crr=(rn/n*100 if n else 0), rrr=(nr/et*100 if et else 0), upsell=(nr/orr*100 if orr else 0), revenue=nr)
 
 exp = load_expiry(); early = load_early(); mid = load_mid(); dorm = load_dormant()
+# nhan loai "ly do" (canonical) de loc: th2 = vua het buoi (remaining=0), th1 = con 1-9 buoi, early = gia han som
+if not exp.empty:
+    exp = exp.copy()
+    exp["reason_cat"] = exp.get("ly_do_vao_list","").astype(str).apply(lambda s: "th2" if "remaining=0" in s else "th1")
+if not early.empty:
+    early = early.copy(); early["reason_cat"] = "early"
 lang = st.sidebar.selectbox("🌐 Ngôn ngữ / Language / 语言", ["Tiếng Việt","English","中文"], index=0)
 T = TR(lang)
 st.title(T["title"])
@@ -243,12 +250,20 @@ allteams = sorted(set(exp.get("team_sale_quan_ly", pd.Series(dtype=str)).dropna(
 sel_teams = st.sidebar.multiselect(T["team_f"], allteams, default=allteams)
 onos = sorted({int(x) for x in pd.concat([(exp["order_no_uid"] if not exp.empty else pd.Series(dtype=float)),(early["order_no_uid"] if not early.empty else pd.Series(dtype=float))]).dropna().tolist()})
 sel_ono = st.sidebar.multiselect(T["ono_f"], onos, default=onos)
+# Bo loc theo "Ly do vao list". Mac dinh KHONG chon "Vua het buoi (<=10 ngay)" (nhom cuoi thang truoc)
+_rmap = {T["r_th1"]:"th1", T["r_th2"]:"th2", T["early"]:"early"}
+_present_keys = set(exp.get("reason_cat", pd.Series(dtype=str)).dropna()) | set(early.get("reason_cat", pd.Series(dtype=str)).dropna())
+_reason_opts = [lbl for lbl,k in _rmap.items() if k in _present_keys]
+_reason_def = [lbl for lbl in _reason_opts if _rmap[lbl] != "th2"]
+sel_reasons = st.sidebar.multiselect(T["reason_f"], _reason_opts, default=_reason_def)
+sel_reason_keys = {_rmap[l] for l in sel_reasons}
 
 def filt(d):
     if d.empty: return d
     x = d[d["month"].isin(sel_months)] if "month" in d.columns else d
     if "team_sale_quan_ly" in x.columns and sel_teams: x = x[x["team_sale_quan_ly"].isin(sel_teams)]
     if "order_no_uid" in x.columns and sel_ono: x = x[pd.to_numeric(x["order_no_uid"], errors="coerce").isin(sel_ono)]
+    if "reason_cat" in x.columns and sel_reason_keys: x = x[x["reason_cat"].isin(sel_reason_keys)]
     return x
 fe = filt(exp); fr = filt(early); fm = filt(mid) if not mid.empty else mid
 

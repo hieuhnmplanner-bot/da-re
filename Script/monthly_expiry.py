@@ -20,6 +20,7 @@ Output: Output/expiry_<YYYY-MM>.csv  + cap nhat State/expiry_registry.csv
 """
 from pathlib import Path
 import sys
+import glob
 import pandas as pd
 import numpy as np
 
@@ -32,7 +33,11 @@ REG = STATE / "expiry_registry.csv"
 
 THRESH = 10        # remaining < 10
 IDLE_NORMAL = 90   # cho remaining 1..9
-IDLE_ZERO = 10     # cho remaining == 0
+IDLE_ZERO = 10     # cho remaining == 0 (chi dung neu ADMIT_ZERO=True)
+# Tu thang 8/2026 tro di: KHONG dua nhom remaining==0 vao "Den han" nua.
+# Ly do: nhom nay = khach da het buoi tu THANG TRUOC -> thuoc "Het han phat sinh" cua thang truoc.
+# De False de tranh rui ro chay thieu run_daily (khong con phu thuoc log ngay).
+ADMIT_ZERO = False
 
 
 def clean_uid(v):
@@ -86,6 +91,8 @@ def main(month):
         if pd.isna(idle):
             return ("", "chua tung hoc")
         if rem == 0:
+            if not ADMIT_ZERO:
+                return ("", "remaining=0 -> Het han phat sinh (khong vao Den han)")
             if idle <= IDLE_ZERO:
                 return ("Frozen" if fr else "Normal", "remaining=0, idle<=%d" % IDLE_ZERO)
             return ("", "remaining=0, idle>%d" % IDLE_ZERO)
@@ -104,6 +111,15 @@ def main(month):
     else:
         reg = pd.DataFrame(columns=["order_id", "uid", "month", "tag"])
         seen = set()
+    # loai them cac order da thuoc "Het han phat sinh" / "Gia han som" (moi thang) -> khong lap lai o Den han
+    for pat in ("mid_expiry_*.csv", "early_renewal_*.csv"):
+        for f in glob.glob(str(OUT / pat)):
+            try:
+                dd = pd.read_csv(f, dtype=str)
+                if "order_id" in dd.columns:
+                    seen |= set(dd["order_id"].astype(str))
+            except Exception:
+                pass
     before = len(elig)
     elig = elig[~elig["latest_order_id"].astype(str).isin(seen)].copy()
     removed = before - len(elig)
