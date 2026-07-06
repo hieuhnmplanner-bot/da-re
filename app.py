@@ -266,7 +266,7 @@ def group_table(dim):
         T["crr"]:df["crr"].map(_pct), T["rrr"]:df["rrr"].map(_pct), T["early"]:df["early"],
         T["c_totren"]:df["renewed"]+df["early"], T["c_totrev"]:(df["revd"]+df["reve"]).map(_vnd)})
 
-tab_old, tab_new, tab_detail, tab_dorm, tab_defs = st.tabs([T["t_old"], T["t_new"], T["t_detail"], T["t_dorm"], T["t_defs"]])
+tab_new, tab_detail, tab_dorm, tab_defs, tab_old = st.tabs([T["t_new"], T["t_detail"], T["t_dorm"], T["t_defs"], T["t_old"]])
 
 # ---------------- TAB HIỆN TẠI ----------------
 with tab_old:
