@@ -180,15 +180,21 @@ def _vnd(x):
 def _pct(x): return f"{x:.1f}%"
 
 def _latest(pattern, required=None):
+    # Chon file moi nhat theo NGAY CHAY nam trong TEN file (vd ..._status_2026-07-06.csv),
+    # KHONG dung mtime: tren Streamlit Cloud moi file co cung moc thoi gian checkout git
+    # -> mtime vo hieu -> co the load nham snapshot cu. Ngay trong ten file luon dung.
     best = {}
     for f in glob.glob(str(OUT / pattern)):
-        mm = re.search(r"(\d{4}-\d{2})", Path(f).name)
+        name = Path(f).name
+        mm = re.search(r"(\d{4}-\d{2})", name)
         if not mm: continue
         try:
             if required and required not in pd.read_csv(f, nrows=0).columns: continue
         except Exception: continue
-        mt = os.path.getmtime(f); m = mm.group(1)
-        if m not in best or mt > best[m][0]: best[m] = (mt, f)
+        dates = re.findall(r"\d{4}-\d{2}-\d{2}", name)        # ngay chay trong ten file
+        rundate = max(dates) if dates else ""
+        key = (rundate, os.path.getmtime(f)); m = mm.group(1)  # uu tien ngay ten file, tie-break mtime
+        if m not in best or key > best[m][0]: best[m] = (key, f)
     frames = []
     for m,(_,f) in best.items():
         try: d = pd.read_csv(f, dtype=str)
@@ -218,7 +224,11 @@ def load_mid():
 def load_dormant():
     files = glob.glob(str(OUT/"dormant_*.csv"))
     if not files: return pd.DataFrame()
-    f = max(files, key=os.path.getmtime)
+    # chon theo ngay trong ten file (dormant_2026-07-06.csv), khong dung mtime (loi Streamlit Cloud)
+    def _rd(f):
+        ds = re.findall(r"\d{4}-\d{2}-\d{2}", Path(f).name)
+        return (max(ds) if ds else "", os.path.getmtime(f))
+    f = max(files, key=_rd)
     try: d = pd.read_csv(f, dtype=str)
     except Exception: return pd.DataFrame()
     if "remaining" in d.columns: d["remaining"] = pd.to_numeric(d["remaining"], errors="coerce")
