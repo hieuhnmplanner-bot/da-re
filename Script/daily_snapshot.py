@@ -11,6 +11,7 @@ Output: State/daily_uid_log.csv  (append)
 from pathlib import Path
 from datetime import date
 import pandas as pd
+from fifo_lessons import build_orders, active_order
 
 BASE = Path(__file__).resolve().parent.parent
 REM_PATH = BASE / "Data_input" / "REM.csv"
@@ -41,15 +42,26 @@ def main(snapshot_date=None):
     })
     out = out[out["uid"] != ""].merge(cnt, left_on="uid", right_index=True, how="left")
 
+    # --- FIFO: don cu tieu hao truoc -> don dang hoc (sap het han) + so buoi con cua chinh don do ---
+    orders = build_orders(r)
+    remmap = dict(zip(out["uid"], pd.to_numeric(out["remaining"], errors="coerce")))
+    ao = [active_order(orders.get(u), remmap.get(u)) for u in out["uid"]]   # asof=None: chay live, moi don deu <= hom nay
+    out["order_id_tieu_hao"] = [a[0] for a in ao]
+    out["so_buoi_con_cua_order"] = [a[1] for a in ao]
+
     if LOG.exists():
         old = pd.read_csv(LOG, dtype=str)
         if snap in set(old["snapshot_date"]):
             print(f"Ngay {snap} da co trong log -> BO QUA (tranh ghi trung).")
             return
+        if "order_id_tieu_hao" not in old.columns:
+            print("! Log cu CHUA co cot FIFO. Hay chay 1 lan: python Script/backfill_fifo.py  roi chay lai.")
+            return
+        out = out.reindex(columns=old.columns)   # dong cot theo header hien co -> khong lech
         out.to_csv(LOG, mode="a", header=False, index=False, encoding="utf-8-sig")
     else:
         out.to_csv(LOG, index=False, encoding="utf-8-sig")
-    print(f"OK Da ghi {len(out)} UID cho ngay {snap} -> {LOG}")
+    print(f"OK Da ghi {len(out)} UID cho ngay {snap} (co FIFO) -> {LOG}")
 
 
 if __name__ == "__main__":

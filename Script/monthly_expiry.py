@@ -31,12 +31,11 @@ OUT = BASE / "Output"; OUT.mkdir(parents=True, exist_ok=True)
 LOG = STATE / "daily_uid_log.csv"
 REG = STATE / "expiry_registry.csv"
 
-THRESH = 10        # remaining < 10
-IDLE_NORMAL = 90   # cho remaining 1..9
+THRESH = 15        # remaining < 15 (chot voi sep 07/2026: <10 kho convert; gia hang 6th-1yr -> <15 hop ly)
+IDLE_NORMAL = 90   # cho remaining 1..14
 IDLE_ZERO = 10     # cho remaining == 0 (chi dung neu ADMIT_ZERO=True)
-# Tu thang 8/2026 tro di: KHONG dua nhom remaining==0 vao "Den han" nua.
-# Ly do: nhom nay = khach da het buoi tu THANG TRUOC -> thuoc "Het han phat sinh" cua thang truoc.
-# De False de tranh rui ro chay thieu run_daily (khong con phu thuoc log ngay).
+# LOAI HAN nhom remaining==0 khoi "Den han": nhom nay la bien khong doan truoc dau thang,
+# rat it (chi ~7 case cham bien), va chay run_monthly buoi sang truoc gio hoc toi nen ho van con >=1 buoi.
 ADMIT_ZERO = False
 
 
@@ -55,12 +54,26 @@ def load_state(run_date):
             asof = lg["snapshot_date"].max()
             print(f"Dung snapshot log ngay {asof.date()} lam trang thai dau thang.")
             s = lg[lg["snapshot_date"] == asof].copy()
+            # GIAI DOAN 2 (FIFO): dung DON DANG TIEU HAO (order cu nhat chua het) + so buoi con CUA CHINH DON DO,
+            # thay cho latest_order_id + so buoi UID. Nho vay don N-1 cua khach gia han som (UID total cao)
+            # van vao Den han khi RIENG don do rot <15. Neu chua co cot FIFO -> fallback ve cach cu.
+            if "order_id_tieu_hao" in s.columns:
+                oid = s["order_id_tieu_hao"].astype(str).str.strip()
+                remc = pd.to_numeric(s["so_buoi_con_cua_order"], errors="coerce")
+                empty = (oid == "") | (oid.str.lower() == "nan")
+                oid = oid.where(~empty, s["latest_order_id"].astype(str))          # fallback khi rong (~0.9%)
+                remc = remc.where(~empty, pd.to_numeric(s["remaining"], errors="coerce"))
+                print(f"  Dung FIFO per-order ({int((~empty).sum())}/{len(s)} co order_id_tieu_hao).")
+            else:
+                oid = s["latest_order_id"].astype(str)
+                remc = pd.to_numeric(s["remaining"], errors="coerce")
+                print("  ! Log chua co cot FIFO -> dung latest_order_id + so buoi UID (cach cu).")
             return pd.DataFrame({
                 "uid": s["uid"].map(clean_uid),
-                "latest_order_id": s["latest_order_id"].astype(str),
-                "remaining": pd.to_numeric(s["remaining"], errors="coerce"),
-                "last_study": pd.to_datetime(s["last_study"], errors="coerce"),
-                "is_frozen": pd.to_numeric(s["is_frozen"], errors="coerce").fillna(0).astype(int),
+                "latest_order_id": oid.values,
+                "remaining": remc.values,
+                "last_study": pd.to_datetime(s["last_study"], errors="coerce").values,
+                "is_frozen": pd.to_numeric(s["is_frozen"], errors="coerce").fillna(0).astype(int).values,
             })
     # fallback: REM hien tai
     print("Chua co log phu hop -> dung REM.csv hien tai (xap xi dau thang).")
@@ -87,18 +100,18 @@ def main(month):
     def decide(row):
         rem, idle, fr = row["remaining"], row["idle"], row["is_frozen"] == 1
         if pd.isna(rem) or rem >= THRESH:
-            return ("", "remaining>=10")
+            return ("", "remaining>=%d" % THRESH)
         if pd.isna(idle):
             return ("", "chua tung hoc")
         if rem == 0:
             if not ADMIT_ZERO:
-                return ("", "remaining=0 -> Het han phat sinh (khong vao Den han)")
+                return ("", "remaining=0 -> loai (khong vao Den han)")
             if idle <= IDLE_ZERO:
                 return ("Frozen" if fr else "Normal", "remaining=0, idle<=%d" % IDLE_ZERO)
             return ("", "remaining=0, idle>%d" % IDLE_ZERO)
         if idle <= IDLE_NORMAL:
-            return ("Frozen" if fr else "Normal", "1-9, idle<=%d" % IDLE_NORMAL)
-        return ("", "1-9, idle>%d" % IDLE_NORMAL)
+            return ("Frozen" if fr else "Normal", "1-%d, idle<=%d" % (THRESH-1, IDLE_NORMAL))
+        return ("", "1-%d, idle>%d" % (THRESH-1, IDLE_NORMAL))
 
     res = st.apply(decide, axis=1, result_type="expand")
     st["tag"], st["reason"] = res[0], res[1]
@@ -107,19 +120,15 @@ def main(month):
     # dedup voi registry
     if REG.exists():
         reg = pd.read_csv(REG, dtype=str)
+        # cho phep DUNG LAI 1 thang sach: bo cac entry cu CUA CHINH thang nay ra khoi registry
+        reg = reg[reg["month"].astype(str) != str(month)].copy()
         seen = set(reg["order_id"].astype(str))
     else:
         reg = pd.DataFrame(columns=["order_id", "uid", "month", "tag"])
         seen = set()
-    # loai them cac order da thuoc "Het han phat sinh" / "Gia han som" (moi thang) -> khong lap lai o Den han
-    for pat in ("mid_expiry_*.csv", "early_renewal_*.csv"):
-        for f in glob.glob(str(OUT / pat)):
-            try:
-                dd = pd.read_csv(f, dtype=str)
-                if "order_id" in dd.columns:
-                    seen |= set(dd["order_id"].astype(str))
-            except Exception:
-                pass
+    # MO HINH MOI: KHONG loai order trong early_renewal/mid_expiry nua.
+    # Ly do: khach gia han som van de order N-1 tu chay xuong <15 roi vao "Den han" thang tuong lai (co che "doi" - Giai doan 2).
+    # Registry chi dam bao 1 order_id vao dung 1 thang (khong lap), khong loai theo nhom khac.
     before = len(elig)
     elig = elig[~elig["latest_order_id"].astype(str).isin(seen)].copy()
     removed = before - len(elig)

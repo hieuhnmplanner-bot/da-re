@@ -34,14 +34,15 @@ K = {
  "sec_tu": L("TỬ SỐ — Đã gia hạn theo thời điểm","NUMERATOR — Renewed by timing","分子 — 按时间续费"),
  "sec_funnel": L("Phễu chuyển đổi","Conversion funnel","转化漏斗"),
  "src_den": L("Đến hạn (đầu tháng)","Due (month start)","到期(月初)"), "src_mid": L("Hết hạn phát sinh","Mid-month expiry","月中到期"),
+ "src_frozen": L("Trong đó: Frozen","of which: Frozen","其中:冻结"),
  "tot_mau": L("Tổng mẫu số","Total denominator","分母合计"),
  "tim_dung": L("Gia hạn đúng hạn","On-time renewal","按时续费"), "tim_som": L("Gia hạn sớm / trước hạn","Early / before due","提前/到期前"), "tim_muon": L("Gia hạn muộn","Late renewal","延迟续费"), "tot_tu": L("Tổng đã gia hạn","Total renewed","已续费合计"),
- "cap_den": L("Còn <10 buổi vào ngày đầu tháng","<10 lessons at month start","月初剩<10课时"), "cap_mid": L("Đang học thì hết sạch buổi (về 0) giữa tháng","Ran out (0) mid-month","月中上完(归0)"), "cap_early": L("Mua đơn mới khi chưa nằm trong Đến hạn","Bought while not in Due list","不在到期名单却已购新单"), "cap_totmau": L("Tổng khách tới điểm gia hạn trong kỳ","All at renewal point","当期到达续费点客户"), "cap_dung": L("Gia hạn ĐÚNG trong tháng tới hạn","Renewed exactly in the due month","恰在到期月续费"), "cap_som": L("Mua đơn kế TRƯỚC tháng tới hạn. Gồm: (a) khách mua sớm khi chưa vào danh sách Đến hạn; (b) khách trong danh sách Đến hạn nhưng đã mua từ tháng trước","Bought next order BEFORE the due month. Includes: (a) bought early before entering the Due list; (b) in the Due list but bought in an earlier month","在到期月之前购买下一单。包含:(a) 尚未进入到期名单就提前购买;(b) 在到期名单内但上月已购买"), "cap_muon": L("Thuộc Đến hạn / HH phát sinh, gia hạn ở THÁNG SAU","In Due/Mid-expiry, renewed later month","到期/月中到期,次月续费"), "cap_tottu": L("= Đúng hạn + Sớm + Muộn","= On-time + Early + Late","=按时+提前+延迟"),
+ "cap_den": L("Còn <15 buổi vào ngày đầu tháng (idle ≤ 90)","<15 lessons at month start (idle ≤ 90)","月初剩<15课时(idle≤90)"), "cap_srcfrozen": L("Đơn bảo lưu (Frozen) nằm trong danh sách","Frozen orders within the list","名单内的冻结订单"), "cap_totmau2": L("= Số order trong danh sách Đến hạn (khóa đầu tháng)","= Orders in the Due list (locked at month start)","=到期名单内订单数(月初锁定)"), "cap_dung": L("Gia hạn ĐÚNG trong tháng tới hạn","Renewed exactly in the due month","恰在到期月续费"), "cap_som": L("Khách trong danh sách Đến hạn nhưng đã mua đơn kế từ tháng TRƯỚC","In the Due list but bought the next order in an EARLIER month","在到期名单内但上月已购买下一单"), "cap_muon": L("Thuộc Đến hạn, gia hạn ở THÁNG SAU","In the Due list, renewed in a LATER month","在到期名单内,次月续费"), "cap_tottu": L("= Đúng hạn + Sớm + Muộn (số order đã gia hạn trong danh sách)","= On-time + Early + Late (renewed orders in the list)","=按时+提前+延迟"),
  "explain": L("📖 Công thức tính CRR/RRR/Upsell (bấm để xem)","📖 CRR/RRR/Upsell formula (click)","📖 CRR/RRR/Upsell 公式（点击）"),
  "explain_body": L(
-   "**CRR** = Tử số / Mẫu số.\n\n**Mẫu số** = Đến hạn (đầu tháng) + Hết hạn phát sinh (về 0 buổi giữa tháng) + Gia hạn sớm (mua đơn mới khi chưa tới hạn).\n\n**Tử số** = số đã gia hạn = Đúng hạn (gia hạn trong tháng cohort) + Sớm (nhóm gia hạn sớm) + Muộn (gia hạn ở tháng sau).\n\n**RRR** = TỔNG doanh thu TẤT CẢ đơn gia hạn (Đúng hạn + Sớm + Muộn, theo chế độ M+90/Real đang chọn) / Tổng giá trị các đơn tới hạn.\n\n**Upsell** = Giá trị đơn gia hạn mới / Giá trị đơn cũ (của nhóm đã gia hạn). >100% = chi nhiều hơn.\n\nHai chế độ: **M+90** khóa trong ~3 tháng (KPI cố định); **Real** tính mọi lúc.",
-   "**CRR** = Numerator / Denominator.\n\n**Denominator** = Due (month start) + Mid-month expiry (hit 0 mid-month) + Early renewals (bought before due).\n\n**Numerator** = renewed = On-time + Early + Late.\n\n**RRR** = TOTAL revenue of ALL renewals (On-time + Early + Late, per selected M+90/Real mode) / total due value.\n\n**Upsell** = new renewal value / old value of renewers. >100% = spending more.\n\nTwo modes: **M+90** locked ~3 months; **Real** anytime.",
-   "**CRR** = 分子 / 分母。\n\n**分母** = 到期(月初) + 月中到期(月中归零) + 提前续费。\n\n**分子** = 已续费 = 按时 + 提前 + 延迟。\n\n**RRR** = 所有续费订单总收入(按时+提前+延迟,按所选M+90/Real模式) / 到期总价值。\n\n**Upsell** = 新续费金额 / 续费者旧金额。>100%=消费更多。\n\n两种模式：**M+90** 锁定约3个月；**Real** 任意时间。"),
+   "**CRR** = Tử số / Mẫu số.\n\n**Mẫu số** = danh sách **Đến hạn** (order còn <15 buổi vào đầu tháng, idle ≤ 90). Mẫu số được **khóa ngay đầu tháng**, không đổi vào cuối tháng.\n\n**Tử số** = trong danh sách đó, số order **đã gia hạn** (đã có đơn kế). Chia nhỏ theo thời điểm: Đúng hạn (trong tháng) + Sớm (mua từ tháng trước) + Muộn (gia hạn tháng sau).\n\n**RRR** = TỔNG doanh thu các đơn gia hạn (theo chế độ M+90/Real đang chọn) / Tổng giá trị các đơn trong danh sách Đến hạn.\n\n**Upsell** = Giá trị đơn gia hạn mới / Giá trị đơn cũ (của nhóm đã gia hạn). >100% = chi nhiều hơn.\n\nHai chế độ: **M+90** = gia hạn trong ~3 tháng kể từ kỳ tới hạn (KPI cố định); **Real** = gia hạn bất cứ lúc nào.",
+   "**CRR** = Numerator / Denominator.\n\n**Denominator** = the **Due** list only (orders with <15 lessons at month start, idle ≤ 90). It is **locked at month start** and does not change at month end.\n\n**Numerator** = within that list, orders that **renewed** (have a next order). Split by timing: On-time (in month) + Early (bought earlier month) + Late (renewed later month).\n\n**RRR** = TOTAL revenue of renewals (per selected M+90/Real mode) / total value of the Due list.\n\n**Upsell** = new renewal value / old value of renewers. >100% = spending more.\n\nTwo modes: **M+90** = renewed within ~3 months of the due period; **Real** = renewed anytime.",
+   "**CRR** = 分子 / 分母。\n\n**分母** = 仅**到期**名单(月初剩<15课时,idle≤90),**月初锁定**,月末不变。\n\n**分子** = 名单中**已续费**(已有下一单)的订单。按时点细分:按时(当月)+ 提前(上月购买)+ 延迟(次月续费)。\n\n**RRR** = 续费总收入(按所选M+90/Real模式) / 到期名单总价值。\n\n**Upsell** = 新续费金额 / 续费者旧金额。>100%=消费更多。\n\n两种模式:**M+90** = 到期起约3个月内续费;**Real** = 任意时间续费。"),
  # dormant
  "d_type": L("Loại","Type","类型"), "d_freeze": L("Đóng băng chủ động","Active freeze","主动冻结"), "d_silent": L("Im lặng rời bỏ","Silent churn","静默流失"),
  "d_total_left": L("Tổng buổi còn treo","Total lessons hanging","剩余课时合计"), "d_denhan": L("Thuộc Đến hạn tháng","In Due month","所属到期月"),
@@ -75,15 +76,15 @@ DEFS = {
 **Nguyên tắc chung:** tính trên dữ liệu THẬT (không dự đoán). Mỗi order_id chỉ thuộc **đúng một tháng**. Áp dụng từ 07/2026.
 
 ---
-#### MẪU SỐ — Khách tới hạn trong kỳ (3 nguồn, không trùng nhau)
-- **Đến hạn (đầu tháng):** đơn còn **dưới 10 buổi** vào ngày đầu tháng. (Học ~2 buổi/tuần nên <10 buổi ≈ sắp hết trong tháng.)
-- **Hết hạn phát sinh:** đầu tháng còn ≥10 buổi, nhưng học đến **hết sạch (0 buổi) giữa tháng** và chưa mua đơn mới. *(Cần log hằng ngày → chạy đều mỗi ngày.)*
-- **Gia hạn sớm:** khách **KHÔNG** nằm trong Đến hạn nhưng **đã mua đơn mới trong tháng** (tính theo ngày mua).
+#### MẪU SỐ — Danh sách Đến hạn (khóa đầu tháng)
+- **Đến hạn (đầu tháng):** đơn còn **dưới 15 buổi** vào ngày đầu tháng, và **idle ≤ 90 ngày** (còn học gần đây). Đơn **bảo lưu (Frozen)** đủ điều kiện vẫn được tính, gắn nhãn Frozen.
+- Nhóm **remaining = 0** (đã hết sạch buổi) **bị loại** khỏi Đến hạn (biến không đoán trước đầu tháng, số lượng rất nhỏ).
+- Mẫu số được **khóa ngay đầu tháng, không đổi vào cuối tháng.**
 
 #### TỬ SỐ — Đã gia hạn (theo thời điểm)
 - **Gia hạn đúng hạn:** gia hạn **ĐÚNG trong** tháng tới hạn.
-- **Gia hạn sớm / trước hạn:** gia hạn **TRƯỚC** tháng tới hạn — gồm (a) nhóm Gia hạn sớm (chưa từng vào Đến hạn) và (b) khách trong Đến hạn/Hết hạn phát sinh nhưng đã mua từ **tháng trước**.
-- **Gia hạn muộn:** gia hạn ở **THÁNG SAU** tháng tới hạn.
+- **Gia hạn sớm / trước hạn:** khách trong danh sách Đến hạn nhưng **đã mua đơn kế từ tháng TRƯỚC**.
+- **Gia hạn muộn:** khách trong danh sách, gia hạn ở **THÁNG SAU** tháng tới hạn.
 
 #### CHỈ SỐ
 - **CRR** = Tổng đã gia hạn ÷ Tổng mẫu số. (Tỷ lệ giữ chân khách.)
@@ -108,15 +109,15 @@ Chỉ tính khi có **THANH TOÁN** (ghi trong GMV) **HOẶC KÍCH HOẠT** đơ
 **Principle:** based on REAL data (no prediction). Each order_id belongs to **exactly one month**. Live from 2026-07.
 
 ---
-#### DENOMINATOR — Customers due (3 disjoint sources)
-- **Due (month start):** order has **<10 lessons** on the 1st of the month.
-- **Mid-month expiry:** had ≥10 at month start but **ran out (0) mid-month** and didn't buy a new order. *(Needs the daily log → run daily.)*
-- **Early renewals:** customer **NOT** in Due but **bought a new order during the month** (by purchase date).
+#### DENOMINATOR — The Due list (locked at month start)
+- **Due (month start):** order has **<15 lessons** on the 1st of the month, and **idle ≤ 90 days**. Eligible **Frozen** orders are included (tagged Frozen).
+- Orders with **remaining = 0** are **excluded** (unpredictable at month start, very few).
+- The denominator is **locked at month start and does not change at month end.**
 
 #### NUMERATOR — Renewed (by timing)
 - **On-time renewal:** renewed **exactly in** the due month.
-- **Early / before due:** renewed **BEFORE** the due month — includes (a) the Early-renewals group and (b) in-list customers who bought in an **earlier month**.
-- **Late renewal:** renewed in a **LATER month**.
+- **Early / before due:** in the Due list but **bought the next order in an EARLIER month**.
+- **Late renewal:** in the list, renewed in a **LATER month**.
 
 #### METRICS
 - **CRR** = Total renewed ÷ Total denominator.
@@ -141,15 +142,15 @@ Only when there is **PAYMENT** (in GMV) **OR ACTIVATION** of a new order (REM). 
 **原则：** 基于真实数据（不预测）。每个 order_id 只属于**唯一一个月**。自 2026-07 起启用。
 
 ---
-#### 分母 — 当期到期客户（3个互不重叠来源）
-- **到期(月初)：** 月初剩 **<10 课时**。
-- **月中到期：** 月初 ≥10，但月中**上完(归0)**且未购新单。*(需每日日志 → 每天运行。)*
-- **提前续费：** **不在**到期名单，但**当月购买了新订单**（按购买日期）。
+#### 分母 — 到期名单（月初锁定）
+- **到期(月初)：** 月初剩 **<15 课时**，且 **idle ≤ 90 天**。符合条件的**冻结**订单也计入(标记冻结)。
+- **剩余 = 0** 的订单**排除**在外(月初不可预测,数量极少)。
+- 分母在**月初锁定,月末不变。**
 
 #### 分子 — 已续费（按时间）
 - **按时续费：** **恰在**到期月续费。
-- **提前/到期前续费：** 在到期月**之前**续费 — 含(a)提前续费组 与(b)名单内但在**更早月份**购买的客户。
-- **延迟续费：** 在**次月及以后**续费。
+- **提前/到期前续费：** 在到期名单内,但在**更早月份**购买了下一单。
+- **延迟续费：** 在名单内,于**次月及以后**续费。
 
 #### 指标
 - **CRR** = 已续费合计 ÷ 分母合计。
@@ -319,8 +320,9 @@ with tab_old:
 
 # ---------------- TAB BẢN MỚI ----------------
 def cohort(fe, fr, fm, REN):
-    n_den = len(fe); n_mid = len(fm) if fm is not None and not fm.empty else 0; n_early = len(fr)
-    denom = n_den + n_mid + n_early
+    # MO HINH MOI (chot voi sep 07/2026): MAU SO = CHI danh sach Den han (khoa dau thang, khong doi cuoi thang).
+    # TU SO = trong so do, bao nhieu da gia han. Van giu 2 thang do M+90 (REN=da_gia_han_M90) va Real (da_gia_han_vo_han).
+    n_den = len(fe); denom = n_den
     ren_fe = fe[fe[REN].fillna(False)] if not fe.empty else fe
     if not ren_fe.empty:
         ghp = pd.to_datetime(ren_fe["ngay_gia_han"], errors="coerce").dt.to_period("M")
@@ -329,12 +331,12 @@ def cohort(fe, fr, fm, REN):
         after  = int(sum(pd.notna(g) and g > c for g, c in zip(ghp, cop)))   # gia han THANG SAU
         inmonth = len(ren_fe) - before - after                               # gia han DUNG trong thang
     else: before = after = inmonth = 0
-    dung = inmonth; muon = after; som = n_early + before   # som/truoc han = ngoai danh sach + trong danh sach mua truoc
-    num = dung + som + muon
-    rev = (ren_fe["gia_tri_don_gia_han"].sum() if not ren_fe.empty else 0) + (fr["gia_tri_don_gia_han"].sum() if not fr.empty else 0)
-    exp_val = (fe["gia_tri_don_cu"].sum() if not fe.empty else 0) + (fr["gia_tri_don_cu"].sum() if not fr.empty else 0)
-    old_ren = (ren_fe["gia_tri_don_cu"].sum() if not ren_fe.empty else 0) + (fr["gia_tri_don_cu"].sum() if not fr.empty else 0)
-    return dict(n_den=n_den,n_mid=n_mid,n_early=n_early,denom=denom,dung=dung,som=som,muon=muon,num=num,
+    dung = inmonth; muon = after; som = before   # chi con khach TRONG danh sach mua tu thang truoc (bo nhom early)
+    num = len(ren_fe)                            # = dung + som + muon
+    rev = ren_fe["gia_tri_don_gia_han"].sum() if not ren_fe.empty else 0
+    exp_val = fe["gia_tri_don_cu"].sum() if not fe.empty else 0
+    old_ren = ren_fe["gia_tri_don_cu"].sum() if not ren_fe.empty else 0
+    return dict(n_den=n_den,n_mid=0,n_early=0,denom=denom,dung=dung,som=som,muon=muon,num=num,
                 crr=(num/denom*100 if denom else 0), rrr=(rev/exp_val*100 if exp_val else 0), ups=(rev/old_ren*100 if old_ren else 0), rev=rev)
 
 with tab_new:
@@ -346,11 +348,11 @@ with tab_new:
     c[0].metric(T["crr"], _pct(C["crr"]), help=T["h_crr"]); c[1].metric(T["rrr"], _pct(C["rrr"]), help=T["h_rrr"])
     c[2].metric(T["upsell"], _pct(C["ups"]), help=T["h_up"]); c[3].metric(T["rev"], _vnd(C["rev"]))
     st.subheader(T["sec_mau"])
+    nfz = int((fe["tag"]=="Frozen").sum()) if (not fe.empty and "tag" in fe.columns) else 0
     c = st.columns(4)
     c[0].metric(T["src_den"], f"{C['n_den']:,}"); c[0].caption(T["cap_den"])
-    c[1].metric(T["src_mid"], f"{C['n_mid']:,}"); c[1].caption(T["cap_mid"])
-    c[2].metric(T["early"], f"{C['n_early']:,}"); c[2].caption(T["cap_early"])
-    c[3].metric(T["tot_mau"], f"{C['denom']:,}"); c[3].caption(T["cap_totmau"])
+    c[1].metric(T["src_frozen"], f"{nfz:,}"); c[1].caption(T["cap_srcfrozen"])
+    c[2].metric(T["tot_mau"], f"{C['denom']:,}"); c[2].caption(T["cap_totmau2"])
     st.subheader(T["sec_tu"])
     c = st.columns(4)
     c[0].metric(T["tim_dung"], f"{C['dung']:,}"); c[0].caption(T["cap_dung"])
