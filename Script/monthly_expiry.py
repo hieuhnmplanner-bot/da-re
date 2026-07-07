@@ -54,20 +54,23 @@ def load_state(run_date):
             asof = lg["snapshot_date"].max()
             print(f"Dung snapshot log ngay {asof.date()} lam trang thai dau thang.")
             s = lg[lg["snapshot_date"] == asof].copy()
-            # GIAI DOAN 2 (FIFO): dung DON DANG TIEU HAO (order cu nhat chua het) + so buoi con CUA CHINH DON DO,
-            # thay cho latest_order_id + so buoi UID. Nho vay don N-1 cua khach gia han som (UID total cao)
-            # van vao Den han khi RIENG don do rot <15. Neu chua co cot FIFO -> fallback ve cach cu.
-            if "order_id_tieu_hao" in s.columns:
+            # QUY TAC:
+            #  - THANG DAU (chua co lich su tieu thu buoi cua THANG TRUOC): chi dung TONG REM UID < 15 + latest_order_id.
+            #  - TU THANG SAU (log da phu ky thang lien truoc): moi dung per-order FIFO (don dang tieu hao + so buoi rieng).
+            prior_start = (run_date - pd.offsets.MonthBegin(1)).normalize()   # dau thang lien truoc
+            have_history = (lg["snapshot_date"] <= prior_start).any()
+            use_fifo = have_history and ("order_id_tieu_hao" in s.columns)
+            if use_fifo:
                 oid = s["order_id_tieu_hao"].astype(str).str.strip()
                 remc = pd.to_numeric(s["so_buoi_con_cua_order"], errors="coerce")
                 empty = (oid == "") | (oid.str.lower() == "nan")
                 oid = oid.where(~empty, s["latest_order_id"].astype(str))          # fallback khi rong (~0.9%)
                 remc = remc.where(~empty, pd.to_numeric(s["remaining"], errors="coerce"))
-                print(f"  Dung FIFO per-order ({int((~empty).sum())}/{len(s)} co order_id_tieu_hao).")
+                print(f"  Da co lich su thang truoc -> dung FIFO per-order ({int((~empty).sum())}/{len(s)}).")
             else:
                 oid = s["latest_order_id"].astype(str)
                 remc = pd.to_numeric(s["remaining"], errors="coerce")
-                print("  ! Log chua co cot FIFO -> dung latest_order_id + so buoi UID (cach cu).")
+                print("  Thang dau / chua co lich su tieu thu thang truoc -> dung TONG REM UID + latest_order_id.")
             return pd.DataFrame({
                 "uid": s["uid"].map(clean_uid),
                 "latest_order_id": oid.values,
