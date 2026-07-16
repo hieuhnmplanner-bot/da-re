@@ -262,7 +262,7 @@ sel_teams = st.sidebar.multiselect(T["team_f"], allteams, default=allteams)
 onos = sorted({int(x) for x in pd.concat([(exp["order_no_uid"] if not exp.empty else pd.Series(dtype=float)),(early["order_no_uid"] if not early.empty else pd.Series(dtype=float))]).dropna().tolist()})
 sel_ono = st.sidebar.multiselect(T["ono_f"], onos, default=onos)
 # Bo loc theo "Ly do vao list". Mac dinh KHONG chon "Vua het buoi (<=10 ngay)" (nhom cuoi thang truoc)
-_rmap = {T["r_th1"]:"th1", T["r_th2"]:"th2", T["early"]:"early"}
+_rmap = {T["r_th1"]:"th1", T["r_th2"]:"th2"}   # bo "Gia han som" khoi bo loc (tan du mo hinh cu)
 _present_keys = set(exp.get("reason_cat", pd.Series(dtype=str)).dropna()) | set(early.get("reason_cat", pd.Series(dtype=str)).dropna())
 _reason_opts = [lbl for lbl,k in _rmap.items() if k in _present_keys]
 _reason_def = [lbl for lbl in _reason_opts if _rmap[lbl] != "th2"]
@@ -274,7 +274,9 @@ def filt(d):
     x = d[d["month"].isin(sel_months)] if "month" in d.columns else d
     if "team_sale_quan_ly" in x.columns and sel_teams: x = x[x["team_sale_quan_ly"].isin(sel_teams)]
     if "order_no_uid" in x.columns and sel_ono: x = x[pd.to_numeric(x["order_no_uid"], errors="coerce").isin(sel_ono)]
-    if "reason_cat" in x.columns and sel_reason_keys: x = x[x["reason_cat"].isin(sel_reason_keys)]
+    if "reason_cat" in x.columns and sel_reason_keys:
+        # chi loc theo th1/th2; cac reason_cat khac (vd "early" cho tab cu) khong bi anh huong
+        x = x[x["reason_cat"].isin(sel_reason_keys) | ~x["reason_cat"].isin(["th1","th2"])]
     return x
 fe = filt(exp); fr = filt(early); fm = filt(mid) if not mid.empty else mid
 
@@ -372,7 +374,6 @@ with tab_new:
 
 # ---------------- TAB CHI TIẾT ----------------
 with tab_detail:
-    view = st.radio(T["view"], [T["v_both"], T["v_due"], T["v_early"]], horizontal=True)
     def _reason(r):
         if r.get("nhom") == "Đến hạn":
             base = T["r_th2"] if "remaining=0" in str(r.get("ly_do_vao_list","")) else T["r_th1"]
@@ -402,10 +403,8 @@ with tab_detail:
             T["h_sban"]:r.get("sale_ban_don"), T["h_tban"]:r.get("team_sale_ban"),
             T["h_smgr"]:r.get("sale_quan_ly"), T["h_tmgr"]:r.get("team_sale_quan_ly"), T["h_teacher"]:r.get("teacher")}
     recs = []
-    if view in (T["v_both"],T["v_due"]) and not fe.empty:
-        for _,r in fe.iterrows(): recs.append(_row(r,"due"))
-    if view in (T["v_both"],T["v_early"]) and not fr.empty:
-        for _,r in fr.iterrows(): recs.append(_row(r,"early"))
+    if not fe.empty:
+        for _,r in fe.iterrows(): recs.append(_row(r,"due"))   # chi hien nhom Den han (bo "Gia han som")
     if not recs: st.info("—")
     else:
         disp = pd.DataFrame(recs); st.write(f"{len(disp):,} {T['rows']}")
