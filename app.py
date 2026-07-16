@@ -51,6 +51,7 @@ K = {
  # detail headers (giu tu ban truoc)
  "h_month":L("Tháng","Month","月份"),"h_group":L("Nhóm","Group","分组"),"h_reason":L("Lý do","Reason","原因"),"h_uid":L("UID","UID","UID"),
  "h_oid":L("Order ID","Order ID","订单ID"),"h_ono":L("Đơn thứ mấy","Order #","第几单"),"h_status":L("Trạng thái","Status","状态"),
+ "h_timing":L("Nhóm gia hạn","Renewal timing","续费时点"),
  "h_oidnew":L("Order ID mới","New Order ID","新订单ID"),"h_rendate":L("Ngày mua đơn kế","Next-order date","下单日期"),
  "h_remain":L("Số buổi đầu tháng","Lessons at month start","月初课时"),"h_remain_now":L("Số buổi hiện tại (UID)","Current lessons (UID)","当前课时(UID)"),"h_buydate":L("Ngày mua đơn này","Purchase date","本单购买日"),
  "h_valold":L("Giá trị đơn","Order value","订单金额"),"h_valnew":L("Giá trị đơn gia hạn","Renewal value","续费金额"),
@@ -383,6 +384,14 @@ with tab_detail:
     def _status(r, kind):
         if kind == "due": return T["s_renewed"] if bool(r.get(REN)) else T["s_not"]
         return T["s_act"] if str(r.get("trang_thai_kich_hoat","")) == "Đã kích hoạt" else T["s_notact"]
+    def _timing(r):
+        if not bool(r.get(REN)): return ""                       # chua gia han (theo che do M+90/Real dang chon)
+        gh = pd.to_datetime(r.get("ngay_gia_han"), errors="coerce")
+        if pd.isna(gh): return ""
+        ghp = gh.to_period("M"); co = pd.Period(str(r.get("month")), "M")
+        if ghp < co: return T["tim_som"]
+        if ghp > co: return T["tim_muon"]
+        return T["tim_dung"]
     def _mny(x): return _vnd(x) if pd.notna(x) else ""
     def _row(r, kind):
         rdate = r.get("ngay_gia_han") if kind=="due" else r.get("ngay_kich_hoat")
@@ -397,7 +406,7 @@ with tab_detail:
             T["h_remain_now"]:_int(r.get("so_buoi_hien_tai")),
             T["h_buydate"]:bdate,
             # (3) Gia han
-            T["h_status"]:_status(r,kind), T["h_oidnew"]:r.get("order_id_moi",""), T["h_rendate"]:rdate,
+            T["h_status"]:_status(r,kind), T["h_timing"]:_timing(r), T["h_oidnew"]:r.get("order_id_moi",""), T["h_rendate"]:rdate,
             T["h_valold"]:_mny(r.get("gia_tri_don_cu")), T["h_valnew"]:_mny(r.get("gia_tri_don_gia_han")),
             # (4) Phu trach
             T["h_sban"]:r.get("sale_ban_don"), T["h_tban"]:r.get("team_sale_ban"),
