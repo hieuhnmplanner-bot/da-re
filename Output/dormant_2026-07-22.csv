@@ -1,0 +1,932 @@
+﻿run_date,uid,loai,order_id,order_no_uid,remaining,last_study,idle_ngay,don_chua_kich_hoat,den_han_thang,sale_ban_don,team_sale_ban,sale_quan_ly,team_sale_quan_ly,teacher
+2026-07-22,3102140118,Im lặng rời bỏ,414888238772482,1.0,5,2024-09-27 21:30:00,662,,,盖亚楠,Other,Ho Thi Thanh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3105983145,Im lặng rời bỏ,458365142106380,2.0,1,2022-04-12 21:00:00,1561,,,An,Other,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3120196194,Đóng băng chủ động,420979745155332,2.0,0,2021-11-21 15:00:00,1703,,,彭胜君,Other,Bui Thi Hong Nhung,Inhouse 2,Dao Thi Trang
+2026-07-22,3126404269,Im lặng rời bỏ,424389886079236,1.0,3,2021-07-11 20:00:00,1836,,,彭胜君,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3128886861,Đóng băng chủ động,440105776449802,1.0,7,2021-10-31 12:00:00,1724,,,彭胜君,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3129477880,Im lặng rời bỏ,443636828020994,1.0,1,2021-10-09 12:30:00,1746,,,黄黎高原,Other,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3130585201,Im lặng rời bỏ,446540152639754,1.0,3,2023-06-25 10:00:00,1122,,,Truc,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3132552401,Đóng băng chủ động,614235756013824,1.0,24,2025-05-18 19:30:00,429,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3133107392,Im lặng rời bỏ,488045657977100,1.0,1,2022-09-01 12:00:00,1419,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3134840444,Đóng băng chủ động,445960660785410,1.0,0,2021-10-19 18:00:00,1736,,,Nghia,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3136584519,Đóng băng chủ động,463506477244688,3.0,0,2022-06-13 21:30:00,1499,,,黎氏清水,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3137193806,Im lặng rời bỏ,502022076164364,1.0,1,2023-02-15 19:00:00,1252,,,Hau,DN,Dao Thi Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3144266194,Im lặng rời bỏ,454425242155268,1.0,39,2024-07-27 12:30:00,724,,,Thuy,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3144336521,Im lặng rời bỏ,431079595217156,1.0,2,2025-04-02 20:30:00,475,,,武氏茹月,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3146517510,Đóng băng chủ động,435000804616458,1.0,0,2021-10-15 20:00:00,1740,,,孙浴镡,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3146937315,Im lặng rời bỏ,429679132725506,1.0,2,2021-08-14 10:00:00,1802,,,阮公元,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3147569952,Đóng băng chủ động,445613110890756,1.0,0,2022-05-13 20:00:00,1530,,,黄氏庆璃,Other,Nguyen Thi Hoai Linh,Other,Dao Thi Trang
+2026-07-22,3148447470,Đóng băng chủ động,435182916686090,2.0,0,2021-09-26 21:30:00,1759,,,愈氏清水,Other,Do Thi Hang,Inhouse 1,Dao Thi Trang
+2026-07-22,3149663071,Đóng băng chủ động,446472771715338,1.0,7,2021-11-20 17:30:00,1704,,,阮氏金玲,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3149761193,Đóng băng chủ động,448272786983170,1.0,0,2021-10-31 21:00:00,1724,,,梁氏蓉,Other,Tran Thi Son,Inhouse 1,Dao Thi Trang
+2026-07-22,3150386695,Đóng băng chủ động,443865080211714,1.0,0,2021-11-23 15:00:00,1701,,,陈氏玄,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3151551767,Im lặng rời bỏ,467905004704014,1.0,1,2022-03-29 21:00:00,1575,,,愈氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3151842897,Đóng băng chủ động,446310018242820,1.0,8,2022-03-25 21:30:00,1579,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3152193215,Im lặng rời bỏ,434840433705220,1.0,1,2021-10-28 11:30:00,1727,,,黎氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3152805014,Đóng băng chủ động,443812943177988,3.0,0,2024-01-10 20:30:00,923,,,THAO,Other,Ta Thuy Van,Inhouse 1,Dao Thi Trang
+2026-07-22,3156341764,Đóng băng chủ động,656848514007300,4.0,19,2025-10-14 19:00:00,280,TMP_3156341764_20251029,,Tran Thi Thu Hang,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3157388909,Đóng băng chủ động,448296096467202,1.0,142,2021-11-27 21:00:00,1697,,,黄氏庆璃,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3158844226,Đóng băng chủ động,451315231561986,3.0,0,2022-02-11 14:30:00,1621,,,梁氏蓉,Other,Vo Thi Thom,Offline Team HaNoi,Dao Thi Trang
+2026-07-22,3159338740,Đóng băng chủ động,441889886816522,2.0,0,2022-10-15 21:30:00,1375,,,黄黎高原,Other,Ta Thuy Van,Inhouse 1,Dao Thi Trang
+2026-07-22,3159639149,Đóng băng chủ động,438856957853962,1.0,0,2021-10-26 14:00:00,1729,,,彭胜君,Other,Hau,DN,Dao Thi Trang
+2026-07-22,3160758556,Đóng băng chủ động,441531339041026,2.0,1,2022-05-27 18:30:00,1516,,,彭胜君,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3161768268,Đóng băng chủ động,435665662970116,1.0,0,2021-08-22 17:30:00,1794,,,愈氏清水,Other,Vu Cam Ly,Inhouse 2,Dao Thi Trang
+2026-07-22,3162961764,Đóng băng chủ động,436203254692098,1.0,0,2021-11-12 16:00:00,1712,,,愈氏清水,Other,Dinh Luong Nhu Ngoc,Other,Dao Thi Trang
+2026-07-22,3163171233,Đóng băng chủ động,436203518847234,1.0,0,2022-01-05 17:30:00,1658,,,愈氏清水,Other,Le Hung Cuong,Inhouse 2,Dao Thi Trang
+2026-07-22,3163411203,Đóng băng chủ động,437075236704522,1.0,0,2021-09-22 21:00:00,1763,,,HAO,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3163758481,Đóng băng chủ động,444739791982852,2.0,1,2022-03-20 16:00:00,1584,,,An,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3163806845,Đóng băng chủ động,436606419650820,1.0,0,2021-10-03 21:30:00,1752,,,黎氏清水,Other,Le Hung Cuong,Inhouse 2,Dao Thi Trang
+2026-07-22,3163862857,Đóng băng chủ động,441749146673412,2.0,0,2021-10-26 20:00:00,1729,,,陈氏玄,Other,Huynh Minh Giang,DN,Dao Thi Trang
+2026-07-22,3164007469,Đóng băng chủ động,443128145496324,1.0,0,2021-11-03 21:30:00,1721,,,愈氏清水,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3164108260,Đóng băng chủ động,440132478148866,2.0,89,2022-12-22 20:30:00,1307,,,彭胜君,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3164251618,Đóng băng chủ động,700761247004928,1.0,65,2025-11-05 18:30:00,258,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3165559604,Đóng băng chủ động,444411348142346,1.0,0,2021-12-19 20:00:00,1675,,,THAO,Other,Le Hung Cuong,Inhouse 2,Dao Thi Trang
+2026-07-22,3165670561,Đóng băng chủ động,439939602723082,1.0,0,2022-07-23 18:30:00,1459,,,彭胜君,Other,Ta Thuy Van,Inhouse 1,Nguyen Lan Anh
+2026-07-22,3165697075,Đóng băng chủ động,446642600909058,1.0,0,2021-11-16 17:00:00,1708,,,An,Other,Le Thi Lan Anh,Inhouse 1,Dao Thi Trang
+2026-07-22,3165751431,Đóng băng chủ động,438194749901060,1.0,0,2021-10-18 20:30:00,1737,,,彭胜君,Other,Tran Thi Son,Inhouse 1,Dao Thi Trang
+2026-07-22,3166105292,Đóng băng chủ động,488613701255438,2.0,0,2022-07-15 21:00:00,1467,,,Ho,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3166423564,Đóng băng chủ động,438676864442628,1.0,0,2022-03-25 20:30:00,1579,,,彭胜君,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3166698371,Đóng băng chủ động,438181585062146,1.0,0,2021-10-23 20:30:00,1732,,,彭胜君,Other,Peerawas.P,Other,Dao Thi Trang
+2026-07-22,3166962514,Đóng băng chủ động,439269987053828,1.0,0,2021-11-13 17:30:00,1711,,,彭胜君,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3167328231,Đóng băng chủ động,439123630985476,1.0,0,2022-06-03 17:00:00,1509,,,彭胜君,Other,Le Hung Cuong,Inhouse 2,Dao Thi Trang
+2026-07-22,3167370697,Đóng băng chủ động,439205441798404,1.0,0,2022-01-08 19:30:00,1655,,,彭胜君,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3167457503,Đóng băng chủ động,438770495205642,1.0,0,2022-05-10 18:30:00,1533,,,彭胜君,Other,Nguyen Kieu Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3167586657,Đóng băng chủ động,439431869081866,1.0,0,2021-08-27 19:30:00,1789,,,彭胜君,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3167719500,Đóng băng chủ động,440130831771906,1.0,0,2022-02-27 14:00:00,1605,,,彭胜君,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3168386352,Đóng băng chủ động,466148357273870,2.0,1,2022-03-12 21:00:00,1592,,,梁氏蓉,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3168534647,Đóng băng chủ động,439471705557252,1.0,3,2021-09-23 17:00:00,1762,,,彭胜君,Other,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3168805402,Đóng băng chủ động,439730829367562,1.0,8,2021-09-12 18:30:00,1773,,,彭胜君,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3169579344,Đóng băng chủ động,440622316128522,1.0,0,2021-10-16 14:00:00,1739,,,彭胜君,Other,Tran Thi Son,Inhouse 1,Dao Thi Trang
+2026-07-22,3169631538,Đóng băng chủ động,440309053090058,1.0,0,2021-09-23 21:30:00,1762,,,彭胜君,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3169643024,Đóng băng chủ động,440309148434690,1.0,6,2021-10-31 21:00:00,1724,,,彭胜君,Other,Ho Thi Thanh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3169644592,Im lặng rời bỏ,501142437859596,2.0,3,2023-05-07 17:00:00,1171,,,Hong,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3169756671,Đóng băng chủ động,441223658479874,1.0,0,2021-10-08 21:00:00,1747,,,An,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3169770271,Đóng băng chủ động,440327819426052,1.0,0,2021-09-14 20:30:00,1771,,,彭胜君,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3169998050,Đóng băng chủ động,440511720984836,1.0,0,2021-09-19 21:00:00,1766,,,彭胜君,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3170112118,Đóng băng chủ động,440644430422274,1.0,0,2021-11-18 17:00:00,1706,,,彭胜君,Other,Bui Thi Nga,Inhouse 2,Dao Thi Trang
+2026-07-22,3170383451,Đóng băng chủ động,442452618492162,1.0,0,2021-10-17 09:30:00,1738,,,黄氏庆璃,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3170441585,Đóng băng chủ động,443127857780994,1.0,0,2021-10-24 21:30:00,1731,,,阮氏金玲,Other,Tran Thi Thu Hang,Inhouse 1,Dao Thi Trang
+2026-07-22,3170707154,Im lặng rời bỏ,441351215720708,1.0,1,2021-09-29 17:00:00,1756,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3170779048,Đóng băng chủ động,441167175713028,1.0,0,2021-09-21 10:30:00,1764,,,愈氏清水,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3170922119,Đóng băng chủ động,441374295671044,1.0,140,2021-10-23 10:00:00,1732,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3171064324,Đóng băng chủ động,441221135040778,1.0,0,2021-10-29 18:30:00,1726,,,黎氏清水,Other,Dao Thi Trang,Inhouse 1,Nguyen Lan Anh
+2026-07-22,3171117754,Đóng băng chủ động,441395145130250,1.0,0,2021-10-28 21:00:00,1727,,,彭胜君,Other,Ta Thuy Van,Inhouse 1,Dao Thi Trang
+2026-07-22,3171232834,Đóng băng chủ động,441681698711818,1.0,0,2022-01-22 17:00:00,1641,,,梁氏蓉,Other,Tran Thi Son,Inhouse 1,Nguyen Lan Anh
+2026-07-22,3171456149,Đóng băng chủ động,442226431291658,1.0,0,2022-01-11 20:30:00,1652,,,阮氏金玲,Other,Tran Thi Son,Inhouse 1,Dao Thi Trang
+2026-07-22,3171485798,Đóng băng chủ động,441751175250178,1.0,0,2021-09-16 21:00:00,1769,,,An,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3171522103,Im lặng rời bỏ,452326545035522,2.0,1,2022-06-11 10:30:00,1501,,,黎氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3171773054,Đóng băng chủ động,461904569196816,2.0,0,2022-07-05 20:30:00,1477,,,梁氏蓉,Other,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3172120537,Đóng băng chủ động,444883788837130,1.0,0,2021-10-18 19:30:00,1737,,,Thuy,Other,Le Hung Cuong,Inhouse 2,Dao Thi Trang
+2026-07-22,3172162268,Đóng băng chủ động,442226562416900,1.0,7,2021-10-11 17:00:00,1744,,,THAO,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3172165198,Đóng băng chủ động,442444160563466,1.0,0,2021-10-18 18:00:00,1737,,,THAO,Other,Ta Thuy Van,Inhouse 1,Dao Thi Trang
+2026-07-22,3172218734,Đóng băng chủ động,442226634787076,1.0,0,2022-06-09 21:30:00,1503,,,An,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3172440873,Đóng băng chủ động,442452703428866,1.0,0,2021-09-24 17:30:00,1761,,,黄黎高原,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3172553769,Im lặng rời bỏ,442782918164746,1.0,6,2022-09-06 21:00:00,1414,,,TLinh,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3172563183,Đóng băng chủ động,442636194556162,1.0,0,2021-10-02 20:30:00,1753,,,An,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3172564105,Đóng băng chủ động,442811516213506,1.0,0,2021-10-14 21:30:00,1741,,,TLinh,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3172575813,Đóng băng chủ động,442636050700548,1.0,7,2021-10-22 19:30:00,1733,,,陈氏玄,Other,,Not have Sale care,Phuong Thao Advisor
+2026-07-22,3172725891,Đóng băng chủ động,443127510503682,1.0,0,2022-08-17 22:00:00,1434,,,Nen,Other,Nguyen Thi Phuong,Other,Nguyen Lan Anh
+2026-07-22,3172806378,Đóng băng chủ động,443142162006282,1.0,0,2021-10-30 11:00:00,1725,,,TLinh,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3172827409,Đóng băng chủ động,444709232955658,1.0,0,2021-12-12 23:30:00,1682,,,Hang,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3172885419,Đóng băng chủ động,442811432800514,1.0,0,2021-10-23 11:00:00,1732,,,An,Other,Dao Thi Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3173010348,Đóng băng chủ động,732461215312134,10.0,7,2026-06-02 20:30:00,49,,2026-07,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3173012036,Đóng băng chủ động,443665253763332,1.0,0,2021-10-05 20:30:00,1750,,,黎氏清水,Other,Tran Thi Son,Inhouse 1,Dao Thi Trang
+2026-07-22,3173018504,Đóng băng chủ động,443636912281860,1.0,0,2021-11-15 21:30:00,1709,,,黎氏清水,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3173034529,Đóng băng chủ động,443373693036810,1.0,0,2021-10-10 11:30:00,1745,,,Thuy,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3173136174,Đóng băng chủ động,443636690182402,1.0,7,2021-10-06 20:00:00,1749,,,梁氏蓉,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3173147398,Đóng băng chủ động,443274820419842,1.0,0,2022-06-16 22:00:00,1496,,,THAO,Other,Dao Thi Trang,Inhouse 1,Nguyen Lan Anh
+2026-07-22,3173155494,Đóng băng chủ động,443324792918274,1.0,0,2021-10-22 21:00:00,1733,,,An,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3173216018,Im lặng rời bỏ,534229179621644,2.0,7,2023-10-03 22:00:00,1022,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3173338542,Đóng băng chủ động,443982293600514,1.0,0,2021-10-06 17:00:00,1749,,,THAO,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3173372802,Im lặng rời bỏ,443636611133700,1.0,1,2021-10-05 14:00:00,1750,,,阮氏金玲,Other,Tran Thi Son,Inhouse 1,Dao Thi Trang
+2026-07-22,3173642909,Đóng băng chủ động,443665394632970,1.0,0,2022-06-30 17:00:00,1482,,,陈氏玄,Other,Le Thi Thu Yen,Inhouse 1,Nguyen Lan Anh
+2026-07-22,3173644162,Im lặng rời bỏ,479226682753296,2.0,1,2022-08-19 17:30:00,1432,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3173896362,Im lặng rời bỏ,443847749703946,1.0,1,2022-12-08 19:30:00,1321,,,陈氏玄,Other,Dao Thi Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3173900719,Đóng băng chủ động,483434834428172,2.0,0,2022-09-08 20:00:00,1412,,,阮氏金玲,Other,Le Hung Cuong,Inhouse 2,Dao Thi Trang
+2026-07-22,3173933641,Đóng băng chủ động,443864876947716,1.0,0,2022-01-03 18:30:00,1660,,,梁氏蓉,Other,Ta Thuy Van,Inhouse 1,Dao Thi Trang
+2026-07-22,3173973176,Đóng băng chủ động,443812538810634,1.0,0,2022-08-13 19:00:00,1438,,,陈氏玄,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3173992570,Đóng băng chủ động,444045268033796,1.0,0,2021-10-04 11:30:00,1751,,,黎氏清水,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3174040944,Đóng băng chủ động,444045384925442,1.0,0,2022-01-13 18:30:00,1650,,,阮氏金玲,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3174060731,Im lặng rời bỏ,489660905175308,2.0,28,2023-03-06 19:30:00,1233,,,Hong,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3174115914,Đóng băng chủ động,444209445894404,1.0,0,2021-09-28 19:00:00,1757,,,An,Other,Le Hung Cuong,Inhouse 2,Dao Thi Trang
+2026-07-22,3174132761,Đóng băng chủ động,443864929351938,1.0,0,2021-11-19 15:00:00,1705,,,陈氏玄,Other,Dang Kim Thuong,Inhouse 1,Dao Thi Trang
+2026-07-22,3174204822,Đóng băng chủ động,444034762959106,1.0,0,2021-09-25 12:30:00,1760,,,An,Other,Bui Thi Nga,Inhouse 2,Dao Thi Trang
+2026-07-22,3174238746,Đóng băng chủ động,444190497245442,1.0,0,2022-10-15 20:30:00,1375,,,黄氏庆璃,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3174251563,Im lặng rời bỏ,479051468335376,1.0,1,2023-06-09 22:00:00,1138,,,阮氏金玲,Other,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3174311649,Im lặng rời bỏ,445083565142276,1.0,1,2021-10-14 21:00:00,1741,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3174442996,Im lặng rời bỏ,,,6,2022-02-23 20:00:00,1609,,,,Not have Sale care,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3174445777,Im lặng rời bỏ,462572630130958,1.0,8,2023-01-24 19:30:00,1274,,,愈氏清水,Other,Dao Thi Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3174483459,Đóng băng chủ động,444900218945794,1.0,0,2022-03-05 14:30:00,1599,,,陈氏玄,Other,Le Thi Thu Yen,Inhouse 1,Nguyen Lan Anh
+2026-07-22,3174550384,Đóng băng chủ động,446317224657154,1.0,0,2021-10-06 20:30:00,1749,,,Hang,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3174556699,Đóng băng chủ động,444733999706370,1.0,0,2022-02-15 16:00:00,1617,,,黎氏清水,Other,Nguyen Thi Hang Nga,Inhouse 1,Dao Thi Trang
+2026-07-22,3174621519,Đóng băng chủ động,445095660603650,1.0,0,2022-08-19 13:30:00,1432,,,黄黎高原,Other,Nguyen Cam Tu,Inhouse 1,Dao Thi Trang
+2026-07-22,3174750703,Đóng băng chủ động,448089918662914,1.0,0,2021-10-16 21:00:00,1739,,,阮氏金玲,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3174787624,Đóng băng chủ động,444783661422850,1.0,8,2021-10-21 11:30:00,1734,,,THAO,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3174795022,Đóng băng chủ động,444727264268548,1.0,0,2021-10-19 11:00:00,1736,,,PAn,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3174913013,Đóng băng chủ động,445429891371274,1.0,0,2021-10-10 21:00:00,1745,,,武氏茹月,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3174916955,Đóng băng chủ động,445045936292106,1.0,6,2021-10-08 20:00:00,1747,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3174967916,Đóng băng chủ động,445413595638018,1.0,0,2021-10-19 18:00:00,1736,,,PAn,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3175070153,Đóng băng chủ động,445667253942532,1.0,6,2021-11-20 10:00:00,1704,,,Nen,Other,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3175078378,Đóng băng chủ động,445429965695242,1.0,0,2021-10-20 16:30:00,1735,,,愈氏清水,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3175112440,Đóng băng chủ động,446625990680834,1.0,0,2021-11-15 16:00:00,1709,,,Linh,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3175138804,Đóng băng chủ động,445809577451786,1.0,0,2021-11-12 20:30:00,1712,,,Quyen,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3175381551,Đóng băng chủ động,445478433227010,1.0,0,2021-10-17 21:00:00,1738,,,Ly,Other,Nguyen Thuy Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3175428012,Đóng băng chủ động,445413660174602,1.0,0,2021-11-04 10:00:00,1720,,,PAn,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3175436525,Đóng băng chủ động,445490528297226,1.0,0,2022-06-28 21:30:00,1484,,,黄氏庆璃,Other,Mai Thi Lien,Inhouse 2,Ellie Advisor
+2026-07-22,3175648884,Đóng băng chủ động,447371065495818,1.0,0,2021-11-25 22:00:00,1699,,,Hang,Other,Tran Thi Son,Inhouse 1,Dao Thi Trang
+2026-07-22,3175781262,Đóng băng chủ động,446990196656394,1.0,8,2021-11-03 21:30:00,1721,,,THAO,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3175827804,Đóng băng chủ động,446309874196738,1.0,0,2021-11-30 10:00:00,1694,,,阮氏金玲,Other,Vu Thi Thu Thuy,Other,Dao Thi Trang
+2026-07-22,3175859063,Im lặng rời bỏ,446168063863042,1.0,5,2025-09-30 19:00:00,294,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3175937456,Đóng băng chủ động,455922311229698,1.0,1,2021-12-17 21:00:00,1677,,,Ly,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3175939697,Đóng băng chủ động,446368312649988,1.0,0,2021-10-25 11:00:00,1730,,,愈氏清水,Other,Le Thi Lan Anh,Inhouse 1,Dao Thi Trang
+2026-07-22,3175940588,Đóng băng chủ động,446989639207178,1.0,0,2021-10-17 10:00:00,1738,,,Thuy,Other,Bui Thi Nga,Inhouse 2,Dao Thi Trang
+2026-07-22,3175953481,Đóng băng chủ động,447186182689034,1.0,0,2021-11-12 21:30:00,1712,,,Ly,Other,Bui Lam Linh,Inhouse 1,Dao Thi Trang
+2026-07-22,3175969791,Đóng băng chủ động,446310182791426,1.0,0,2021-10-31 09:00:00,1724,,,武氏茹月,Other,Tran Thi Thu Hang,Inhouse 1,Dao Thi Trang
+2026-07-22,3175979233,Đóng băng chủ động,446990029963524,1.0,0,2021-11-14 15:30:00,1710,,,Linh,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3175998874,Đóng băng chủ động,446990297463050,1.0,0,2021-10-08 20:00:00,1747,,,Orchid,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3176022474,Im lặng rời bỏ,462755330322704,1.0,1,2022-05-20 19:00:00,1523,,,阮氏金玲,Other,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3176028633,Đóng băng chủ động,447029246996740,1.0,0,2021-10-22 20:30:00,1733,,,武氏茹月,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3176104360,Đóng băng chủ động,446306362972418,1.0,0,2021-11-30 09:00:00,1694,,,Orchid,Other,Nguyen Phuong Thuy,Inhouse 1,Nguyen Phuong Thuy
+2026-07-22,3176170403,Đóng băng chủ động,446657621506306,1.0,6,2021-10-12 22:00:00,1743,,,梁氏蓉,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3176244637,Đóng băng chủ động,446855458099458,1.0,0,2021-11-21 20:00:00,1703,,,Truc,Other,Luu Thi Hoang Ngan,Inhouse 1,Dao Thi Trang
+2026-07-22,3176247307,Đóng băng chủ động,446989863459074,1.0,0,2021-10-28 19:00:00,1727,,,Linh,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3176287556,Im lặng rời bỏ,446869333360900,1.0,47,2024-09-14 16:30:00,675,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3176290600,Đóng băng chủ động,448252651901194,1.0,0,2021-11-15 19:30:00,1709,,,Quyen,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3176314034,Đóng băng chủ động,447893979984138,1.0,0,2021-10-18 16:00:00,1737,,,Ly,Other,Ta Thuy Van,Inhouse 1,Dao Thi Trang
+2026-07-22,3176341507,Đóng băng chủ động,447248878053634,1.0,0,2022-05-21 11:30:00,1522,,,Linh,Other,Le Thi Lan Anh,Inhouse 1,Dao Thi Trang
+2026-07-22,3176346385,Đóng băng chủ động,447893945223428,1.0,0,2021-10-17 21:30:00,1738,,,梁氏蓉,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3176351401,Đóng băng chủ động,446699559776514,1.0,0,2021-10-26 16:00:00,1729,,,Hien,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3176358653,Đóng băng chủ động,447057305288970,1.0,139,2022-01-14 11:30:00,1649,,,愈氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3176409372,Đóng băng chủ động,492157456593164,2.0,0,2022-11-05 19:30:00,1354,,,Hong,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3176471204,Đóng băng chủ động,446988856449284,1.0,0,2022-06-30 19:30:00,1482,,,黄氏庆璃,Other,Vu Thi Khanh Huyen,Inhouse 2,Dao Thi Trang
+2026-07-22,3176557928,Im lặng rời bỏ,447893883926794,1.0,132,2024-07-15 21:00:00,736,,,陈氏玄,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3176636126,Đóng băng chủ động,447379821566210,1.0,0,2021-10-25 20:00:00,1730,,,愈氏清水,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3176705978,Đóng băng chủ động,449895641944322,1.0,1,2021-12-14 21:30:00,1680,,,黎氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3176745945,Đóng băng chủ động,447734822095106,1.0,0,2021-10-25 21:30:00,1730,,,黄氏庆璃,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3176756272,Đóng băng chủ động,447379844595970,1.0,0,2021-10-26 20:30:00,1729,,,愈氏清水,Other,Ta Thuy Van,Inhouse 1,Dao Thi Trang
+2026-07-22,3176780885,Đóng băng chủ động,447560588615946,1.0,0,2022-05-16 20:00:00,1527,,,黄氏庆璃,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3176867280,Đóng băng chủ động,447938969219330,1.0,0,2021-10-31 15:30:00,1724,,,Ly,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3176948487,Đóng băng chủ động,447710169841922,1.0,0,2021-10-27 20:30:00,1728,,,PHAM TU CUONG,Other,Luu Thi Hoang Ngan,Inhouse 1,Dao Thi Trang
+2026-07-22,3177086804,Đóng băng chủ động,448452447176970,1.0,0,2021-11-02 20:00:00,1722,,,Chi,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3177168845,Đóng băng chủ động,484016807463182,1.0,1,2022-07-22 18:00:00,1460,,,Hau,DN,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3177186602,Đóng băng chủ động,448452432423170,1.0,0,2021-11-03 21:30:00,1721,,,Hien,Other,Le Hung Cuong,Inhouse 2,Dao Thi Trang
+2026-07-22,3177252525,Im lặng rời bỏ,487334506803468,1.0,21,2024-08-14 16:30:00,706,,,阮氏金玲,Other,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3177327854,Đóng băng chủ động,448764808870146,1.0,7,2021-11-20 21:00:00,1704,,,THAO,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3177347041,Đóng băng chủ động,448411096836354,1.0,6,2021-11-13 17:00:00,1711,,,THAO,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3177530808,Đóng băng chủ động,448486025505034,1.0,0,2021-11-29 19:00:00,1695,,,Orchid,Other,Nguyen Phuong Thuy,Inhouse 1,Dao Thi Trang
+2026-07-22,3177638962,Im lặng rời bỏ,476780064821518,2.0,4,2025-07-18 16:00:00,368,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3177639050,Đóng băng chủ động,448847144261892,1.0,0,2021-12-24 20:30:00,1670,,,陈氏玄,Other,Tran Thi Son,Inhouse 1,Dao Thi Trang
+2026-07-22,3177853996,Đóng băng chủ động,448984926339330,1.0,0,2022-05-04 17:30:00,1539,,,愈氏清水,Other,Nguyen Thuy Trang,Inhouse 1,Dao Thi Trang
+2026-07-22,3178095614,Im lặng rời bỏ,476780038156558,2.0,5,2024-08-30 15:30:00,690,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3178101549,Im lặng rời bỏ,449301481556234,1.0,2,2023-11-15 09:00:00,979,,,TThao,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3178257680,Im lặng rời bỏ,547318981929230,1.0,10,2024-04-12 19:30:00,830,,,Dao Thi Trang,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3178276753,Đóng băng chủ động,449675212884234,1.0,1,2021-12-12 19:30:00,1682,,,武氏茹月,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3178471836,Đóng băng chủ động,459770331756814,1.0,2,2022-01-25 21:00:00,1638,,,黄氏庆璃,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3178527335,Im lặng rời bỏ,450177029026052,1.0,1,2021-12-10 20:30:00,1684,,,梁氏蓉,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3178723609,Im lặng rời bỏ,452537028016394,1.0,37,2026-03-12 22:00:00,131,,,陈氏玄,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3178929387,Im lặng rời bỏ,450555068219658,1.0,2,2021-12-15 22:30:00,1679,,,Linh,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3178986728,Im lặng rời bỏ,452495998832900,1.0,2,2023-08-18 11:00:00,1068,,,Ly,Other,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3179098803,Đóng băng chủ động,462572702028046,1.0,1,2022-04-07 21:00:00,1566,,,阮氏金玲,Other,Dao Thi Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3179204956,Im lặng rời bỏ,451073198440714,1.0,1,2021-12-28 18:00:00,1666,,,陈氏玄,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3179238520,Đóng băng chủ động,451475144509698,1.0,0,2022-02-04 21:00:00,1628,,,Linh,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3179351566,Đóng băng chủ động,684524806908160,4.0,48,2025-06-14 13:00:00,402,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3179529149,Đóng băng chủ động,451949928616196,1.0,0,2022-03-03 21:30:00,1601,,,阮氏金玲,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3179564343,Im lặng rời bỏ,487571573068048,3.0,2,2022-09-25 16:00:00,1395,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3179945658,Im lặng rời bỏ,465777492900110,2.0,2,2022-05-31 20:30:00,1512,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3180100497,Đóng băng chủ động,726041681471746,1.0,15,2026-06-10 20:30:00,41,,,Nguyen Le Thanh Huyen,Ho Chi Minh,Nina,Inhouse 1,Dao Thi Hoang Yen
+2026-07-22,3180196829,Im lặng rời bỏ,569880632609036,2.0,5,2024-05-17 20:30:00,795,,,Hau,DN,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3180295483,Đóng băng chủ động,724970244081924,1.0,19,2026-02-09 20:30:00,162,,,Nguyen Thi My Linh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Ms Laura
+2026-07-22,3180380858,Đóng băng chủ động,463506635989264,2.0,0,2022-03-30 21:00:00,1574,,,阮氏金玲,Other,Tran Thi Son,Inhouse 1,Dao Thi Trang
+2026-07-22,3180447924,Đóng băng chủ động,462388551080206,2.0,1,2022-07-08 20:30:00,1474,,,Hoa,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3180504269,Đóng băng chủ động,540423003007244,1.0,0,2023-06-11 21:30:00,1136,,,Vu Thi Lan Anh,Other,Dang Thi Thanh Thuy,Other,Ellie Advisor
+2026-07-22,3180840937,Im lặng rời bỏ,605174257725708,5.0,3,2025-05-01 19:00:00,446,,,Le Thi Thuy Trinh,Other,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3181150210,Im lặng rời bỏ,454276406655242,1.0,2,2022-07-28 16:00:00,1454,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3181182072,Đóng băng chủ động,456588574818570,1.0,0,2022-03-10 21:30:00,1594,,,武氏茹月,Other,Vu Cam Ly,Inhouse 2,Dao Thi Trang
+2026-07-22,3181275619,Im lặng rời bỏ,500073090156816,2.0,2,2022-11-23 18:00:00,1336,,,黎氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3181844226,Im lặng rời bỏ,454268585748740,1.0,1,2022-03-03 21:00:00,1601,,,Ho,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3182076249,Im lặng rời bỏ,462228401682700,2.0,2,2022-10-02 21:30:00,1388,,,Ho,Other,Dao Thi Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3182189321,Đóng băng chủ động,454793380239626,1.0,1,2021-12-22 20:00:00,1672,,,Hang,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3182528643,Im lặng rời bỏ,494965225990416,3.0,1,2022-10-16 19:30:00,1374,,,阮氏金玲,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3183088366,Im lặng rời bỏ,523120754919696,2.0,6,2022-12-14 20:30:00,1315,,,Dao Thi Trang,Inhouse 1,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3183115728,Im lặng rời bỏ,536218754750732,4.0,2,2024-07-25 11:00:00,726,,,Hong,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3184338064,Đóng băng chủ động,455922336641290,1.0,0,2022-05-09 21:00:00,1534,,,愈氏清水,Other,Dao Thi Trang,Inhouse 1,Cu Thi Thu Hien
+2026-07-22,3184737199,Im lặng rời bỏ,496894733330702,3.0,1,2022-12-12 21:00:00,1317,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3185374249,Đóng băng chủ động,457654931302670,1.0,1,2022-04-06 20:30:00,1567,,,阮氏金玲,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3185601672,Đóng băng chủ động,457479228547342,1.0,0,2022-01-15 10:00:00,1648,,,TThao,Other,Tran Thi Son,Inhouse 1,Dao Thi Trang
+2026-07-22,3185912752,Im lặng rời bỏ,482247873007886,2.0,1,2023-12-30 22:00:00,934,,,阮氏金玲,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3185916638,Đóng băng chủ động,731747846353154,1.0,16,2026-06-19 17:00:00,32,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3186512418,Im lặng rời bỏ,500835013536016,3.0,1,2023-03-30 22:00:00,1209,,,黎氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3186527586,Đóng băng chủ động,695295951096068,6.0,38,2026-01-11 12:00:00,191,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3187300864,Đóng băng chủ động,460449119895824,1.0,1,2022-04-02 21:00:00,1571,,,LeThi,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3187854602,Đóng băng chủ động,459222881507596,1.0,0,2022-01-23 19:30:00,1640,,,黄黎高原,Other,Le Thi Thu Yen,Inhouse 1,Dao Thi Trang
+2026-07-22,3188058502,Đóng băng chủ động,723081864964352,3.0,80,2026-05-28 21:30:00,54,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3189126492,Đóng băng chủ động,461025665194252,1.0,2,2022-04-09 17:30:00,1564,,,Ho,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3189134816,Đóng băng chủ động,459914019098892,1.0,0,2022-03-23 18:00:00,1581,,,黎氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3189680154,Im lặng rời bỏ,462060333156624,1.0,4,2024-03-06 20:30:00,867,,,黎氏清水,Other,Bui Thi Hong Van,Inhouse 1,Dao Thi Trang
+2026-07-22,3190646831,Đóng băng chủ động,462228322842894,1.0,0,,,,,Nen,Other,Dao Thi Trang,Inhouse 1,Laura - Team 2 Admin
+2026-07-22,3191457806,Im lặng rời bỏ,463153865120014,1.0,3,2024-03-01 22:00:00,872,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3192873328,Im lặng rời bỏ,492157676734736,2.0,1,2022-11-22 21:30:00,1337,,,Hong,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3192923690,Đóng băng chủ động,585040294306064,2.0,4,2024-12-28 17:30:00,570,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3193481927,Im lặng rời bỏ,475753293398284,1.0,1,2022-08-05 21:30:00,1446,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Le Thi Lan Anh
+2026-07-22,3193697772,Im lặng rời bỏ,466148320655632,1.0,2,2022-05-28 19:00:00,1515,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3193965826,Đóng băng chủ động,465610384265488,1.0,2,2022-01-28 11:00:00,1635,,,THAO,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3194085514,Đóng băng chủ động,521354346393872,3.0,0,2023-05-06 11:30:00,1172,,,Hau,DN,Dao My Nhat Huyen,Inhouse 1,Ellie Advisor
+2026-07-22,3194292105,Im lặng rời bỏ,470576385284364,1.0,1,2022-04-15 17:30:00,1558,,,黎氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3194659261,Im lặng rời bỏ,466304043806990,1.0,1,2022-05-02 21:00:00,1541,,,愈氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3195861710,Im lặng rời bỏ,467381127528720,1.0,2,2024-11-09 10:30:00,619,,,Ho,Other,Ho Thi Thanh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3196007455,Đóng băng chủ động,467247792525580,1.0,3,2022-01-26 15:00:00,1637,,,Ho,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3198371816,Đóng băng chủ động,472344522189070,1.0,0,2022-06-12 22:30:00,1500,,,黄黎高原,Other,Nguyen Phuong Thuy,Inhouse 1,Dao Thi Trang
+2026-07-22,3198604414,Đóng băng chủ động,470697561379088,1.0,0,2022-05-19 20:30:00,1524,,,Nen,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3199089839,Im lặng rời bỏ,473189285015822,1.0,1,2022-07-10 20:30:00,1472,,,陈氏玄,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3199252130,Im lặng rời bỏ,503299498475790,3.0,1,2023-01-06 19:30:00,1292,,,Thanh Van,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3199457441,Im lặng rời bỏ,471315080325388,1.0,3,2022-05-10 08:00:00,1533,,,愈氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3199818255,Im lặng rời bỏ,472312381712654,1.0,1,2022-07-29 18:30:00,1453,,,Ho,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3200232615,Im lặng rời bỏ,536929819668748,3.0,1,2024-09-03 15:30:00,686,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3200809550,Im lặng rời bỏ,516049190844686,2.0,1,2023-03-01 19:30:00,1238,,,Hong,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3201207386,Im lặng rời bỏ,475502637103374,1.0,12,2024-10-06 17:30:00,653,,,Nen,Other,Nguyen Kieu Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3201950184,Đóng băng chủ động,475299913867534,1.0,2,2022-04-10 10:00:00,1563,,,阮氏金玲,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3202285266,Im lặng rời bỏ,476071052808464,1.0,7,2023-02-09 09:00:00,1258,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3202598799,Im lặng rời bỏ,496539845394700,2.0,1,2023-02-21 22:00:00,1246,,,Hau,DN,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3202953654,Đóng băng chủ động,490898248159502,1.0,1,2022-07-25 17:30:00,1457,,,Thanh Van,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3203273427,Im lặng rời bỏ,476940906971408,1.0,1,2022-05-21 21:00:00,1522,,,Thanh Van,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3203520970,Im lặng rời bỏ,480325135552782,1.0,1,2022-05-29 14:30:00,1514,,,Hau,DN,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3203651060,Im lặng rời bỏ,480117072582924,1.0,1,2022-06-03 21:00:00,1509,,,Ho,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3203827975,Im lặng rời bỏ,500257645289740,2.0,3,2023-09-25 19:30:00,1030,,,黎氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3203956469,Đóng băng chủ động,492157833523472,1.0,4,2022-09-03 21:00:00,1417,,,阮氏金玲,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3204218294,Đóng băng chủ động,681832691450114,4.0,43,2025-11-16 19:30:00,247,,,Nguyen Lan Anh,Other,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3204492341,Im lặng rời bỏ,478715053531408,1.0,5,2022-11-26 10:00:00,1333,,,Ho,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3205031769,Đóng băng chủ động,479226649565454,1.0,1,2022-04-15 20:30:00,1558,,,Nen,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3205078439,Im lặng rời bỏ,480117089601806,1.0,2,2022-10-08 19:00:00,1382,,,Hong,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3205297653,Im lặng rời bỏ,521358397597968,2.0,2,2023-08-04 21:00:00,1082,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3205300756,Đóng băng chủ động,479781465397520,1.0,0,2022-04-16 20:30:00,1557,,,Hong,Other,Nguyen Thi Phuong,Other,Dao Thi Trang
+2026-07-22,3205657126,Im lặng rời bỏ,481506570553614,1.0,6,2023-02-21 21:00:00,1246,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3205855236,Im lặng rời bỏ,481506974957836,1.0,1,2022-05-29 20:30:00,1514,,,LeThi,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3206317113,Im lặng rời bỏ,481545081497868,1.0,9,2023-05-26 20:00:00,1152,,,Ho,Other,Bui Thi Hong Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3206607024,Đóng băng chủ động,651058610489616,1.0,3,2025-06-04 21:30:00,412,,,Hoang Thi Hong Tham,Offline Team HaNoi,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3206876296,Im lặng rời bỏ,534792593199376,1.0,1,2023-05-12 20:30:00,1166,,,Hau,DN,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3207228789,Im lặng rời bỏ,483646040586508,1.0,1,2022-11-19 14:00:00,1340,,,阮氏金玲,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3207299646,Im lặng rời bỏ,628406436362496,6.0,2,2024-10-17 21:00:00,642,,,Cu Thi Thu Hien,Offline Team HaNoi,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3207373460,Im lặng rời bỏ,583677199552780,3.0,8,2024-11-07 17:00:00,621,,,王思凡,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3207472369,Im lặng rời bỏ,484514008586508,1.0,3,2022-11-06 16:00:00,1353,,,Hau,DN,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3207491617,Im lặng rời bỏ,483434857421072,1.0,2,2022-09-04 18:00:00,1416,,,Ho,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3208127248,Im lặng rời bỏ,498665092385040,2.0,3,2023-01-06 18:00:00,1292,,,Hong,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3208131714,Đóng băng chủ động,484326472155406,1.0,1,2022-07-22 10:00:00,1460,,,Hau,DN,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3209449537,Im lặng rời bỏ,514610178746636,3.0,5,2023-03-10 21:00:00,1229,,,阮氏金玲,Other,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3209718599,Im lặng rời bỏ,503839838374158,2.0,1,2023-02-10 09:00:00,1257,,,Hong,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3209924644,Im lặng rời bỏ,487693103730958,1.0,1,2022-07-21 19:00:00,1461,,,黎氏清水,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3210476853,Im lặng rời bỏ,502022162825488,2.0,2,2023-01-05 22:00:00,1293,,,Thanh Van,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3210938206,Im lặng rời bỏ,511647085553934,2.0,1,2022-12-29 21:00:00,1300,,,Hong,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3211779226,Im lặng rời bỏ,496399992129808,1.0,4,2022-09-30 18:00:00,1390,,,黄黎高原,Other,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3212485046,Im lặng rời bỏ,493928287230222,1.0,15,2025-08-13 20:30:00,342,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3212894327,Im lặng rời bỏ,495380454793486,1.0,1,2022-09-25 17:00:00,1395,,,Thanh Van,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3216525026,Im lặng rời bỏ,499926679736590,1.0,1,2022-12-13 20:30:00,1316,,,阮氏金玲,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3216659553,Im lặng rời bỏ,511647036094736,2.0,1,2023-01-24 20:30:00,1274,,,Thanh Van,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3216822758,Im lặng rời bỏ,503853740448012,1.0,1,2022-12-15 20:30:00,1314,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3217459004,Đóng băng chủ động,582709694902544,4.0,45,2024-12-15 15:00:00,583,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3217560813,Im lặng rời bỏ,503299663372558,1.0,6,2023-08-21 09:00:00,1065,,,Thanh Van,Other,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3218260927,Đóng băng chủ động,523298873372940,2.0,21,2023-06-14 21:30:00,1133,,,Dao Thi Trang,Inhouse 1,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3219327539,Im lặng rời bỏ,503082254043404,1.0,2,2022-12-02 21:30:00,1327,,,Thanh Van,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3219328603,Im lặng rời bỏ,502763761561872,1.0,2,2023-01-03 19:30:00,1295,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3219561350,Im lặng rời bỏ,550431586494732,3.0,1,2023-10-11 20:00:00,1014,,,黄黎高原,Other,Dao Thi Trang,Inhouse 1,Le To Hai My
+2026-07-22,3220135496,Im lặng rời bỏ,503083084923152,1.0,2,2022-11-11 20:00:00,1348,,,Hau,DN,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3220228094,Đóng băng chủ động,586661875628304,3.0,5,2025-05-24 18:00:00,423,TMP_3220228094_20250430,,Nguyen Lan Anh,Other,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3220544210,Im lặng rời bỏ,508276499972364,1.0,1,2023-03-01 12:30:00,1238,,,Hong,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3221011244,Im lặng rời bỏ,505081846847758,1.0,1,2022-09-25 20:00:00,1395,,,Hau,DN,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3221798754,Đóng băng chủ động,702139752034564,1.0,53,2026-04-11 18:00:00,101,,,Tran Thi Thu Hang,Inhouse 1,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3222172065,Im lặng rời bỏ,571567651164432,3.0,1,2024-02-01 20:30:00,901,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3222464584,Đóng băng chủ động,704851978551554,5.0,23,2026-03-31 21:00:00,112,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3222689964,Đóng băng chủ động,682016901284100,1.0,36,2025-12-27 13:00:00,206,,,Vo Thi Thom,Offline Team HaNoi,Pham Thuy Linh,Other,Tran Thu Ha
+2026-07-22,3224520086,Đóng băng chủ động,510184346317070,1.0,0,2022-11-07 18:00:00,1352,,,阮氏金玲,Other,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3224525550,Im lặng rời bỏ,583250976975120,3.0,14,2024-09-09 21:30:00,680,,,Dao Thi Trang,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3227389298,Đóng băng chủ động,524880113150222,2.0,15,2023-04-12 21:00:00,1196,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ta Thuy Van
+2026-07-22,3228574428,Im lặng rời bỏ,518872815345936,1.0,9,2023-10-06 19:30:00,1019,,,Phan Thi Huong,Inhouse 1,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3229273232,Đóng băng chủ động,519360253378832,1.0,0,2023-05-14 20:30:00,1164,,,Lo Thi Thu Hien,Other,Luu Thi Hoang Ngan,Inhouse 1,Ellie Advisor
+2026-07-22,3229486167,Đóng băng chủ động,743740660465928,8.0,42,2026-06-26 23:00:00,25,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3229702302,Đóng băng chủ động,675261360677120,1.0,20,2026-06-19 21:00:00,32,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3230406749,Im lặng rời bỏ,520602556858638,1.0,1,2023-12-17 09:00:00,947,,,Nguyen Thi Ngoc Lien,Other,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3230907836,Đóng băng chủ động,616202495447308,1.0,37,2025-01-05 21:30:00,562,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3231636354,Im lặng rời bỏ,522435425634572,1.0,1,2023-03-15 21:00:00,1224,,,阮氏金玲,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3232091989,Im lặng rời bỏ,538647391643920,2.0,1,2024-04-14 21:30:00,828,,,Cu Thi Thu Hien,Offline Team HaNoi,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3232640382,Đóng băng chủ động,679714477668608,4.0,58,2026-07-14 19:00:00,7,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3233421178,Đóng băng chủ động,647522076725516,4.0,63,2025-08-10 10:30:00,345,,,Tran Thi Thu Hang,Inhouse 1,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3235325609,Đóng băng chủ động,680785854245122,1.0,12,2025-09-03 17:30:00,321,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3235430892,Im lặng rời bỏ,554034722380044,2.0,1,2023-12-08 17:30:00,956,,,Cu Thi Thu Hien,Offline Team HaNoi,Bui Thi Thai Duong,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3235904853,Đóng băng chủ động,540822258497806,1.0,0,2023-05-20 10:30:00,1158,,,Tran Thi Thu Hang,Inhouse 1,Ellie Advisor,Other,Tran Thi Thu Hang
+2026-07-22,3236158633,Im lặng rời bỏ,554137962324240,2.0,1,2023-10-30 18:00:00,995,,,黎氏清水,Other,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3238303083,Đóng băng chủ động,536927386595600,1.0,5,2023-03-12 21:00:00,1227,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ta Thuy Van
+2026-07-22,3238800067,Đóng băng chủ động,534957922951438,1.0,0,2023-04-07 20:00:00,1201,,,Hau,DN,Bui Thi Hong Van,Inhouse 1,Nguyen Lan Anh
+2026-07-22,3239436566,Đóng băng chủ động,538834957334800,1.0,13,2025-04-06 11:00:00,471,,,Cu Thi Thu Hien,Offline Team HaNoi,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3240055402,Im lặng rời bỏ,586814900322574,2.0,1,2024-05-15 16:00:00,797,,,Cu Thi Thu Hien,Offline Team HaNoi,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3240189156,Im lặng rời bỏ,537419094704396,1.0,2,2024-03-08 19:00:00,865,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3240438871,Đóng băng chủ động,711436097603840,7.0,27,2026-03-15 21:30:00,128,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3240576996,Im lặng rời bỏ,642562144745728,4.0,10,2025-06-06 21:30:00,410,,,Nguyen Lan Anh,Other,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3240775633,Đóng băng chủ động,696696257927426,4.0,16,2025-10-08 21:00:00,286,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3240905570,Im lặng rời bỏ,538470944624912,1.0,3,2023-11-04 10:30:00,990,,,Cu Thi Thu Hien,Offline Team HaNoi,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3240920918,Đóng băng chủ động,541695150319888,1.0,24,2023-08-13 17:30:00,1073,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3241393052,Im lặng rời bỏ,757363958069510,4.0,106,2025-03-16 17:00:00,492,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang
+2026-07-22,3242023147,Im lặng rời bỏ,543665652828430,1.0,1,2023-09-20 20:30:00,1035,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3242557246,Đóng băng chủ động,542064046913804,1.0,15,2025-06-18 16:00:00,398,,,Cu Thi Thu Hien,Offline Team HaNoi,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3242821570,Im lặng rời bỏ,543121088577808,1.0,1,2024-05-21 19:00:00,791,,,Cu Thi Thu Hien,Offline Team HaNoi,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3243386286,Im lặng rời bỏ,543816518187280,1.0,2,2023-07-02 21:00:00,1115,,,Luu Thi Mai Hien,Other,Phan Thi Huong,Inhouse 1,Ruby Advisor
+2026-07-22,3243549424,Đóng băng chủ động,606979562553616,2.0,24,2025-06-25 14:30:00,391,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3244127327,Im lặng rời bỏ,555986479061264,2.0,24,2023-12-30 17:30:00,934,,,Phan Thi Huong,Inhouse 1,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3244459629,Im lặng rời bỏ,642871283355920,1.0,1,2025-02-03 19:00:00,533,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3244467812,Đóng băng chủ động,614787231334656,1.0,8,2025-01-19 20:30:00,548,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ta Thuy Van
+2026-07-22,3244827042,Đóng băng chủ động,547006155391246,1.0,10,2023-05-22 21:30:00,1156,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3246088997,Im lặng rời bỏ,621138021128448,4.0,10,2024-12-18 20:30:00,580,,,Dao Thi Trang,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3246100527,Đóng băng chủ động,714571911115012,3.0,55,2026-05-31 16:00:00,51,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3246758589,Đóng băng chủ động,559351964104974,2.0,36,2024-07-13 18:00:00,738,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3246820712,Đóng băng chủ động,554039740883216,1.0,0,2023-11-26 20:30:00,968,,,Tran Thi Thu Hang,Inhouse 1,To Thi Ha,Inhouse 2,Phuong Thao Advisor
+2026-07-22,3246895405,Im lặng rời bỏ,552987735900432,1.0,1,2023-08-23 14:00:00,1063,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3247356107,Im lặng rời bỏ,579024859375886,2.0,1,2024-01-24 17:30:00,909,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3247449528,Im lặng rời bỏ,553543336419596,1.0,1,2024-07-13 17:30:00,738,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3248206574,Đóng băng chủ động,556778701822222,1.0,21,2023-09-16 21:30:00,1039,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3248250669,Im lặng rời bỏ,555672657821964,1.0,3,2023-08-26 16:30:00,1060,,,黄黎高原,Other,Bui Thi Thai Duong,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3248853830,Im lặng rời bỏ,568942127507728,2.0,4,2024-06-20 20:00:00,761,,,Le Thi Thuy Trinh,Other,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3248968873,Đóng băng chủ động,597927485311244,2.0,13,2024-05-29 20:30:00,783,TMP_3248968873_20240630,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3249005495,Im lặng rời bỏ,633720248021248,2.0,1,2025-08-02 11:00:00,353,,,Hoang Thi Hong Tham,Offline Team HaNoi,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3249802562,Đóng băng chủ động,559755250106636,1.0,0,2023-10-23 14:00:00,1002,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3250225378,Đóng băng chủ động,630832135442704,2.0,14,2025-09-18 16:30:00,306,,,Vu Khanh Linh,Other,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3250574298,Im lặng rời bỏ,560138946197772,1.0,1,2024-04-05 19:00:00,837,,,Bui Thi Nga,Inhouse 2,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3250990436,Đóng băng chủ động,737409824186632,3.0,102,2024-06-24 22:00:00,757,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Ruby Advisor
+2026-07-22,3251194408,Đóng băng chủ động,569270346772748,2.0,27,2025-07-20 13:30:00,366,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3251554851,Đóng băng chủ động,698959986915584,2.0,8,2025-11-13 18:30:00,250,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3252172416,Đóng băng chủ động,663271123984640,2.0,36,2026-06-21 12:00:00,30,,,Le Thi Thanh Hien,Other,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3252386518,Im lặng rời bỏ,563613539420432,1.0,9,2025-02-17 18:30:00,519,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3252751370,Đóng băng chủ động,566833031059728,1.0,19,2024-05-24 21:30:00,788,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3252994290,Đóng băng chủ động,673146977577216,4.0,59,2026-06-14 18:00:00,37,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3253977350,Im lặng rời bỏ,568206345181452,1.0,1,2024-03-24 22:00:00,849,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3254001181,Im lặng rời bỏ,579694006841612,2.0,1,2024-06-02 12:30:00,779,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3254073859,Đóng băng chủ động,646451221618944,1.0,8,2025-06-27 21:00:00,389,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3254200583,Đóng băng chủ động,586244006324496,2.0,2,2025-11-28 10:00:00,235,,,Le Thi Thanh Hien,Other,Ta Thuy Van,Inhouse 1,Ms Laura
+2026-07-22,3254884210,Im lặng rời bỏ,582528120617228,2.0,1,2024-04-13 19:00:00,829,,,Dao Thi Trang,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3255362086,Đóng băng chủ động,630161862695168,2.0,22,2025-10-12 22:00:00,282,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3255923783,Đóng băng chủ động,571596036233486,1.0,0,2023-09-27 17:30:00,1028,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3256436076,Đóng băng chủ động,657386635272452,3.0,23,2025-12-14 22:00:00,219,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3256748695,Đóng băng chủ động,622401920342284,2.0,21,2025-10-05 20:30:00,289,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3256941631,Im lặng rời bỏ,572311866624272,1.0,5,2024-02-19 18:00:00,883,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3257712179,Im lặng rời bỏ,587482790052110,2.0,1,2024-07-07 21:30:00,744,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3258032729,Đóng băng chủ động,680384405649668,3.0,44,2026-06-08 18:30:00,43,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3258414236,Đóng băng chủ động,663220460230916,2.0,55,2026-05-09 12:00:00,73,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3259455588,Im lặng rời bỏ,592134525137164,2.0,2,2024-07-25 22:00:00,726,,,Tran Thi Thu Hang,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3260383080,Đóng băng chủ động,580284046756112,1.0,9,2024-10-29 16:30:00,630,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3260426228,Im lặng rời bỏ,582530778900748,1.0,4,2024-12-29 17:00:00,569,,,Tran Thi Thu Hang,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3260612404,Im lặng rời bỏ,580642400278798,1.0,1,2024-09-01 08:30:00,688,,,Ta Thuy Van,Inhouse 1,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3260974244,Đóng băng chủ động,642001449290000,3.0,34,2025-08-16 21:00:00,339,,,Le Thi Thanh Hien,Other,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3261095352,Im lặng rời bỏ,580950976946444,1.0,1,2024-05-23 19:30:00,789,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3261260978,Đóng băng chủ động,703050677551360,6.0,4,2026-05-12 21:00:00,70,,2026-07,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3261663979,Im lặng rời bỏ,641315682662656,2.0,13,2026-01-10 15:30:00,192,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3262157367,Đóng băng chủ động,737885817731330,7.0,14,2026-05-30 11:00:00,52,,2026-07,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3262465624,Đóng băng chủ động,624372186530060,2.0,6,2024-11-02 14:00:00,626,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3262527238,Đóng băng chủ động,604149473726732,2.0,42,2025-03-09 18:00:00,499,,,Le Thi Thanh Hien,Other,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3262618731,Đóng băng chủ động,737396727668998,4.0,92,2026-07-18 18:00:00,3,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3263118719,Đóng băng chủ động,668569943345412,3.0,11,2025-07-15 17:30:00,371,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3263539374,Đóng băng chủ động,640208438591756,2.0,21,2025-04-20 18:00:00,457,,,Cu Thi Thu Hien,Offline Team HaNoi,Le To Hai My,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3263608909,Im lặng rời bỏ,585893127282960,1.0,1,2024-03-16 10:30:00,857,,,Cu Thi Thu Hien,Offline Team HaNoi,Bui Thi Thai Duong,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3264044803,Im lặng rời bỏ,586594620936464,1.0,3,2024-06-26 16:00:00,755,,,Tran Thi Thu Hang,Inhouse 1,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3264288237,Đóng băng chủ động,586814430451984,1.0,11,2024-06-22 18:00:00,759,,,Cu Thi Thu Hien,Offline Team HaNoi,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3264403688,Đóng băng chủ động,723748972081412,3.0,11,2026-03-29 22:00:00,114,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3265138307,Im lặng rời bỏ,614027807707392,2.0,12,2025-01-29 06:30:00,538,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3265295429,Đóng băng chủ động,595667515113740,1.0,5,2024-05-19 16:30:00,793,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3265426694,Đóng băng chủ động,674220854610178,1.0,1,2025-07-15 20:00:00,371,,,Truong My Hoa,Other,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3265828763,Im lặng rời bỏ,606058481060108,2.0,9,2025-05-31 15:30:00,416,,,Cu Thi Thu Hien,Offline Team HaNoi,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3265864046,Đóng băng chủ động,590668867152142,1.0,18,2025-02-14 18:30:00,522,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3267133485,Im lặng rời bỏ,593688059799820,1.0,4,2025-03-30 22:30:00,478,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3267569121,Đóng băng chủ động,594256309657870,1.0,42,2024-11-15 21:30:00,613,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3267616754,Đóng băng chủ động,740420053543170,3.0,108,2026-07-13 19:00:00,8,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3267696266,Im lặng rời bỏ,606456463288588,1.0,1,2024-07-01 20:00:00,750,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3267823572,Im lặng rời bỏ,595440573012236,1.0,3,2024-07-06 12:00:00,745,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3267943025,Đóng băng chủ động,711790694123780,1.0,45,,,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3267997645,Im lặng rời bỏ,596204245340428,1.0,2,2024-08-25 12:30:00,695,,,Nguyen Kieu Trang,Inhouse 1,Le Thi Thanh Thuy,Inhouse 1,Thao Chi Advisor
+2026-07-22,3268148411,Đóng băng chủ động,596204429832462,1.0,1,2024-08-25 09:30:00,695,,,Nguyen Kieu Trang,Inhouse 1,Le Thi Thanh Thuy,Inhouse 1,Thao Chi Advisor
+2026-07-22,3268566792,Im lặng rời bỏ,656188011172100,2.0,42,2025-10-05 19:30:00,289,,,Nguyen Linh Chi,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3269197286,Đóng băng chủ động,601285985294604,2.0,77,2025-03-13 19:00:00,495,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3269233135,Đóng băng chủ động,647173118859532,2.0,52,2025-06-14 20:00:00,402,,,Le Thi Thanh Hien,Other,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3269366614,Đóng băng chủ động,672058329620736,2.0,94,2025-06-03 22:00:00,413,,,Dao Thi Trang,Inhouse 1,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3269444922,Đóng băng chủ động,732617227559174,4.0,41,2026-07-03 11:00:00,18,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3269940176,Im lặng rời bỏ,618846578231568,1.0,1,2024-08-29 21:00:00,691,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3270021088,Đóng băng chủ động,637067080077568,2.0,5,2025-10-04 21:30:00,290,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3270059544,Đóng băng chủ động,710877245882626,4.0,98,2025-12-02 21:00:00,231,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3270060273,Đóng băng chủ động,614037420917008,2.0,18,2025-02-22 21:00:00,514,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3270149618,Đóng băng chủ động,604292028651776,1.0,57,2024-07-02 21:00:00,749,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3270194210,Đóng băng chủ động,637736177301776,2.0,35,2025-06-19 09:00:00,397,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3270404981,Đóng băng chủ động,606300736514304,1.0,27,2024-07-10 20:00:00,741,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3270528597,Im lặng rời bỏ,621102783981840,1.0,1,2024-09-03 13:30:00,686,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3270528823,Đóng băng chủ động,679142678964480,2.0,50,2026-03-31 18:00:00,112,,,Dao Thi Trang,Inhouse 1,Kieu Thi Thu Quynh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3270945959,Đóng băng chủ động,675817789577476,3.0,23,2025-09-21 20:30:00,303,,,Nguyen Linh Chi,Inhouse 1,Ho Thi Thanh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3270949070,Im lặng rời bỏ,608766694123792,1.0,5,2024-10-24 22:00:00,635,,,Tran Thi Thu Hang,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3271100829,Đóng băng chủ động,646417869908240,2.0,5,2026-01-05 21:30:00,197,,,Tran Thi Thu Hang,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3271339528,Im lặng rời bỏ,611192105376012,1.0,2,2024-07-04 21:30:00,747,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3271571029,Đóng băng chủ động,642340021575948,2.0,14,2025-08-03 12:30:00,352,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3271581006,Đóng băng chủ động,736480662786306,3.0,87,2026-07-09 16:00:00,12,,,Nguyen Linh Chi,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3271623141,Đóng băng chủ động,611407149095180,1.0,5,2024-10-23 21:30:00,636,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3271641654,Im lặng rời bỏ,611409890423040,1.0,1,2024-07-17 21:30:00,734,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3271972377,Đóng băng chủ động,715951156134144,1.0,21,2026-04-07 21:00:00,105,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3272122246,Đóng băng chủ động,649989936929036,2.0,15,2025-12-07 12:30:00,226,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3272217467,Đóng băng chủ động,614035701266700,2.0,60,2026-07-03 18:00:00,18,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3272416903,Im lặng rời bỏ,615484004976896,1.0,1,2024-08-04 11:30:00,716,,,Le Thi Thanh Hien,Other,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3272488717,Đóng băng chủ động,619928259803408,1.0,8,2025-06-11 21:00:00,405,,,Dinh Thi Khanh Nguyet,Other,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3272713003,Đóng băng chủ động,616189485359372,1.0,10,2025-10-25 17:30:00,269,,,Nguyen Linh Chi,Inhouse 1,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3272742217,Đóng băng chủ động,621153489893632,1.0,33,2025-03-19 21:00:00,489,,,Dinh Thi Khanh Nguyet,Other,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3272840526,Đóng băng chủ động,621630432844044,1.0,31,2024-09-12 18:00:00,677,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3272843160,Đóng băng chủ động,621677905178896,1.0,28,2025-05-14 16:00:00,433,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3272995944,Đóng băng chủ động,676168329134338,3.0,42,2025-06-02 20:30:00,414,,,Nguyen Cong Nguyen,Other,彭胜君,Other,Phuong Thao Advisor
+2026-07-22,3273114829,Đóng băng chủ động,733142879197446,4.0,21,2026-06-07 22:00:00,44,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3273122025,Đóng băng chủ động,733318040135938,4.0,16,2026-06-10 22:00:00,41,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3273186169,Im lặng rời bỏ,617636364593408,1.0,41,2024-06-14 16:30:00,767,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3273220445,Đóng băng chủ động,617913454113024,1.0,46,2024-10-30 18:30:00,629,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3273222301,Đóng băng chủ động,617928371085584,1.0,48,2024-10-21 18:30:00,638,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3273264896,Đóng băng chủ động,618672077582592,1.0,34,2024-07-30 21:00:00,721,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3273393379,Đóng băng chủ động,621676821104908,1.0,8,2024-11-03 22:30:00,625,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3273451399,Đóng băng chủ động,651395431323904,2.0,23,2025-06-07 22:00:00,409,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3273469478,Đóng băng chủ động,619729532549392,1.0,63,2024-08-11 10:00:00,709,,,Nguyen Thi Phuong Linh,Other,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3273518235,Đóng băng chủ động,675951740602626,2.0,1,2026-04-16 21:00:00,96,,2026-07,Tran Thi Thu Hang,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3273648319,Im lặng rời bỏ,620250550081792,1.0,1,2024-09-05 22:00:00,684,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3273747105,Đóng băng chủ động,621118120333584,1.0,4,2024-08-26 09:00:00,694,,,Dinh Thi Khanh Nguyet,Other,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3273989017,Đóng băng chủ động,683449079826688,1.0,13,2025-06-14 14:00:00,402,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3274029783,Đóng băng chủ động,621676683460876,1.0,12,2025-08-25 11:30:00,330,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3274137472,Đóng băng chủ động,650870645258496,2.0,10,2026-06-14 17:00:00,37,,2026-07,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3274217283,Đóng băng chủ động,663094474496256,2.0,28,2025-11-21 23:00:00,242,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Ruby Advisor
+2026-07-22,3274220038,Đóng băng chủ động,695460039741698,2.0,57,2026-01-09 15:00:00,193,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3274224711,Im lặng rời bỏ,622729459716352,1.0,1,2024-10-06 15:00:00,653,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3274226227,Đóng băng chủ động,650340192977168,2.0,39,2025-08-17 15:00:00,338,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3274383726,Đóng băng chủ động,623239529566480,1.0,3,2025-07-11 20:00:00,375,,,Nguyen Kieu Trang,Inhouse 1,Le Thi Thanh Thuy,Inhouse 1,Thao Chi Advisor
+2026-07-22,3274447355,Đóng băng chủ động,711919997520128,2.0,40,2026-07-19 11:30:00,2,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3274473839,Đóng băng chủ động,623930525174016,1.0,32,2026-06-16 11:00:00,35,,,Cu Thi Thu Hien,Offline Team HaNoi,Le To Hai My,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3274643869,Đóng băng chủ động,623797970102540,1.0,27,2025-03-11 21:00:00,497,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3274676094,Đóng băng chủ động,734347549968642,1.0,35,2026-05-27 18:30:00,55,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3274690011,Đóng băng chủ động,624859472621836,1.0,21,2024-10-28 19:30:00,631,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3274773786,Đóng băng chủ động,647527245371648,2.0,4,2025-11-28 21:30:00,235,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3275034269,Đóng băng chủ động,737889413738754,4.0,39,2026-05-26 21:00:00,56,TMP_3275034269_20260426,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3275046171,Im lặng rời bỏ,625184819536128,1.0,1,2025-09-07 18:30:00,317,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3275220390,Đóng băng chủ động,628407032473872,1.0,3,2025-07-06 22:00:00,380,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3275331502,Đóng băng chủ động,702152616638720,2.0,7,2026-05-26 21:30:00,56,,2026-07,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3275408826,Đóng băng chủ động,724134915287298,5.0,15,2026-05-29 16:30:00,53,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3275412190,Đóng băng chủ động,629427521779984,1.0,60,2025-03-19 21:00:00,489,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3275800661,Đóng băng chủ động,627858662181120,1.0,36,2024-09-15 08:30:00,674,,,Nguyen Thi Nhung,Other,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3275800870,Đóng băng chủ động,653724939362568,1.0,19,2026-05-28 21:30:00,54,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3275805719,Im lặng rời bỏ,642707378829580,2.0,1,2025-02-04 19:30:00,532,,,Cu Thi Thu Hien,Offline Team HaNoi,Bui Thi Thai Duong,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3275942060,Đóng băng chủ động,627857993410816,1.0,16,2025-03-26 16:00:00,482,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3276037641,Đóng băng chủ động,679176175261956,2.0,65,2026-01-09 22:00:00,193,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3276076177,Đóng băng chủ động,695329047685378,2.0,41,2026-04-11 08:30:00,101,,,Nguyen Lan Anh,Other,Bui Thi Thai Duong,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3276147446,Im lặng rời bỏ,628371496356108,1.0,9,2025-09-07 14:00:00,317,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ta Thuy Van
+2026-07-22,3276369038,Đóng băng chủ động,721468984721668,4.0,17,2026-06-25 13:00:00,26,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3276540411,Đóng băng chủ động,687324823642370,1.0,33,2025-08-02 14:30:00,353,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3277465903,Im lặng rời bỏ,638493959516432,1.0,5,2025-04-05 16:30:00,472,,,Tran Thi Thu Hang,Inhouse 1,Ho Thi Thanh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3277587109,Đóng băng chủ động,732052206979334,6.0,12,2026-06-17 15:30:00,34,,2026-07,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3277872012,Đóng băng chủ động,705428334993664,4.0,34,2026-03-09 21:30:00,134,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3277923760,Im lặng rời bỏ,636380216119568,1.0,1,2025-02-23 23:30:00,513,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3277977176,Đóng băng chủ động,726789944486152,2.0,42,2026-05-14 17:00:00,68,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3277994545,Đóng băng chủ động,638840762284288,1.0,1,2026-05-15 21:30:00,67,,2026-07,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Ruby Advisor
+2026-07-22,3278012173,Đóng băng chủ động,666800482705664,2.0,32,2025-06-02 16:30:00,414,,,Nguyen Linh Chi,Inhouse 1,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3278411321,Im lặng rời bỏ,651889882396930,2.0,1,2025-04-19 17:30:00,458,,,Cu Thi Thu Hien,Offline Team HaNoi,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3278546541,Đóng băng chủ động,637028325251328,1.0,7,2024-12-02 18:30:00,596,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3278782072,Đóng băng chủ động,637595490269456,1.0,23,2025-01-13 19:00:00,554,,,Dinh Thi Khanh Nguyet,Other,Bui Thi Hong Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3278785452,Đóng băng chủ động,637595520620800,1.0,20,2025-01-23 19:00:00,544,,,Dinh Thi Khanh Nguyet,Other,Bui Thi Hong Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3279081796,Đóng băng chủ động,638487976683776,1.0,36,2025-05-30 21:30:00,417,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3279197804,Đóng băng chủ động,683574558679298,3.0,14,2026-02-12 21:00:00,159,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3279200749,Đóng băng chủ động,722582571598082,2.0,69,2026-05-27 21:00:00,55,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3279310885,Đóng băng chủ động,715096065691904,3.0,1,2026-04-16 20:30:00,96,,2026-07,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3279482773,Đóng băng chủ động,651364132382978,2.0,4,2025-07-23 22:00:00,363,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3279639607,Đóng băng chủ động,706652274342144,1.0,90,2025-12-10 21:00:00,223,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3279642420,Đóng băng chủ động,658120088989956,2.0,1,2025-07-29 16:30:00,357,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3279744191,Im lặng rời bỏ,640658336725260,1.0,1,2025-02-20 19:00:00,516,,,Tran Thi Thu Hang,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3279752068,Đóng băng chủ động,664686149880068,2.0,64,2026-06-01 21:30:00,50,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3279784036,Đóng băng chủ động,677797425647872,2.0,11,2026-06-26 19:00:00,25,,2026-07,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3279798792,Im lặng rời bỏ,640923371610380,1.0,1,2025-07-16 20:00:00,370,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3279835574,Đóng băng chủ động,684798757513474,2.0,6,2026-06-07 15:00:00,44,,2026-07,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3279862903,Đóng băng chủ động,691055530768640,2.0,65,2026-06-12 19:00:00,39,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3280173843,Đóng băng chủ động,642549723222284,1.0,12,2025-03-04 19:00:00,504,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3280234804,Đóng băng chủ động,643221733505280,1.0,15,2025-10-09 18:00:00,285,,,Cu Thi Thu Hien,Offline Team HaNoi,Ho Thi Thanh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3280274465,Đóng băng chủ động,652114936922374,1.0,9,2025-03-30 17:30:00,478,,,Hoang Thi Hong Tham,Offline Team HaNoi,Nguyen Thao Anh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3280323915,Đóng băng chủ động,643312732227856,1.0,42,2025-06-25 19:30:00,391,,,Vu Khanh Linh,Other,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3280419210,Đóng băng chủ động,736724775043334,1.0,35,2026-05-26 18:30:00,56,,,Nguyen Thi Trang,Inhouse 2,Nguyen Thi Trang,Inhouse 2,Tran Thu Ha
+2026-07-22,3280427707,Đóng băng chủ động,656847448746242,2.0,3,2025-07-13 16:00:00,373,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Tran Thi Son
+2026-07-22,3280456830,Đóng băng chủ động,746045098336520,3.0,40,2026-06-29 21:00:00,22,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3280459528,Đóng băng chủ động,673133879150850,2.0,62,2026-05-20 22:00:00,62,,,Nguyen Thi Nhung,Other,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3280475790,Đóng băng chủ động,674541336248578,2.0,11,2025-08-05 21:00:00,350,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3280477569,Đóng băng chủ động,668000435671296,1.0,18,2026-06-28 15:00:00,23,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3280503235,Đóng băng chủ động,643577438472460,1.0,15,2025-10-05 18:30:00,289,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Tran Thi Son
+2026-07-22,3280527198,Đóng băng chủ động,657385324726532,2.0,10,2025-12-25 21:30:00,208,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3280568128,Đóng băng chủ động,674541608325376,2.0,11,2025-08-05 21:30:00,350,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3280600178,Đóng băng chủ động,662874506400004,1.0,11,2025-07-05 23:00:00,381,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ta Thuy Van
+2026-07-22,3280656292,Đóng băng chủ động,753650471244034,7.0,22,2026-07-11 16:30:00,10,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3280955690,Đóng băng chủ động,674766180206848,3.0,13,2026-07-03 01:30:00,18,TMP_3280955690_20260309,2026-07,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3280981940,Đóng băng chủ động,651576269502722,1.0,52,2025-07-31 11:00:00,355,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3281024290,Đóng băng chủ động,645255987534096,1.0,14,2025-10-04 17:30:00,290,,,Vu Khanh Linh,Other,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3281033347,Đóng băng chủ động,681533912400128,1.0,70,2025-09-30 17:30:00,294,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Tran Thi Son
+2026-07-22,3281036294,Im lặng rời bỏ,646426991698188,1.0,1,2025-01-30 18:00:00,537,,,Cu Thi Thu Hien,Offline Team HaNoi,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3281112638,Im lặng rời bỏ,685580677492994,2.0,15,2025-10-22 21:00:00,272,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Thao Chi Advisor
+2026-07-22,3281304198,Im lặng rời bỏ,646936382382348,1.0,1,2025-05-20 15:00:00,427,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3281312353,Đóng băng chủ động,646416948730112,1.0,59,2025-04-18 21:00:00,459,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3281396033,Đóng băng chủ động,647696213104908,1.0,13,2025-06-27 18:00:00,389,,,Le Thi Thanh Hien,Other,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3281396096,Đóng băng chủ động,657387559004418,1.0,64,2025-07-13 17:00:00,373,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3281503115,Im lặng rời bỏ,651025962408208,1.0,2,2025-03-20 19:30:00,488,,,PF Hanoi system,Other,Lai Ngoc Thuy Linh,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3281616146,Đóng băng chủ động,661534523922692,1.0,8,2025-07-14 21:00:00,372,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3281670619,Đóng băng chủ động,705014128474370,2.0,86,2026-01-11 23:00:00,191,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3281736925,Im lặng rời bỏ,649446701467920,1.0,1,2025-06-20 20:00:00,396,,,Nguyen Kieu Trang,Inhouse 1,Le Thi Thanh Thuy,Inhouse 1,Thao Chi Advisor
+2026-07-22,3281745936,Đóng băng chủ động,651888906891522,1.0,50,2025-07-03 23:00:00,383,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ta Thuy Van
+2026-07-22,3281837023,Đóng băng chủ động,748736889284866,1.0,31,2026-07-17 23:30:00,4,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Ms Laura
+2026-07-22,3281882692,Đóng băng chủ động,648401025089808,1.0,4,2026-01-06 20:00:00,196,,,Cu Thi Thu Hien,Offline Team HaNoi,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3281891759,Đóng băng chủ động,707647748045056,1.0,0,2026-04-21 21:00:00,91,,,Dao Ngoc Lan Anh,Inhouse 1,Tran Thi Son,Inhouse 1,Ruby Advisor
+2026-07-22,3281924653,Đóng băng chủ động,723422631835904,1.0,36,2026-03-11 17:30:00,132,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3281944910,Im lặng rời bỏ,659498266921216,1.0,1,2026-03-01 16:30:00,142,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Ruby Advisor
+2026-07-22,3282019652,Đóng băng chủ động,740055885328642,4.0,205,2026-06-19 22:00:00,32,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3282170618,Đóng băng chủ động,680384204054784,2.0,26,2025-08-04 20:30:00,351,,,Phan Thi Huong,Inhouse 1,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3282254199,Đóng băng chủ động,690728173818112,2.0,45,2025-12-24 17:00:00,209,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3282259128,Đóng băng chủ động,670491132899586,1.0,23,2025-03-26 20:30:00,482,,,Do Thuy Dung,Other,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3282345156,Im lặng rời bỏ,666061201680644,2.0,1,2026-02-02 19:00:00,169,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3282446732,Đóng băng chủ động,666642344935682,2.0,50,2025-12-19 15:30:00,214,,,Cu Thi Thu Hien,Offline Team HaNoi,Le To Hai My,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3282488325,Đóng băng chủ động,658827224973572,1.0,2,2026-01-20 19:30:00,182,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3282749330,Đóng băng chủ động,714408133523712,2.0,87,2026-03-14 22:00:00,129,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3282786700,Đóng băng chủ động,733676912181512,3.0,31,2026-06-21 21:00:00,30,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3282897361,Đóng băng chủ động,655111241400580,1.0,5,2025-02-15 08:00:00,521,,,Nguyen Linh Chi,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3282933871,Đóng băng chủ động,735053311301894,2.0,86,2026-06-27 15:00:00,24,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3283052914,Đóng băng chủ động,724618790101248,2.0,20,2026-06-04 20:00:00,47,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3283069946,Đóng băng chủ động,655287297880324,1.0,19,2025-04-14 21:30:00,463,,,Hoang Thi Hong Tham,Offline Team HaNoi,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3283082197,Đóng băng chủ động,685392012847364,2.0,17,2026-03-20 09:00:00,123,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3283110372,Đóng băng chủ động,654901849190660,1.0,2,2026-04-27 22:30:00,85,,2026-07,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Tran Thi Son
+2026-07-22,3283457726,Đóng băng chủ động,723966245224704,1.0,26,,,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3283586822,Đóng băng chủ động,678122862012674,2.0,26,2026-07-01 23:30:00,20,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3283758348,Đóng băng chủ động,732806362321154,1.0,18,2026-04-11 10:30:00,101,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Ms Laura
+2026-07-22,3283767031,Đóng băng chủ động,702680736616706,1.0,26,2025-12-13 19:00:00,220,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van
+2026-07-22,3283767037,Đóng băng chủ động,700772783145218,2.0,24,2025-12-20 18:00:00,213,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3283788304,Đóng băng chủ động,663094926465284,1.0,29,2025-04-28 19:30:00,449,,,Truong My Hoa,Other,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3283933297,Đóng băng chủ động,662770988210434,1.0,5,2025-04-05 17:00:00,472,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ta Thuy Van
+2026-07-22,3284068003,Đóng băng chủ động,671932981860612,1.0,5,2025-06-19 21:30:00,397,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3284085117,Đóng băng chủ động,718953069250820,1.0,6,2026-06-11 21:30:00,40,,2026-07,Vu Thi Trang,Inhouse 2,Nguyen Thi Trang,Inhouse 2,Tran Thu Ha
+2026-07-22,3284432131,Đóng băng chủ động,658827034192130,1.0,7,2025-09-29 18:00:00,295,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3284432191,Đóng băng chủ động,658827028400384,1.0,4,2025-09-29 18:00:00,295,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3284439779,Đóng băng chủ động,659717204730116,1.0,14,2025-06-22 22:30:00,394,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Tran Thi Son
+2026-07-22,3284524005,Đóng băng chủ động,661166014355716,1.0,8,2025-06-18 20:30:00,398,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3284569177,Im lặng rời bỏ,659498093592834,1.0,2,2025-04-19 16:30:00,458,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3284661972,Đóng băng chủ động,724137489813760,2.0,95,2026-06-23 23:00:00,28,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3284689332,Đóng băng chủ động,685737316501764,2.0,29,2026-06-20 15:00:00,31,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3285198926,Đóng băng chủ động,710871804662018,3.0,69,2026-07-04 19:00:00,17,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3285584722,Im lặng rời bỏ,679504660097282,2.0,1,2025-10-24 21:00:00,270,,,Le To Hai My,Inhouse 1,Nguyen Nhu Ngoc,Inhouse 1,Nguyen Nhu Ngoc
+2026-07-22,3285780341,Đóng băng chủ động,676541454766340,2.0,25,2025-08-23 18:00:00,332,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Ms Laura
+2026-07-22,3285783534,Đóng băng chủ động,678872129976576,2.0,18,2025-06-21 11:30:00,395,,,Nguyen Linh Chi,Inhouse 1,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3285935314,Đóng băng chủ động,738774992902408,3.0,34,2026-07-19 21:00:00,2,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3285935945,Đóng băng chủ động,666588169144578,1.0,2,2025-07-01 20:30:00,385,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3285935956,Đóng băng chủ động,720724026806528,2.0,19,2026-07-10 21:00:00,11,TMP_3285935956_20260630,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3286075721,Đóng băng chủ động,665783516999936,1.0,8,2025-06-16 10:00:00,400,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3286097640,Đóng băng chủ động,717027674349828,3.0,5,2026-05-07 21:30:00,75,,2026-07,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3286273992,Đóng băng chủ động,716167680049408,3.0,86,2026-05-29 19:00:00,53,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Thao Chi Advisor
+2026-07-22,3286592175,Đóng băng chủ động,667355029125380,1.0,10,2025-04-27 21:00:00,450,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Thao Chi Advisor
+2026-07-22,3286596214,Đóng băng chủ động,702719991847172,2.0,7,2026-03-02 18:30:00,141,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3286597529,Im lặng rời bỏ,697009137074434,2.0,1,2026-01-28 22:00:00,174,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3286616425,Đóng băng chủ động,666998382407938,1.0,14,2025-07-18 18:00:00,368,,,Cu Thi Thu Hien,Offline Team HaNoi,Le To Hai My,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3286815986,Đóng băng chủ động,684798572882178,1.0,22,2025-11-24 22:30:00,239,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3286856319,Đóng băng chủ động,667997686405378,1.0,36,2025-04-12 16:00:00,465,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh
+2026-07-22,3286910575,Đóng băng chủ động,731748235665666,2.0,92,2026-03-31 21:00:00,112,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3287002375,Đóng băng chủ động,667989616527616,1.0,29,2025-12-08 21:30:00,225,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3287024361,Đóng băng chủ động,697241778690304,2.0,14,2026-07-13 16:30:00,8,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Ruby Advisor
+2026-07-22,3287210576,Đóng băng chủ động,748876508330246,2.0,62,2026-06-01 21:30:00,50,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3287273127,Đóng băng chủ động,669943396542724,1.0,7,2025-06-03 20:30:00,413,,,Do Thuy Dung,Other,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3287349273,Đóng băng chủ động,669597824289028,1.0,5,2025-11-09 19:00:00,254,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3287457223,Đóng băng chủ động,671083777001732,1.0,5,2025-12-09 19:00:00,224,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3287735074,Đóng băng chủ động,670697595685124,1.0,24,2026-01-24 00:00:00,179,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ms Laura
+2026-07-22,3287905664,Đóng băng chủ động,712957021251844,1.0,79,2026-07-15 19:00:00,6,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3287911169,Đóng băng chủ động,672060181500162,1.0,3,2026-06-03 18:30:00,48,,2026-07,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3288074068,Đóng băng chủ động,675074086744322,1.0,24,2026-01-07 17:30:00,195,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3288103759,Đóng băng chủ động,713127055237378,2.0,26,2026-06-24 23:30:00,27,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ms Laura
+2026-07-22,3288171461,Đóng băng chủ động,722547223060738,1.0,34,2026-03-12 16:00:00,131,,,Dao Ngoc Lan Anh,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3288221496,Đóng băng chủ động,671554869704960,1.0,12,2025-05-02 20:30:00,445,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3288236409,Đóng băng chủ động,744845341837570,2.0,47,2026-05-29 16:00:00,53,,,Nguyen Thao Anh,Inhouse 1,Le Kim Chi,Inhouse 1,Le Kim Chi
+2026-07-22,3288475782,Đóng băng chủ động,671931268272384,1.0,46,2026-04-09 20:30:00,103,,,Tran Thi Thu Hang,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3288530461,Đóng băng chủ động,671757232943364,1.0,10,2025-09-14 17:00:00,310,,,Truong My Hoa,Other,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3288573001,Im lặng rời bỏ,672631872184576,2.0,1,2025-07-08 11:30:00,378,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3288620731,Đóng băng chủ động,672952432544004,1.0,6,2025-05-31 12:30:00,416,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Ms Laura
+2026-07-22,3288760104,Im lặng rời bỏ,673314895223040,1.0,34,2025-06-05 10:30:00,411,,,Vo Thi Thom,Offline Team HaNoi,Hoang Thi Hong Tham,Offline Team HaNoi,Tran Thu Ha
+2026-07-22,3288855755,Đóng băng chủ động,712983061942528,2.0,5,2026-05-14 21:00:00,68,,2026-07,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3288933992,Đóng băng chủ động,673510057160964,1.0,0,2025-07-21 22:00:00,365,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Le Thi Thanh Thuy
+2026-07-22,3288975748,Đóng băng chủ động,712808334336256,2.0,55,2026-02-12 07:30:00,159,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3289054021,Đóng băng chủ động,673522526066944,1.0,7,2025-07-18 21:00:00,368,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ms Laura
+2026-07-22,3289253918,Đóng băng chủ động,676711705317632,1.0,44,2025-12-12 16:00:00,221,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3289464685,Đóng băng chủ động,733694346832130,4.0,16,2026-05-05 19:30:00,77,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3289553409,Đóng băng chủ động,676177993730306,1.0,13,2025-08-12 21:30:00,343,,,Nguyen Linh Chi,Inhouse 1,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3289634118,Đóng băng chủ động,693118153933056,1.0,54,2026-02-04 20:00:00,167,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh
+2026-07-22,3289639632,Đóng băng chủ động,713869181237504,2.0,4,2026-06-04 16:30:00,47,,2026-07,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3289654756,Đóng băng chủ động,675693308252418,1.0,37,2025-06-21 12:30:00,395,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3290064241,Đóng băng chủ động,679009200304384,1.0,38,2025-06-21 19:00:00,395,,,Truong My Hoa,Other,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3290309499,Đóng băng chủ động,676888884832516,1.0,87,2025-06-24 19:00:00,392,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh
+2026-07-22,3290387870,Đóng băng chủ động,735647495280904,2.0,29,2026-06-14 14:00:00,37,,,Vu Thuy Huong,Offline Team HaNoi,Vu Thuy Huong,Offline Team HaNoi,Tran Thu Ha
+2026-07-22,3290451068,Đóng băng chủ động,684267429851396,1.0,0,2025-06-18 21:30:00,398,,,Pham Thi Thanh,Offline Team HaNoi,Nguyen Kieu Trang,Inhouse 1,Le Thi Thanh Thuy
+2026-07-22,3290476400,Im lặng rời bỏ,680608448116996,1.0,1,2025-10-30 09:00:00,264,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3290624818,Im lặng rời bỏ,698137666593024,1.0,1,2025-11-15 20:30:00,248,,,Nguyen Linh Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Nguyen Linh Chi
+2026-07-22,3290699935,Đóng băng chủ động,722566592235776,2.0,13,2026-05-29 21:00:00,53,,2026-07,Hoang Thi Hong Tham,Offline Team HaNoi,Hoang Thi Hong Tham,Offline Team HaNoi,Tran Thu Ha
+2026-07-22,3290834006,Đóng băng chủ động,726099221506312,3.0,46,2026-01-31 21:30:00,171,,,Vo Tran Anh Thuy,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3290888993,Đóng băng chủ động,680034545891584,1.0,5,2026-05-06 21:00:00,76,,2026-07,Do Thi Hong Nhung,Inhouse 1,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3291174863,Đóng băng chủ động,680034989820162,1.0,9,2026-03-23 22:00:00,120,,,Truong Thi Quynh,Offline Team HaNoi,Pham Thuy Linh,Other,Tran Thu Ha
+2026-07-22,3291546445,Đóng băng chủ động,695295607386370,2.0,81,2026-04-03 19:00:00,109,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3291552346,Đóng băng chủ động,681318243387648,1.0,3,2026-05-21 17:30:00,61,,2026-07,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3291664060,Đóng băng chủ động,733674925107462,2.0,42,2026-04-29 23:30:00,83,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3291850023,Đóng băng chủ động,685590940506370,1.0,44,2025-07-08 22:00:00,378,,,Nguyen Linh Chi,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3291988029,Đóng băng chủ động,681666148780288,1.0,43,2025-06-26 22:00:00,390,,,Do Tran Phuong Anh,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3292033193,Đóng băng chủ động,681665004611844,1.0,101,2025-05-27 17:00:00,420,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Tran Thi Son
+2026-07-22,3292056588,Đóng băng chủ động,681980657443074,1.0,10,2025-09-13 19:00:00,311,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3292101660,Đóng băng chủ động,695653034422532,1.0,12,2026-02-10 18:00:00,161,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ruby Advisor
+2026-07-22,3292171958,Đóng băng chủ động,686616081961218,1.0,7,2025-08-15 10:00:00,340,,,Do Tran Phuong Anh,Inhouse 1,Ta Thuy Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3292213399,Đóng băng chủ động,744320857749766,2.0,53,2025-12-04 23:00:00,229,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3292379847,Đóng băng chủ động,682856184723714,1.0,10,2026-04-19 20:00:00,93,,2026-07,Pham Nguyen Huong Giang,Offline Team HaNoi,Pham Thuy Linh,Other,Tran Thu Ha
+2026-07-22,3292467999,Đóng băng chủ động,744845492498690,2.0,47,2026-05-31 16:00:00,51,,,Nguyen Thao Anh,Inhouse 1,Le Kim Chi,Inhouse 1,Le Kim Chi
+2026-07-22,3292492761,Đóng băng chủ động,683440100522240,1.0,11,2025-10-18 08:30:00,276,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Tran Thi Son
+2026-07-22,3292492831,Đóng băng chủ động,728733071208710,2.0,78,2026-06-17 21:00:00,34,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3292492988,Đóng băng chủ động,736202194450696,3.0,8,2026-06-09 20:00:00,42,,2026-07,Nguyen Linh Chi,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3292493804,Đóng băng chủ động,739123053779208,2.0,27,2026-07-03 11:00:00,18,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3292494116,Đóng băng chủ động,693691226583300,2.0,89,2026-07-05 19:00:00,16,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3292495481,Đóng băng chủ động,740364710865160,2.0,35,2026-06-17 10:30:00,34,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3292495604,Đóng băng chủ động,684316754696450,1.0,10,2025-08-21 11:30:00,334,,,Tran Thi Thu Hang,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Ms Laura
+2026-07-22,3292512469,Đóng băng chủ động,708040252780800,1.0,70,2026-03-27 17:00:00,116,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3292532759,Đóng băng chủ động,684268589158660,1.0,10,2025-11-01 12:00:00,262,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh
+2026-07-22,3292538832,Đóng băng chủ động,684126836701444,1.0,44,2026-06-21 19:00:00,30,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3292598639,Đóng băng chủ động,729440497307912,2.0,114,2026-06-19 21:00:00,32,,,Mai Thi Lien,Inhouse 2,Mai Thi Lien,Inhouse 2,Tran Thu Ha
+2026-07-22,3292614846,Đóng băng chủ động,684128351985922,1.0,4,2025-07-17 21:30:00,369,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3292683230,Đóng băng chủ động,684155941835010,1.0,49,2025-06-20 20:00:00,396,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3292693733,Đóng băng chủ động,684679889756418,1.0,36,2025-12-26 21:30:00,207,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Ruby Advisor
+2026-07-22,3292735163,Đóng băng chủ động,704684749283586,2.0,44,2026-06-03 21:00:00,48,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3292748755,Đóng băng chủ động,684316922493186,1.0,13,2025-08-21 11:30:00,334,,,Tran Thi Thu Hang,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Ms Laura
+2026-07-22,3292787673,Đóng băng chủ động,684669604268288,1.0,7,2026-05-23 17:00:00,59,,2026-07,Do Tran Phuong Anh,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3292809269,Đóng băng chủ động,746916638564610,2.0,94,2026-07-20 18:30:00,1,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3292856607,Đóng băng chủ động,684631033557250,1.0,10,2025-09-19 20:00:00,305,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Ta Thuy Van
+2026-07-22,3292986473,Đóng băng chủ động,748514154995976,2.0,106,2026-07-06 21:30:00,15,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Thao Chi Advisor
+2026-07-22,3292986739,Im lặng rời bỏ,685544455516416,1.0,1,2025-11-29 17:00:00,234,,,Do Tran Phuong Anh,Inhouse 1,Pham Thi Thao,Inhouse 1,Josh
+2026-07-22,3293133105,Đóng băng chủ động,687368076912898,1.0,81,2025-09-03 16:30:00,321,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Ruby Advisor
+2026-07-22,3293299388,Đóng băng chủ động,686311828359426,1.0,2,2025-08-14 17:00:00,341,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3293315651,Đóng băng chủ động,686958575153410,1.0,66,2025-11-09 21:00:00,254,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Thao Chi Advisor
+2026-07-22,3293384390,Đóng băng chủ động,717906150398210,2.0,20,2026-05-21 21:00:00,61,,,Nguyen Linh Chi,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3293472682,Đóng băng chủ động,688039133583616,1.0,8,2025-12-07 20:30:00,226,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3293547891,Đóng băng chủ động,698960104802564,1.0,17,2025-10-02 18:00:00,292,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh
+2026-07-22,3293570327,Đóng băng chủ động,688198652356866,1.0,11,2026-07-17 21:30:00,4,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Ruby Advisor
+2026-07-22,3293655646,Đóng băng chủ động,726753955082504,1.0,28,2026-05-23 19:30:00,59,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3293712566,Đóng băng chủ động,686970209892612,1.0,29,2026-03-26 15:00:00,117,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3293818229,Đóng băng chủ động,692802739302658,1.0,14,2025-12-19 16:00:00,214,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3293820385,Đóng băng chủ động,687893459470594,1.0,34,2026-02-01 18:30:00,170,,,Nguyen Linh Chi,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3293997865,Đóng băng chủ động,690467628861698,1.0,6,2026-01-17 18:30:00,185,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Ms Laura
+2026-07-22,3294002664,Đóng băng chủ động,715062622744834,2.0,12,2026-05-24 18:30:00,58,,2026-07,Hoang Thi Hong Tham,Offline Team HaNoi,Hoang Thi Hong Tham,Offline Team HaNoi,Tran Thu Ha
+2026-07-22,3294007726,Đóng băng chủ động,690128874379524,1.0,23,2025-10-29 19:30:00,265,,,Ho Thi Thanh,Inhouse 1,Ho Thi Thanh,Inhouse 1,Ms Laura
+2026-07-22,3294338467,Đóng băng chủ động,743964750369030,2.0,59,2026-04-25 13:30:00,87,,,Hoang Thi Hong Tham,Offline Team HaNoi,Hoang Thi Hong Tham,Offline Team HaNoi,Tran Thu Ha
+2026-07-22,3294397138,Đóng băng chủ động,725023794649348,2.0,42,2026-03-19 19:00:00,124,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3294515520,Đóng băng chủ động,689801287567618,1.0,20,2026-06-17 09:30:00,34,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3294790147,Đóng băng chủ động,729085257242886,2.0,28,2026-07-20 15:00:00,1,,,Nguyen Linh Chi,Inhouse 1,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3294817896,Đóng băng chủ động,710107921672448,2.0,19,2026-05-25 22:30:00,57,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3294828552,Đóng băng chủ động,712951521937666,2.0,17,2026-06-24 19:30:00,27,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3294836887,Đóng băng chủ động,693327841851652,1.0,32,2025-09-13 19:00:00,311,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3294875605,Đóng băng chủ động,738249071200520,3.0,16,2026-05-23 21:00:00,59,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3294997908,Im lặng rời bỏ,691206812477698,1.0,3,2025-12-27 17:00:00,206,,,Le Thi Thuy Trang,Inhouse 1,Le Thi Thuy Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3295000723,Đóng băng chủ động,691589521666306,1.0,3,2025-09-08 19:00:00,316,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Thao Chi Advisor
+2026-07-22,3295001757,Đóng băng chủ động,691440824152324,1.0,4,2025-09-28 15:00:00,296,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang
+2026-07-22,3295060228,Đóng băng chủ động,691570722625794,1.0,7,2026-01-15 16:00:00,187,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Tran Thi Son
+2026-07-22,3295192146,Đóng băng chủ động,753874218877190,1.0,48,2026-07-17 21:00:00,4,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3295221196,Đóng băng chủ động,694190861342980,1.0,25,2026-05-19 20:30:00,63,,,Nguyen Thi Thu Ngan,Offline Team HaNoi,Pham Thuy Linh,Other,Tran Thu Ha
+2026-07-22,3295373943,Đóng băng chủ động,710166919422210,2.0,156,2026-03-08 09:30:00,135,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Ruby Advisor
+2026-07-22,3295485343,Đóng băng chủ động,692612727216388,1.0,32,2025-09-30 16:00:00,294,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Tran Thi Son
+2026-07-22,3295777741,Đóng băng chủ động,726262997702918,2.0,98,2026-04-13 16:30:00,99,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3295899039,Đóng băng chủ động,725204334432518,2.0,68,2026-07-12 18:30:00,9,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3295925646,Đóng băng chủ động,708706609641728,2.0,84,2025-12-22 21:00:00,211,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3295981157,Đóng băng chủ động,694180475369730,1.0,27,2026-06-23 21:00:00,28,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3295998324,Đóng băng chủ động,693740555118850,1.0,3,2026-01-02 18:00:00,200,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3296141023,Đóng băng chủ động,694540024422656,1.0,41,2026-05-15 23:00:00,67,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3296159094,Im lặng rời bỏ,695153903190272,1.0,11,2026-01-04 11:00:00,198,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Josh
+2026-07-22,3296216968,Đóng băng chủ động,694231574089986,1.0,31,2026-05-14 20:30:00,68,,,Tran Thi Thu Hang,Inhouse 1,Dao Thi Trang,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3296253635,Đóng băng chủ động,722901526749440,1.0,16,2026-06-09 10:30:00,42,,,Nguyen Thuy Hien,Inhouse 2,Mai Thi Lien,Inhouse 2,Tran Thu Ha
+2026-07-22,3296440176,Đóng băng chủ động,726400095389960,2.0,36,2026-05-28 21:00:00,54,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Thao Chi Advisor
+2026-07-22,3296513607,Đóng băng chủ động,696477514770690,1.0,2,2026-02-14 20:00:00,157,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3296528297,Đóng băng chủ động,722902594461952,2.0,31,2026-05-28 21:30:00,54,,,Nguyen Linh Chi,Inhouse 1,Dao Thi Trang,Inhouse 1,Ms Laura
+2026-07-22,3296543279,Đóng băng chủ động,704139089129732,1.0,32,2026-07-04 10:30:00,17,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Ruby Advisor
+2026-07-22,3296621800,Đóng băng chủ động,715653084735744,2.0,26,2026-02-16 21:30:00,155,,,Le Minh Thanh,Ho Chi Minh,Nina,Inhouse 1,Dao Thi Hoang Yen
+2026-07-22,3296632255,Đóng băng chủ động,701665586061568,1.0,55,,,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Ms Laura
+2026-07-22,3296694283,Đóng băng chủ động,734028116353288,1.0,90,2026-05-22 20:00:00,60,,,Hoang Thi Hong Tham,Offline Team HaNoi,Hoang Thi Hong Tham,Offline Team HaNoi,Tran Thu Ha
+2026-07-22,3296768626,Đóng băng chủ động,748516230121736,3.0,60,2026-07-04 15:00:00,17,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3296890570,Đóng băng chủ động,697056364931330,1.0,8,2026-05-23 19:00:00,59,,2026-07,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3296942986,Đóng băng chủ động,737883990581510,1.0,34,2026-07-05 22:00:00,16,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3296982967,Đóng băng chủ động,698624423393540,1.0,14,2026-04-26 18:00:00,86,,2026-07,Nguyen Nhat Vy,Inhouse 1,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3297088467,Đóng băng chủ động,699132974586112,1.0,17,2026-01-13 23:30:00,189,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ms Laura
+2026-07-22,3297134881,Im lặng rời bỏ,719143617304834,1.0,1,2026-02-26 20:30:00,145,,,Lai Ngoc Thuy Linh,Ho Chi Minh,Lai Ngoc Thuy Linh,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3297212322,Đóng băng chủ động,727156252555526,2.0,112,2026-06-28 15:30:00,23,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3297264749,Đóng băng chủ động,735783664034050,2.0,32,2026-06-11 10:30:00,40,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3297308870,Đóng băng chủ động,734935413903618,2.0,31,2026-05-29 21:30:00,53,,,Nguyen Duy Thinh,Ho Chi Minh,Lai Ngoc Thuy Linh,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3297446251,Đóng băng chủ động,702721296548098,2.0,40,2026-03-26 20:30:00,117,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3297454911,Đóng băng chủ động,700561552740608,1.0,35,2026-06-04 21:30:00,47,,,Nguyen Thi Ngoc Anh,Offline Team HaNoi,Pham Thuy Linh,Other,Tran Thu Ha
+2026-07-22,3297540008,Đóng băng chủ động,698960814059778,1.0,10,2026-01-21 11:00:00,181,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3297545086,Đóng băng chủ động,699133979795712,1.0,42,2026-06-27 23:00:00,24,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3297650646,Đóng băng chủ động,735783048210696,2.0,32,2026-06-11 10:30:00,40,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3297738793,Đóng băng chủ động,736296682225922,2.0,82,2026-06-17 10:00:00,34,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3297745182,Đóng băng chủ động,700611731634432,1.0,12,2025-12-22 21:30:00,211,,,Tran Vo Minh Thu,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3297753578,Đóng băng chủ động,699352290734338,1.0,12,2026-06-05 20:00:00,46,,2026-07,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ruby Advisor
+2026-07-22,3297900422,Đóng băng chủ động,734356154075394,2.0,33,2026-05-31 12:00:00,51,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3297909165,Đóng băng chủ động,700761367435524,1.0,31,2026-03-03 18:00:00,140,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3297917653,Đóng băng chủ động,711413157181700,1.0,10,2025-12-03 20:00:00,230,,,Le Minh Thanh,Ho Chi Minh,Nina,Inhouse 1,Dao Thi Hoang Yen
+2026-07-22,3298020275,Đóng băng chủ động,702688328780034,1.0,42,2025-10-27 18:30:00,267,,,Tran Vo Minh Thu,Ho Chi Minh,Nguyen Hong Nhu,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3298020941,Đóng băng chủ động,703392439249154,1.0,78,2026-03-15 19:00:00,128,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3298144974,Đóng băng chủ động,701279393734912,1.0,52,2025-09-13 19:30:00,311,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3298334998,Đóng băng chủ động,733173021935880,2.0,68,2026-07-11 19:00:00,10,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3298336217,Im lặng rời bỏ,732420948062470,5.0,6,2026-03-11 18:30:00,132,,,Vuong Phuong Anh,Other,Vuong Phuong Anh,Other,Vuong Phuong Anh
+2026-07-22,3298512180,Đóng băng chủ động,703252058065156,1.0,50,2025-10-09 20:00:00,285,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3298555336,Đóng băng chủ động,703064171987202,1.0,10,2026-02-25 21:00:00,146,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3298626387,Đóng băng chủ động,741326084456712,1.0,34,2026-06-22 22:00:00,29,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Ruby Advisor
+2026-07-22,3298656398,Đóng băng chủ động,703912348324096,1.0,37,2026-05-20 21:00:00,62,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3298818076,Đóng băng chủ động,703217955279104,1.0,3,2026-01-27 20:00:00,175,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3298868815,Đóng băng chủ động,703024701905154,1.0,10,2025-11-07 21:30:00,256,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3298878351,Im lặng rời bỏ,703081145446660,1.0,19,2026-04-01 23:30:00,111,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3298878575,Đóng băng chủ động,705148692668674,1.0,102,2025-10-12 15:00:00,282,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3299019800,Đóng băng chủ động,702956049236224,1.0,9,2025-11-09 17:00:00,254,,,Dang Thi Kim Tuyen,Ho Chi Minh,Lai Ngoc Thuy Linh,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3299029894,Đóng băng chủ động,705238938910980,1.0,36,2026-07-06 22:30:00,15,TMP_3299029894_20260530,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Ms Laura
+2026-07-22,3299051502,Đóng băng chủ động,750135184595202,1.0,47,2026-07-02 21:00:00,19,,,Dao Ngoc Lan Anh,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Dao Thi Hoang Yen
+2026-07-22,3299084708,Đóng băng chủ động,703911238240512,1.0,39,2026-05-04 18:00:00,78,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3299152488,Đóng băng chủ động,704088942993668,1.0,33,2026-07-19 03:00:00,2,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Ms Laura
+2026-07-22,3299264958,Đóng băng chủ động,705158167218436,1.0,6,2026-04-11 10:00:00,101,,2026-07,Nguyen Thi Thuy Trang,Inhouse 2,Vu Thi Khanh Huyen,Inhouse 2,Tran Thu Ha
+2026-07-22,3299299463,Đóng băng chủ động,704108999377154,1.0,9,2025-10-29 21:30:00,265,,,Le Thi Thao,Inhouse 2,Bui Thi Nga,Inhouse 2,Tran Thu Ha
+2026-07-22,3299299488,Đóng băng chủ động,752098160034056,3.0,106,2026-06-19 21:30:00,32,,,Nguyen Minh Phat,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3299433922,Đóng băng chủ động,723406716166402,1.0,12,2026-02-01 18:00:00,170,,,Dao Ngoc Lan Anh,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3299462437,Đóng băng chủ động,708714294776064,1.0,47,2025-11-16 15:00:00,247,,,Le Thi Thuy Trang,Inhouse 1,Le Thi Thuy Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3299464004,Đóng băng chủ động,736833886914818,2.0,41,2026-05-29 21:30:00,53,,,Nguyen Nhat Vy,Inhouse 1,Phan Thi Huong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3299483638,Đóng băng chủ động,705148845449474,1.0,102,2025-10-12 16:00:00,282,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3299560396,Đóng băng chủ động,710105779411204,1.0,18,2025-11-20 01:00:00,243,,,Bui Thi Hong Van,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ms Laura
+2026-07-22,3299610787,Đóng băng chủ động,708909484214532,1.0,12,2026-04-05 15:30:00,107,,2026-07,Dang Nhat Anh,Inhouse 2,Le Thi Thuy Van,Inhouse 2,Tran Thu Ha
+2026-07-22,3299667627,Đóng băng chủ động,705239044245760,1.0,31,2026-07-09 22:30:00,12,TMP_3299667627_20260530,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Ms Laura
+2026-07-22,3299838412,Đóng băng chủ động,707321296963844,1.0,45,2025-10-17 21:00:00,277,,,Nguyen Ha Giang,Inhouse 2,Bui Thi Nga,Inhouse 2,Tran Thu Ha
+2026-07-22,3299875010,Đóng băng chủ động,724096235194624,2.0,27,2026-05-24 21:00:00,58,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3299906056,Đóng băng chủ động,706605220983042,1.0,22,2026-02-11 21:00:00,160,,,Nguyen Phuong Thao,Inhouse 2,Vu Thi Khanh Huyen,Inhouse 2,Tran Thu Ha
+2026-07-22,3299910184,Đóng băng chủ động,708707067365632,1.0,6,2026-07-09 20:30:00,12,,2026-07,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3299949348,Đóng băng chủ động,723914021245188,1.0,67,2026-06-05 20:00:00,46,,,Nguyen Nhat Vy,Inhouse 1,Phan Thi Huong,Inhouse 1,Ruby Advisor
+2026-07-22,3299955008,Đóng băng chủ động,708194439639296,1.0,15,2026-02-03 18:30:00,168,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3300062643,Đóng băng chủ động,707493883572482,1.0,52,2026-04-14 18:00:00,98,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Ruby Advisor
+2026-07-22,3300164431,Đóng băng chủ động,721299580764416,2.0,115,2026-03-26 18:30:00,117,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Ruby Advisor
+2026-07-22,3300252200,Đóng băng chủ động,709112093479168,1.0,54,2026-05-02 18:00:00,80,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Ms Laura
+2026-07-22,3300379817,Đóng băng chủ động,745354903929094,1.0,96,2026-07-15 23:00:00,6,,,Pham Thi Tam Thuy,Inhouse 1,Pham Thi Tam Thuy,Inhouse 1,Ruby Advisor
+2026-07-22,3300605814,Đóng băng chủ động,726616013054216,2.0,5,2026-05-29 20:30:00,53,,2026-07,Tran Thi Thaoo,Inhouse 1,Le To Hai My,Inhouse 1,Ms Laura
+2026-07-22,3300631236,Đóng băng chủ động,711349837201666,1.0,12,2025-12-20 11:00:00,213,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ms Laura
+2026-07-22,3300636807,Đóng băng chủ động,734031611791624,2.0,28,2026-06-22 21:30:00,29,,,Nguyen Minh Phat,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3300661831,Đóng băng chủ động,710106418499840,1.0,31,2026-01-24 11:00:00,178,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3300763516,Đóng băng chủ động,711873057720580,1.0,61,2026-06-23 20:30:00,28,,,Vu Thuy Huong,Offline Team HaNoi,Vu Thuy Huong,Offline Team HaNoi,Tran Thu Ha
+2026-07-22,3300768016,Đóng băng chủ động,709623121142018,1.0,2,2026-01-14 20:00:00,188,,,Dao Thi Hoang Yen,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3300879899,Đóng băng chủ động,711003033999618,1.0,85,2026-03-06 13:30:00,137,,,Ta Thuy Van,Inhouse 1,Ta Thuy Van,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3300890213,Đóng băng chủ động,716348561561856,1.0,18,2026-05-18 20:30:00,64,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Thao Chi Advisor
+2026-07-22,3300903790,Đóng băng chủ động,733640137320712,1.0,7,2026-04-24 20:00:00,88,,2026-07,Bui Lam Linh,Inhouse 1,Bui Lam Linh,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3300999000,Đóng băng chủ động,710464297974018,1.0,12,2026-07-11 20:30:00,10,,,Nguyen Nhung Nhu Ngoc,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3301022121,Đóng băng chủ động,744793756999942,2.0,31,2026-07-16 20:30:00,5,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Ms Laura
+2026-07-22,3301097478,Đóng băng chủ động,710812396570880,1.0,50,2026-05-28 22:00:00,54,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3301155131,Đóng băng chủ động,715455936456960,1.0,21,2026-04-25 15:00:00,87,,,Dao Ngoc Lan Anh,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3301178956,Đóng băng chủ động,732146134352136,2.0,7,2026-06-23 21:00:00,28,,2026-07,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3301278788,Đóng băng chủ động,712638380114176,2.0,113,2026-03-23 18:00:00,120,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3301305370,Đóng băng chủ động,711349952819456,1.0,15,2025-12-18 18:30:00,215,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ms Laura
+2026-07-22,3301352866,Đóng băng chủ động,711753873166592,1.0,30,2026-07-17 15:30:00,4,,,Bui Thi Anh,IND,Bui Thi Anh,IND,Tran Thu Ha
+2026-07-22,3301456635,Đóng băng chủ động,711895109820676,1.0,53,2026-06-21 11:00:00,30,,,Le Minh Thanh,Ho Chi Minh,Nina,Inhouse 1,Dao Thi Hoang Yen
+2026-07-22,3301534442,Đóng băng chủ động,712757346963714,1.0,67,2026-04-03 21:00:00,109,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3301558932,Đóng băng chủ động,713333597036804,1.0,11,2026-05-04 17:30:00,78,,2026-07,Chang Thi Thanh Binh,Ho Chi Minh,Nina,Inhouse 1,Dao Thi Hoang Yen
+2026-07-22,3301601128,Đóng băng chủ động,713868962367748,1.0,15,2026-06-27 16:30:00,24,,,Kieu Thi Thu Quynh,Inhouse 1,Kieu Thi Thu Quynh,Inhouse 1,Ms Laura
+2026-07-22,3301601249,Đóng băng chủ động,712973055320324,1.0,15,2025-12-28 20:00:00,205,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3301688352,Đóng băng chủ động,736712238399752,3.0,3,2026-06-14 19:30:00,37,,2026-07,Le Thi Thuy Van,Inhouse 2,Le Thi Thuy Van,Inhouse 2,Tran Thu Ha
+2026-07-22,3301798352,Im lặng rời bỏ,713137117563136,1.0,2,2026-01-31 17:00:00,171,,,Lai Ngoc Thuy Linh,Ho Chi Minh,Lai Ngoc Thuy Linh,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3301849291,Đóng băng chủ động,713843369711876,1.0,9,2026-06-07 20:30:00,44,,2026-07,Chang Thi Thanh Binh,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3301887472,Đóng băng chủ động,725024556542208,2.0,79,2026-05-26 20:30:00,56,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3301903563,Đóng băng chủ động,715459363143938,1.0,43,2025-12-18 16:00:00,215,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3302036188,Đóng băng chủ động,716361192632576,1.0,22,2025-12-19 20:30:00,214,,,Nguyen Thi Thuy Nga,Ho Chi Minh,Nguyen Hong Nhu,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3302082197,Đóng băng chủ động,714362585131268,1.0,70,2026-05-25 21:30:00,57,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3302124916,Im lặng rời bỏ,731220832659714,2.0,52,2026-03-29 21:00:00,114,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Ruby Advisor
+2026-07-22,3302136539,Đóng băng chủ động,715095231058180,1.0,35,2025-12-06 10:00:00,227,,,Dang Bang Tam,Inhouse 2,Vu Cam Ly,Inhouse 2,Tran Thu Ha
+2026-07-22,3302198144,Đóng băng chủ động,714387981025538,1.0,39,2026-02-08 20:30:00,163,,,Tran Thi Thaoo,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Ms Laura
+2026-07-22,3302212081,Đóng băng chủ động,750494914828552,2.0,46,2026-07-01 21:30:00,20,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Thao Chi Advisor
+2026-07-22,3302268175,Đóng băng chủ động,715610091464962,1.0,88,2026-04-17 17:00:00,95,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3302274877,Đóng băng chủ động,715421947142404,1.0,32,2026-01-22 18:30:00,180,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Ruby Advisor
+2026-07-22,3302276620,Đóng băng chủ động,716212951576836,1.0,5,2026-03-29 22:00:00,114,,,Phuong Thao Nhi,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3302283110,Đóng băng chủ động,718780270170368,1.0,9,2026-06-09 17:00:00,42,,2026-07,Nguyen Nhat Vy,Inhouse 1,Le Kim Chi,Inhouse 1,Ruby Advisor
+2026-07-22,3302413674,Đóng băng chủ động,715239038750976,1.0,91,2026-03-26 18:00:00,117,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Ms Laura
+2026-07-22,3302459062,Đóng băng chủ động,717372663851266,1.0,62,2026-06-24 23:00:00,27,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Ms Laura
+2026-07-22,3302658775,Đóng băng chủ động,716698603809026,1.0,61,2026-05-31 08:00:00,51,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Thao Chi Advisor
+2026-07-22,3302670438,Đóng băng chủ động,723059601051908,1.0,81,2026-06-20 16:30:00,31,,,Tran Thi Thaoo,Inhouse 1,Dao Thi Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3302752941,Đóng băng chủ động,717548751481092,1.0,39,2026-03-21 19:00:00,122,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3302793018,Đóng băng chủ động,731580247929096,1.0,35,2026-05-15 20:00:00,67,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Ruby Advisor
+2026-07-22,3302850469,Đóng băng chủ động,717548429658368,1.0,67,2026-05-16 19:00:00,66,,,Tran Thi Thaoo,Inhouse 1,Dao Thi Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3302863764,Đóng băng chủ động,717009474736384,1.0,6,2026-06-08 21:00:00,43,TMP_3302863764_20260525,2026-07,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3302993590,Đóng băng chủ động,737395767042310,2.0,64,2026-05-28 22:00:00,54,,,Vu Ho Thanh Huong,Inhouse 2,Vu Ho Thanh Huong,Inhouse 2,Tran Thu Ha
+2026-07-22,3303003057,Đóng băng chủ động,717547722539264,1.0,60,2026-06-24 23:30:00,27,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Ms Laura
+2026-07-22,3303044341,Đóng băng chủ động,740539792302342,1.0,8,2026-07-15 22:00:00,6,,2026-07,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Ruby Advisor
+2026-07-22,3303058029,Đóng băng chủ động,733172907393282,2.0,94,2026-07-11 19:30:00,10,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3303081025,Đóng băng chủ động,718950169489668,1.0,2,2026-07-06 19:00:00,15,,2026-07,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Ruby Advisor
+2026-07-22,3303160054,Đóng băng chủ động,718455168467200,1.0,91,2026-06-18 21:00:00,33,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Ms Laura
+2026-07-22,3303168135,Đóng băng chủ động,718779781742850,1.0,90,2026-03-08 19:00:00,135,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Thao Chi Advisor
+2026-07-22,3303253775,Đóng băng chủ động,721687284066562,1.0,100,2026-01-18 17:30:00,184,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3303261442,Đóng băng chủ động,719661233619200,1.0,68,2026-06-30 18:00:00,21,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Ruby Advisor
+2026-07-22,3303406892,Đóng băng chủ động,718950265422080,1.0,84,2026-03-27 20:30:00,116,,,Dang Kim Thuong,Inhouse 1,Dang Kim Thuong,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3303480726,Đóng băng chủ động,739572368965890,2.0,43,2026-06-03 22:00:00,48,,,Nguyen Phuong Thao,Inhouse 2,Nguyen Thi Trang,Inhouse 2,Tran Thu Ha
+2026-07-22,3303561107,Đóng băng chủ động,720411729058050,1.0,9,2026-06-05 20:30:00,46,,2026-07,Le Vo Anh Thu,Ho Chi Minh,Nguyen Hong Nhu,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3303567449,Đóng băng chủ động,719712486473984,1.0,15,2026-07-09 19:00:00,12,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3303755654,Đóng băng chủ động,722675307946244,1.0,12,2026-06-28 21:00:00,23,,2026-07,Nguyen Ha Giang,Inhouse 2,Nguyen Thi Hai Yen,Inhouse 2,Tran Thu Ha
+2026-07-22,3303756138,Đóng băng chủ động,732147874040072,2.0,20,2026-05-26 22:00:00,56,,,Pham Thi Tam Thuy,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3303826284,Đóng băng chủ động,720270377332996,1.0,2,2026-04-05 21:00:00,107,,2026-07,Vo Tran Anh Thuy,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3303850844,Im lặng rời bỏ,720723173968130,1.0,7,2026-03-06 19:30:00,137,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3303850896,Đóng băng chủ động,721436025827588,1.0,7,2026-07-06 21:30:00,15,TMP_3303850896_20260630,2026-07,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3303868306,Đóng băng chủ động,720755359041792,1.0,18,2026-04-25 17:00:00,87,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3303893458,Đóng băng chủ động,721436259080450,1.0,39,2026-03-25 21:30:00,118,,,Nguyen Minh Phat,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3303925994,Đóng băng chủ động,720987297511680,1.0,19,2026-05-31 12:00:00,51,,,To Thi Ha,Inhouse 2,Vu Ho Thanh Huong,Inhouse 2,Tran Thu Ha
+2026-07-22,3303954829,Đóng băng chủ động,724528737589504,1.0,12,2026-06-12 11:30:00,39,,2026-07,Dao Ngoc Lan Anh,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3303964903,Đóng băng chủ động,723406236844288,1.0,19,2026-06-13 10:30:00,38,,,Dao Ngoc Lan Anh,Inhouse 1,Le Thi Tuyet,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3303965417,Đóng băng chủ động,721476078328066,1.0,5,2026-06-29 22:30:00,22,,2026-07,Bui Lam Linh,Inhouse 1,Bui Lam Linh,Inhouse 1,Ruby Advisor
+2026-07-22,3303992733,Đóng băng chủ động,754042997551362,2.0,62,2026-07-06 22:00:00,15,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Ms Laura
+2026-07-22,3304012134,Đóng băng chủ động,722493713342724,1.0,61,2026-06-02 21:30:00,49,,,Kieu Thi Thu Quynh,Inhouse 1,Kieu Thi Thu Quynh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3304066239,Đóng băng chủ động,721646033862914,1.0,8,2026-06-05 21:00:00,46,,2026-07,Pham Thi Tam Thuy,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3304090949,Đóng băng chủ động,721704242374914,1.0,18,2026-01-28 18:00:00,174,,,Nguyen Minh Phat,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3304158838,Đóng băng chủ động,721687842048260,1.0,68,2026-06-26 23:00:00,25,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3304175871,Đóng băng chủ động,738595938314504,1.0,43,2026-05-13 20:00:00,69,,,Pham Long Vu,Inhouse 2,Nguyen Thi Trang,Inhouse 2,Tran Thu Ha
+2026-07-22,3304226321,Đóng băng chủ động,745193668768006,1.0,18,2026-06-08 21:00:00,43,,,Vu Thi Khanh Huyen,Inhouse 2,Vu Thi Khanh Huyen,Inhouse 2,Ms Jenny Advisor
+2026-07-22,3304367061,Đóng băng chủ động,727093066733826,1.0,18,2026-05-31 21:00:00,51,,,Nguyen Thi Thanh Tam,Inhouse 1,Phan Thi Huong,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3304518520,Đóng băng chủ động,724491062735106,1.0,14,2026-02-22 19:00:00,149,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Ms Laura
+2026-07-22,3304518558,Đóng băng chủ động,723728918599936,1.0,85,2026-05-06 00:00:00,77,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3304551909,Đóng băng chủ động,723731436241154,1.0,66,2026-06-12 21:00:00,39,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3304718177,Đóng băng chủ động,724495151558914,1.0,17,2026-03-22 21:00:00,121,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3304757132,Đóng băng chủ động,724137241086210,1.0,36,2026-06-30 03:00:00,21,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Ruby Advisor
+2026-07-22,3304825744,Đóng băng chủ động,735284256692482,1.0,39,2026-06-10 18:30:00,41,,,Le To Hai My,Inhouse 1,Le To Hai My,Inhouse 1,Le To Hai My
+2026-07-22,3304839122,Đóng băng chủ động,724971577409796,1.0,46,2026-02-07 21:30:00,164,,,Dang Kim Thuong,Inhouse 1,Dang Kim Thuong,Inhouse 1,Ruby Advisor
+2026-07-22,3304887448,Đóng băng chủ động,726830959960328,1.0,23,2026-06-24 21:30:00,27,,,Dao Ngoc Lan Anh,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3304900895,Đóng băng chủ động,733173120090370,2.0,89,2026-07-11 20:00:00,10,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3304934001,Đóng băng chủ động,726799480305928,1.0,8,2026-04-09 22:30:00,103,,2026-07,Lai Ngoc Thuy Linh,Ho Chi Minh,Lai Ngoc Thuy Linh,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3305015736,Đóng băng chủ động,732655466400006,1.0,39,2026-05-15 22:00:00,67,,,To Thi Ha,Inhouse 2,Vu Cam Ly,Inhouse 2,Tran Thu Ha
+2026-07-22,3305015821,Đóng băng chủ động,725853770682632,1.0,6,2026-06-18 21:30:00,33,,2026-07,Nguyen Thi Giang,Inhouse 2,Nguyen Thi Trang,Inhouse 2,Tran Thu Ha
+2026-07-22,3305022340,Đóng băng chủ động,724987017310464,1.0,19,2026-05-25 21:00:00,57,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3305104791,Đóng băng chủ động,726562269083906,1.0,23,2026-02-07 19:00:00,164,,,Kieu Thi Thu Quynh,Inhouse 1,Kieu Thi Thu Quynh,Inhouse 1,Ms Laura
+2026-07-22,3305132578,Đóng băng chủ động,726798766534920,1.0,47,2026-02-26 19:00:00,145,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3305266809,Đóng băng chủ động,731752533278978,1.0,109,2026-03-20 21:30:00,123,,,Le Thi Lan Anh,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3305278159,Đóng băng chủ động,731359899752710,1.0,22,2026-06-26 21:00:00,25,,,Luu Thi Hoang Ngan,Inhouse 1,Luu Thi Hoang Ngan,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3305288363,Đóng băng chủ động,725677655763208,1.0,21,2026-02-10 18:00:00,161,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Ruby Advisor
+2026-07-22,3305385798,Đóng băng chủ động,726390395877634,1.0,69,2026-07-02 21:30:00,19,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Ms Laura
+2026-07-22,3305449507,Đóng băng chủ động,753653008025858,2.0,56,2026-06-29 23:30:00,22,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3305473501,Đóng băng chủ động,728040592408838,1.0,80,2026-07-04 14:30:00,17,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3305545834,Đóng băng chủ động,726803478223110,1.0,45,2026-02-24 19:00:00,147,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Ruby Advisor
+2026-07-22,3305594292,Đóng băng chủ động,727483124912390,1.0,92,2026-06-10 21:00:00,41,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3305595871,Đóng băng chủ động,726258139691272,1.0,16,2026-07-15 19:30:00,6,,,Le Thi Thuy Trang,Inhouse 1,Le Thi Thuy Trang,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3305598868,Đóng băng chủ động,727128376434946,1.0,88,2026-06-03 18:30:00,48,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Ruby Advisor
+2026-07-22,3305706011,Đóng băng chủ động,732757797636358,1.0,29,2026-06-08 20:00:00,43,,,Nguyen Nhu Ngoc,Inhouse 1,Nguyen Nhu Ngoc,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3305716570,Đóng băng chủ động,733848756199686,1.0,6,2026-05-27 20:30:00,55,,2026-07,Nguyen Thi Thuy Trang,Inhouse 2,Kieu Lan Anh,Inhouse 2,Tran Thu Ha
+2026-07-22,3305788178,Đóng băng chủ động,733374415405318,1.0,21,2026-03-31 21:30:00,112,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Thao Chi Advisor
+2026-07-22,3305808476,Đóng băng chủ động,732968721676546,1.0,47,2026-03-17 21:30:00,126,,,To Thi Ha,Inhouse 2,Vu Cam Ly,Inhouse 2,Tran Thu Ha
+2026-07-22,3305819752,Đóng băng chủ động,727679552635142,1.0,13,2026-03-25 20:00:00,118,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3305966476,Đóng băng chủ động,746944821567752,1.0,23,2026-06-04 18:30:00,47,,,Kieu Thi Thu Quynh,Inhouse 1,Kieu Thi Thu Quynh,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3306006685,Đóng băng chủ động,741647250698498,2.0,12,2026-07-12 15:00:00,9,,,Dao Ngoc Lan Anh,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3306024204,Đóng băng chủ động,727622593208584,1.0,84,2026-06-01 00:00:00,51,,,Tran Thi Thaoo,Inhouse 1,Kieu Thi Thu Quynh,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3306089827,Đóng băng chủ động,734541442056456,1.0,19,2026-05-01 21:00:00,81,,,Nguyen Phuong Thuy,Inhouse 1,Nguyen Phuong Thuy,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3306149940,Đóng băng chủ động,728332925890822,1.0,45,2026-03-11 17:00:00,132,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3306192305,Đóng băng chủ động,734875989657858,1.0,85,2026-06-08 21:00:00,43,,,Vu Thi Khanh Huyen,Inhouse 2,Vu Thi Khanh Huyen,Inhouse 2,Tran Thu Ha
+2026-07-22,3306468746,Đóng băng chủ động,728949410892034,1.0,32,2026-05-01 21:00:00,81,,,Nguyen Minh Phat,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3306469569,Đóng băng chủ động,728861141231880,1.0,14,2026-07-04 02:30:00,17,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3306613461,Đóng băng chủ động,730327626658054,1.0,14,2026-03-15 09:00:00,128,,,Le Thi Thuy Trang,Inhouse 1,Le Thi Thuy Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3306762636,Đóng băng chủ động,737730618962184,1.0,2,2026-06-28 16:30:00,23,,2026-07,Nguyen Thi Trang,Inhouse 2,Nguyen Thi Trang,Inhouse 2,Tran Thu Ha
+2026-07-22,3306791559,Đóng băng chủ động,730190704308488,1.0,140,2026-06-11 22:30:00,40,,,Pham Thi Tam Thuy,Inhouse 1,Pham Thi Tam Thuy,Inhouse 1,Ms Laura
+2026-07-22,3306882754,Đóng băng chủ động,741077918509318,2.0,97,2026-06-23 22:30:00,28,,,Dao Ngoc Lan Anh,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Ruby Advisor
+2026-07-22,3306943523,Đóng băng chủ động,731176387649794,1.0,98,2026-03-26 18:30:00,117,,,Kieu Lan Anh,Inhouse 2,Kieu Lan Anh,Inhouse 2,Tran Thu Ha
+2026-07-22,3306985579,Đóng băng chủ động,735289372588296,1.0,2,2026-06-10 21:30:00,41,,2026-07,Lai Ngoc Thuy Linh,Ho Chi Minh,Lai Ngoc Thuy Linh,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3307069813,Đóng băng chủ động,731549369434370,1.0,22,2026-03-14 16:00:00,129,,,Pham Thi Tam Thuy,Inhouse 1,Le Thi Lan Anh,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3307087906,Đóng băng chủ động,731933553254664,1.0,21,2026-07-07 18:00:00,14,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3307154801,Đóng băng chủ động,733169559482632,1.0,18,2026-06-18 20:30:00,33,,,Tran Thi Thaoo,Inhouse 1,Le To Hai My,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3307301901,Đóng băng chủ động,732795073698050,1.0,47,2026-04-24 21:00:00,88,,,Do Thi Tuyet Nhung,Inhouse 1,Do Thi Tuyet Nhung,Inhouse 1,Thao Chi Advisor
+2026-07-22,3307480697,Đóng băng chủ động,733998809278728,1.0,22,2026-07-16 21:30:00,5,,,Nguyen Thi Thao Ngoc,Inhouse 1,Nguyen Thi Thao Ngoc,Inhouse 1,Ms Laura
+2026-07-22,3307494470,Đóng băng chủ động,732837033888006,1.0,82,2026-06-30 23:00:00,21,,,Nguyen Kieu Trang,Inhouse 1,Nguyen Kieu Trang,Inhouse 1,Ruby Advisor
+2026-07-22,3307546206,Đóng băng chủ động,734073346281734,1.0,40,2026-05-20 19:00:00,62,,,To Thi Ha,Inhouse 2,Vu Cam Ly,Inhouse 2,Tran Thu Ha
+2026-07-22,3307547281,Đóng băng chủ động,733993041889538,1.0,23,2026-06-11 14:30:00,40,,,Dao Ngoc Lan Anh,Inhouse 1,Bui Thi Hong Van,Inhouse 1,Thao Chi Advisor
+2026-07-22,3308516465,Đóng băng chủ động,736159895202054,1.0,42,2026-04-14 20:00:00,98,,,Bui Lam Linh,Inhouse 1,Bui Lam Linh,Inhouse 1,Thao Chi Advisor
+2026-07-22,3308523902,Đóng băng chủ động,734924732072198,1.0,85,2026-05-31 19:00:00,51,,,Kieu Thi Thu Quynh,Inhouse 1,Kieu Thi Thu Quynh,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3308617328,Đóng băng chủ động,734906722343170,1.0,50,2026-06-02 22:00:00,49,,,Nguyen Thi Hang Nga,Inhouse 1,Nguyen Thi Hang Nga,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3308644666,Đóng băng chủ động,735106927442184,1.0,2,2026-06-12 20:30:00,39,,2026-07,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3308654421,Đóng băng chủ động,735462198270210,1.0,75,2026-07-13 19:00:00,8,,,Nguyen Phuong Thuy,Inhouse 1,Nguyen Phuong Thuy,Inhouse 1,Ms Laura
+2026-07-22,3308728135,Đóng băng chủ động,741457517848834,1.0,19,2026-05-12 21:00:00,70,,,Vu Ho Thanh Huong,Inhouse 2,Vu Ho Thanh Huong,Inhouse 2,Ms Jenny Advisor
+2026-07-22,3308799805,Đóng băng chủ động,737600759732482,1.0,26,2026-05-24 18:00:00,58,,,Nguyen Nhu Ngoc,Inhouse 1,Nguyen Nhu Ngoc,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3308815417,Đóng băng chủ động,735415888793858,1.0,36,2026-05-17 08:30:00,65,,,Le Thi Thuy Trang,Inhouse 1,Le Thi Thuy Trang,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3308945007,Đóng băng chủ động,735293798039814,1.0,7,2026-06-05 21:00:00,46,,2026-07,Nguyen Phuong Thao,Inhouse 2,Nguyen Thi Hai Yen,Inhouse 2,Tran Thu Ha
+2026-07-22,3308971109,Đóng băng chủ động,737417594056968,1.0,84,2026-06-25 21:00:00,26,,,Pham Thi Tam Thuy,Inhouse 1,Pham Thi Tam Thuy,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3309069932,Đóng băng chủ động,740422270208264,1.0,21,2026-04-30 21:00:00,82,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3309089011,Đóng băng chủ động,736472555858184,1.0,19,2026-05-23 21:00:00,59,,,Dang Kim Thuong,Inhouse 1,Dang Kim Thuong,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3309135884,Đóng băng chủ động,736819155204358,1.0,40,2026-05-29 21:00:00,53,,,Dang Kim Thuong,Inhouse 1,Dang Kim Thuong,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3309155151,Đóng băng chủ động,738946201112838,1.0,96,2026-05-08 18:30:00,74,,,Dang Kim Thuong,Inhouse 1,Dang Kim Thuong,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3309176497,Đóng băng chủ động,737395467886850,1.0,29,2026-06-27 11:00:00,24,,,Nguyen Phuong Thao,Inhouse 2,Nguyen Thi Trang,Inhouse 2,Ms Jenny Advisor
+2026-07-22,3309370418,Đóng băng chủ động,739557770033416,1.0,37,2026-07-05 14:30:00,16,,,Nguyen Phuong Thuy,Inhouse 1,Nguyen Phuong Thuy,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3309452282,Đóng băng chủ động,738075832082694,1.0,3,2026-06-23 18:00:00,28,,2026-07,Bui Lam Linh,Inhouse 1,Bui Lam Linh,Inhouse 1,Ms Laura
+2026-07-22,3309500712,Đóng băng chủ động,738680601895174,1.0,30,2026-07-04 10:00:00,17,,,Vu Ho Thanh Huong,Inhouse 2,Vu Ho Thanh Huong,Inhouse 2,Ms Jenny Advisor
+2026-07-22,3309684157,Đóng băng chủ động,739839392575752,1.0,37,2026-06-28 15:30:00,23,,,Nguyen Phuong Thuy,Inhouse 1,Nguyen Phuong Thuy,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3309842607,Đóng băng chủ động,739002959528200,1.0,137,2026-07-18 01:00:00,3,,,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3309864004,Đóng băng chủ động,739172491731202,1.0,47,2026-05-17 12:00:00,65,,,Le Thuy Nhung,Inhouse 1,Le Thuy Nhung,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3309877523,Đóng băng chủ động,743572689674498,1.0,17,2026-06-04 11:00:00,47,,,Nguyen Thi Hai Yen,Inhouse 2,Nguyen Thi Hai Yen,Inhouse 2,Ms Jenny Advisor
+2026-07-22,3309929517,Đóng băng chủ động,738993261431046,1.0,35,2026-06-24 20:30:00,27,,,Nguyen Minh Phat,Ho Chi Minh,Nguyen Minh Phat,Ho Chi Minh,Dao Thi Hoang Yen
+2026-07-22,3310122402,Đóng băng chủ động,740938522353928,1.0,19,2026-05-21 21:30:00,61,,,Nguyen Thuy Trang,Inhouse 1,Nguyen Thuy Trang,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3310153694,Đóng băng chủ động,741310039167234,1.0,35,2026-06-30 20:30:00,21,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3310202138,Đóng băng chủ động,743623478792456,1.0,36,2026-07-06 22:30:00,15,,,Le Thi Tuyet,Inhouse 1,Le Thi Tuyet,Inhouse 1,Ms Laura
+2026-07-22,3310252324,Đóng băng chủ động,741427711056136,1.0,35,2026-06-30 21:00:00,21,,,Nguyen Phuong Thuy,Inhouse 1,Nguyen Phuong Thuy,Inhouse 1,Ms Laura
+2026-07-22,3310288226,Đóng băng chủ động,741511627571458,1.0,53,,,,,Kieu Thi Thu Quynh,Inhouse 1,Kieu Thi Thu Quynh,Inhouse 1,Kieu Thi Thu Quynh
+2026-07-22,3310292291,Đóng băng chủ động,744797390260488,1.0,24,2026-05-17 21:00:00,65,,,Dang Kim Thuong,Inhouse 1,Dang Kim Thuong,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3310356048,Đóng băng chủ động,740581453781250,1.0,23,2026-05-01 21:00:00,81,,,Tran Thi Son,Inhouse 1,Tran Thi Son,Inhouse 1,Diem Quynh Advisor
+2026-07-22,3310596757,Đóng băng chủ động,741953878380808,1.0,114,2026-04-28 19:00:00,84,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3310597523,Đóng băng chủ động,742696444377350,1.0,14,2026-05-10 18:00:00,72,,2026-07,Pham Long Vu,Inhouse 2,Kieu Lan Anh,Inhouse 2,Tran Thu Ha
+2026-07-22,3310676174,Đóng băng chủ động,745143156498690,1.0,21,2026-05-30 21:00:00,52,,,Vu Thi Tuyet Trinh,Inhouse 1,Vu Thi Tuyet Trinh,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3310894623,Đóng băng chủ động,743060752986374,1.0,36,2026-06-26 23:30:00,25,,,Cao Thi Lua,Inhouse 1,Cao Thi Lua,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3310905179,Đóng băng chủ động,744822138112262,1.0,50,2026-06-07 19:00:00,44,,,Le Thi Thuy Trang,Inhouse 1,Le Thi Thuy Trang,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3311060247,Đóng băng chủ động,744119315439874,1.0,8,2026-07-05 21:00:00,16,,2026-07,Pham Thi Thao,Inhouse 1,Pham Thi Thao,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3311449575,Đóng băng chủ động,745364850761990,1.0,19,2026-06-06 21:00:00,45,,,Le Kim Chi,Inhouse 1,Le Kim Chi,Inhouse 1,Thao Chi Advisor
+2026-07-22,3311922591,Đóng băng chủ động,747266333276424,1.0,14,2026-06-08 11:00:00,43,,2026-07,Dao My Nhat Huyen,Inhouse 1,Dao My Nhat Huyen,Inhouse 1,Ms Jenny Advisor
+2026-07-22,3311992414,Đóng băng chủ động,748509214058760,1.0,174,,,,,Le Thi Thu Yen,Inhouse 1,Le Thi Thu Yen,Inhouse 1,Phuong Thao Advisor
+2026-07-22,3312220082,Đóng băng chủ động,749076629864706,1.0,46,2026-06-25 17:00:00,26,,,Kieu Lan Anh,Inhouse 2,Kieu Lan Anh,Inhouse 2,Kieu Lan Anh
+2026-07-22,3312491608,Đóng băng chủ động,749778206034182,1.0,100,2026-06-25 01:00:00,26,,,Luu Thi Hoang Ngan,Inhouse 1,Luu Thi Hoang Ngan,Inhouse 1,Thao Chi Advisor
+2026-07-22,3312939366,Đóng băng chủ động,754007555299586,1.0,48,2026-07-16 22:30:00,5,,,Kieu Thi Thu Quynh,Inhouse 1,Kieu Thi Thu Quynh,Inhouse 1,Ms Laura
+2026-07-22,3313039377,Đóng băng chủ động,752461783402754,1.0,26,2026-06-26 17:30:00,25,,,Bui Thi Thai Duong,Inhouse 1,Bui Thi Thai Duong,Inhouse 1,Ruby Advisor
+2026-07-22,3313146217,Đóng băng chủ động,751697657086214,1.0,23,2026-06-28 11:00:00,23,,,Nguyen Cam Tu,Inhouse 1,Nguyen Cam Tu,Inhouse 1,Nguyen Cam Tu
+2026-07-22,3313496156,Đóng băng chủ động,752985664129282,1.0,21,2026-07-14 18:30:00,7,,,Luu Thi Hoang Ngan,Inhouse 1,Luu Thi Hoang Ngan,Inhouse 1,Ms Laura
+2026-07-22,65724240,Im lặng rời bỏ,481539540519180,3.0,4,2023-06-05 16:30:00,1142,,,蔺世杰,Other,Nguyen Kieu Trang,Inhouse 1,Phuong Thao Advisor
