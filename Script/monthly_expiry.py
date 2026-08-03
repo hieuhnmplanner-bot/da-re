@@ -64,12 +64,15 @@ def load_state(run_date):
                 oid = s["order_id_tieu_hao"].astype(str).str.strip()
                 remc = pd.to_numeric(s["so_buoi_con_cua_order"], errors="coerce")
                 empty = (oid == "") | (oid.str.lower() == "nan")
-                oid = oid.where(~empty, s["latest_order_id"].astype(str))          # fallback khi rong (~0.9%)
+                real_latest = s["latest_order_id"].astype(str)
+                re_early = (oid != real_latest) & (~empty)   # don dang tieu hao KHAC don moi nhat => khach da gia han som
+                oid = oid.where(~empty, real_latest)          # fallback khi rong (~0.9%)
                 remc = remc.where(~empty, pd.to_numeric(s["remaining"], errors="coerce"))
                 print(f"  Da co lich su thang truoc -> dung FIFO per-order ({int((~empty).sum())}/{len(s)}).")
             else:
                 oid = s["latest_order_id"].astype(str)
                 remc = pd.to_numeric(s["remaining"], errors="coerce")
+                re_early = pd.Series(False, index=s.index)     # thang dau: khong co khai niem gia han som per-order
                 print("  Thang dau / chua co lich su tieu thu thang truoc -> dung TONG REM UID + latest_order_id.")
             return pd.DataFrame({
                 "uid": s["uid"].map(clean_uid),
@@ -77,6 +80,7 @@ def load_state(run_date):
                 "remaining": remc.values,
                 "last_study": pd.to_datetime(s["last_study"], errors="coerce").values,
                 "is_frozen": pd.to_numeric(s["is_frozen"], errors="coerce").fillna(0).astype(int).values,
+                "renewed_early": re_early.values,
             })
     # fallback: REM hien tai
     print("Chua co log phu hop -> dung REM.csv hien tai (xap xi dau thang).")
@@ -91,6 +95,7 @@ def load_state(run_date):
         "remaining": pd.to_numeric(s["Remain lesson Number"], errors="coerce").values,
         "last_study": pd.to_datetime(s["Last class time"], errors="coerce").values,
         "is_frozen": pd.to_numeric(s["Is Frozen"], errors="coerce").fillna(0).astype(int).values,
+        "renewed_early": False,
     })
 
 
@@ -136,6 +141,23 @@ def main(month):
     elig = elig[~elig["latest_order_id"].astype(str).isin(seen)].copy()
     removed = before - len(elig)
 
+    # WITNESSED-CROSSING: don da gia han som (renewed_early) chi GIU neu log THANG TRUOC tung thay don do >= THRESH buoi
+    # (tuc da chung kien no rot tu >=15 -> <15 TRONG KY). Don von da <15 tu truoc khi theo doi = backlog -> LOAI.
+    removed_backlog = 0
+    if "renewed_early" in elig.columns and bool(elig["renewed_early"].any()) and LOG.exists():
+        lg2 = pd.read_csv(LOG, dtype=str)
+        lg2["snapshot_date"] = pd.to_datetime(lg2["snapshot_date"], errors="coerce")
+        prior_start = (run_date - pd.offsets.MonthBegin(1)).normalize()
+        lg2 = lg2[(lg2["snapshot_date"] >= prior_start) & (lg2["snapshot_date"] < run_date)]
+        witnessed = set()
+        if len(lg2) and "so_buoi_con_cua_order" in lg2.columns:
+            lg2["sb"] = pd.to_numeric(lg2["so_buoi_con_cua_order"], errors="coerce")
+            ge = lg2[lg2["sb"] >= THRESH]
+            witnessed = set(zip(ge["uid"].map(clean_uid), ge["order_id_tieu_hao"].astype(str)))
+        keep = elig.apply(lambda r: (not r["renewed_early"]) or ((r["uid"], str(r["latest_order_id"])) in witnessed), axis=1)
+        removed_backlog = int((~keep).sum())
+        elig = elig[keep].copy()
+
     elig["month"] = month
     out = elig[["latest_order_id", "uid", "remaining", "last_study", "idle", "is_frozen", "tag", "reason", "month"]]
     out = out.rename(columns={"latest_order_id": "order_id"})
@@ -149,6 +171,7 @@ def main(month):
     print(f"OK Danh sach het han {month}: {len(out)} order_id "
           f"(Frozen: {(out['tag']=='Frozen').sum()}) -> {out_path}")
     print(f"   Da loai do trung registry (da o thang truoc): {removed}")
+    print(f"   Da loai backlog gia han som (chua chung kien rot <15 trong ky): {removed_backlog}")
     print(f"   Registry tong cong: {len(reg)+len(newreg)} order_id")
 
 
