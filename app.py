@@ -37,12 +37,12 @@ K = {
  "src_frozen": L("Trong đó: Frozen","of which: Frozen","其中:冻结"),
  "tot_mau": L("Tổng mẫu số","Total denominator","分母合计"),
  "tim_dung": L("Gia hạn đúng hạn","On-time renewal","按时续费"), "tim_som": L("Gia hạn sớm / trước hạn","Early / before due","提前/到期前"), "tim_muon": L("Gia hạn muộn","Late renewal","延迟续费"), "tot_tu": L("Tổng đã gia hạn","Total renewed","已续费合计"),
- "cap_den": L("Còn <15 buổi vào ngày đầu tháng (idle ≤ 90)","<15 lessons at month start (idle ≤ 90)","月初剩<15课时(idle≤90)"), "cap_srcfrozen": L("Số đơn ĐANG BẢO LƯU (khách tạm dừng học) — vẫn <15 buổi nên vẫn nằm trong danh sách","Frozen orders (study paused) — still <15 so still in the list","冻结订单(暂停上课)—仍<15,故仍在名单内"), "cap_totmau2": L("= Số order trong danh sách Đến hạn (khóa đầu tháng)","= Orders in the Due list (locked at month start)","=到期名单内订单数(月初锁定)"), "cap_dung": L("Mua đơn kế NGAY TRONG tháng tới hạn (đơn cũ <15 tháng này, gia hạn cũng tháng này)","Bought the next order WITHIN the due month","在到期月当月购买下一单"), "cap_som": L("Đã mua đơn kế từ THÁNG TRƯỚC; đầu tháng này đơn cũ mới tụt <15 nên giờ mới vào danh sách","Bought the next order in an EARLIER month; old order only dropped <15 now","上月已购买下一单;旧单本月初才<15"), "cap_muon": L("Đơn cũ tới hạn tháng này, nhưng phải sang THÁNG SAU khách mới mua đơn kế","Order due this month, but the next order was bought in a LATER month","本月到期,但次月才购买下一单"), "cap_tottu": L("= Đúng hạn + Sớm + Muộn (số order đã gia hạn trong danh sách)","= On-time + Early + Late (renewed orders in the list)","=按时+提前+延迟"),
+ "cap_den": L("Còn ≤20 buổi vào ngày đầu tháng (idle ≤ 90)","≤20 lessons at month start (idle ≤ 90)","月初剩≤20课时(idle≤90)"), "cap_srcfrozen": L("Số đơn ĐANG BẢO LƯU (khách tạm dừng học) — vẫn ≤20 buổi nên vẫn nằm trong danh sách","Frozen orders (study paused) — still ≤20 so still in the list","冻结订单(暂停上课)—仍≤20,故仍在名单内"), "cap_totmau2": L("= Số order trong danh sách Đến hạn (khóa đầu tháng)","= Orders in the Due list (locked at month start)","=到期名单内订单数(月初锁定)"), "cap_dung": L("Mua đơn kế NGAY TRONG tháng tới hạn (đơn cũ ≤20 tháng này, gia hạn cũng tháng này)","Bought the next order WITHIN the due month","在到期月当月购买下一单"), "cap_som": L("Đã mua đơn kế từ THÁNG TRƯỚC; đầu tháng này đơn cũ mới tụt ≤20 nên giờ mới vào danh sách","Bought the next order in an EARLIER month; old order only dropped ≤20 now","上月已购买下一单;旧单本月初才≤20"), "cap_muon": L("Đơn cũ tới hạn tháng này, nhưng phải sang THÁNG SAU khách mới mua đơn kế","Order due this month, but the next order was bought in a LATER month","本月到期,但次月才购买下一单"), "cap_tottu": L("= Đúng hạn + Sớm + Muộn (số order đã gia hạn trong danh sách)","= On-time + Early + Late (renewed orders in the list)","=按时+提前+延迟"),
  "explain": L("📖 Công thức tính CRR/RRR/Upsell (bấm để xem)","📖 CRR/RRR/Upsell formula (click)","📖 CRR/RRR/Upsell 公式（点击）"),
  "explain_body": L(
-   "**CRR** = Tử số / Mẫu số.\n\n**Mẫu số** = danh sách **Đến hạn** (order còn <15 buổi vào đầu tháng, idle ≤ 90). Mẫu số được **khóa ngay đầu tháng**, không đổi vào cuối tháng.\n\n**Tử số** = trong danh sách đó, số order **đã gia hạn** (đã có đơn kế). Chia nhỏ theo thời điểm: Đúng hạn (trong tháng) + Sớm (mua từ tháng trước) + Muộn (gia hạn tháng sau).\n\n**RRR** = TỔNG doanh thu các đơn gia hạn (theo chế độ M+90/Real đang chọn) / Tổng giá trị các đơn trong danh sách Đến hạn.\n\n**Upsell** = Giá trị đơn gia hạn mới / Giá trị đơn cũ (của nhóm đã gia hạn). >100% = chi nhiều hơn.\n\nHai chế độ: **M+90** = gia hạn trong ~3 tháng kể từ kỳ tới hạn (KPI cố định); **Real** = gia hạn bất cứ lúc nào.",
-   "**CRR** = Numerator / Denominator.\n\n**Denominator** = the **Due** list only (orders with <15 lessons at month start, idle ≤ 90). It is **locked at month start** and does not change at month end.\n\n**Numerator** = within that list, orders that **renewed** (have a next order). Split by timing: On-time (in month) + Early (bought earlier month) + Late (renewed later month).\n\n**RRR** = TOTAL revenue of renewals (per selected M+90/Real mode) / total value of the Due list.\n\n**Upsell** = new renewal value / old value of renewers. >100% = spending more.\n\nTwo modes: **M+90** = renewed within ~3 months of the due period; **Real** = renewed anytime.",
-   "**CRR** = 分子 / 分母。\n\n**分母** = 仅**到期**名单(月初剩<15课时,idle≤90),**月初锁定**,月末不变。\n\n**分子** = 名单中**已续费**(已有下一单)的订单。按时点细分:按时(当月)+ 提前(上月购买)+ 延迟(次月续费)。\n\n**RRR** = 续费总收入(按所选M+90/Real模式) / 到期名单总价值。\n\n**Upsell** = 新续费金额 / 续费者旧金额。>100%=消费更多。\n\n两种模式:**M+90** = 到期起约3个月内续费;**Real** = 任意时间续费。"),
+   "**CRR** = Tử số / Mẫu số.\n\n**Mẫu số** = danh sách **Đến hạn** (order còn ≤20 buổi vào đầu tháng, idle ≤ 90). Mẫu số được **khóa ngay đầu tháng**, không đổi vào cuối tháng.\n\n**Tử số** = trong danh sách đó, số order **đã gia hạn** (đã có đơn kế). Chia nhỏ theo thời điểm: Đúng hạn (trong tháng) + Sớm (mua từ tháng trước) + Muộn (gia hạn tháng sau).\n\n**RRR** = TỔNG doanh thu các đơn gia hạn (theo chế độ M+90/Real đang chọn) / Tổng giá trị các đơn trong danh sách Đến hạn.\n\n**Upsell** = Giá trị đơn gia hạn mới / Giá trị đơn cũ (của nhóm đã gia hạn). >100% = chi nhiều hơn.\n\nHai chế độ: **M+90** = gia hạn trong ~3 tháng kể từ kỳ tới hạn (KPI cố định); **Real** = gia hạn bất cứ lúc nào.",
+   "**CRR** = Numerator / Denominator.\n\n**Denominator** = the **Due** list only (orders with ≤20 lessons at month start, idle ≤ 90). It is **locked at month start** and does not change at month end.\n\n**Numerator** = within that list, orders that **renewed** (have a next order). Split by timing: On-time (in month) + Early (bought earlier month) + Late (renewed later month).\n\n**RRR** = TOTAL revenue of renewals (per selected M+90/Real mode) / total value of the Due list.\n\n**Upsell** = new renewal value / old value of renewers. >100% = spending more.\n\nTwo modes: **M+90** = renewed within ~3 months of the due period; **Real** = renewed anytime.",
+   "**CRR** = 分子 / 分母。\n\n**分母** = 仅**到期**名单(月初剩≤20课时,idle≤90),**月初锁定**,月末不变。\n\n**分子** = 名单中**已续费**(已有下一单)的订单。按时点细分:按时(当月)+ 提前(上月购买)+ 延迟(次月续费)。\n\n**RRR** = 续费总收入(按所选M+90/Real模式) / 到期名单总价值。\n\n**Upsell** = 新续费金额 / 续费者旧金额。>100%=消费更多。\n\n两种模式:**M+90** = 到期起约3个月内续费;**Real** = 任意时间续费。"),
  # dormant
  "d_type": L("Loại","Type","类型"), "d_freeze": L("Đóng băng chủ động","Active freeze","主动冻结"), "d_silent": L("Im lặng rời bỏ","Silent churn","静默流失"),
  "d_total_left": L("Tổng buổi còn treo","Total lessons hanging","剩余课时合计"), "d_denhan": L("Thuộc Đến hạn tháng","In Due month","所属到期月"),
@@ -57,7 +57,7 @@ K = {
  "h_valold":L("Giá trị đơn","Order value","订单金额"),"h_valnew":L("Giá trị đơn gia hạn","Renewal value","续费金额"),
  "h_sban":L("Sale bán","Selling sale","成交销售"),"h_tban":L("Team bán","Selling team","成交团队"),
  "h_smgr":L("Sale quản lý","Managing sale","在管销售"),"h_tmgr":L("Team quản lý","Managing team","在管团队"),"h_teacher":L("Teacher","Teacher","老师"),
- "r_th1":L("Còn 1–14 buổi, đang học","1–14 left, active","剩1–14,在学"),"r_th2":L("Vừa hết buổi (≤10 ngày)","Just finished","刚上完"),
+ "r_th1":L("Còn 1–20 buổi, đang học","1–20 left, active","剩1–20,在学"),"r_th2":L("Vừa hết buổi (≤10 ngày)","Just finished","刚上完"),
  "reason_f":L("Lý do vào list","Reason","入库原因"),
  "r_frozen":L(" · Frozen"," · Frozen"," · 冻结"),"r_eact":L("Gia hạn sớm · đã kích hoạt","Early · activated","提前·已激活"),"r_epend":L("Gia hạn sớm · chưa kích hoạt","Early · not activated","提前·未激活"),
  "s_renewed":L("Đã gia hạn","Renewed","已续费"),"s_not":L("Chưa gia hạn","Not renewed","未续费"),"s_act":L("Đã kích hoạt","Activated","已激活"),"s_notact":L("Chưa kích hoạt","Not activated","未激活"),
@@ -78,7 +78,7 @@ DEFS = {
 
 ---
 #### MẪU SỐ — Danh sách Đến hạn (khóa đầu tháng)
-- **Đến hạn (đầu tháng):** đơn còn **dưới 15 buổi** vào ngày đầu tháng, và **idle ≤ 90 ngày** (còn học gần đây). Đơn **bảo lưu (Frozen)** đủ điều kiện vẫn được tính, gắn nhãn Frozen.
+- **Đến hạn (đầu tháng):** đơn còn **≤ 20 buổi** vào ngày đầu tháng, và **idle ≤ 90 ngày** (còn học gần đây). Đơn **bảo lưu (Frozen)** đủ điều kiện vẫn được tính, gắn nhãn Frozen.
 - Nhóm **remaining = 0** (đã hết sạch buổi) **bị loại** khỏi Đến hạn (biến không đoán trước đầu tháng, số lượng rất nhỏ).
 - Mẫu số được **khóa ngay đầu tháng, không đổi vào cuối tháng.**
 
@@ -111,7 +111,7 @@ Chỉ tính khi có **THANH TOÁN** (ghi trong GMV) **HOẶC KÍCH HOẠT** đơ
 
 ---
 #### DENOMINATOR — The Due list (locked at month start)
-- **Due (month start):** order has **<15 lessons** on the 1st of the month, and **idle ≤ 90 days**. Eligible **Frozen** orders are included (tagged Frozen).
+- **Due (month start):** order has **≤20 lessons** on the 1st of the month, and **idle ≤ 90 days**. Eligible **Frozen** orders are included (tagged Frozen).
 - Orders with **remaining = 0** are **excluded** (unpredictable at month start, very few).
 - The denominator is **locked at month start and does not change at month end.**
 
@@ -144,7 +144,7 @@ Only when there is **PAYMENT** (in GMV) **OR ACTIVATION** of a new order (REM). 
 
 ---
 #### 分母 — 到期名单（月初锁定）
-- **到期(月初)：** 月初剩 **<15 课时**，且 **idle ≤ 90 天**。符合条件的**冻结**订单也计入(标记冻结)。
+- **到期(月初)：** 月初剩 **≤20 课时**，且 **idle ≤ 90 天**。符合条件的**冻结**订单也计入(标记冻结)。
 - **剩余 = 0** 的订单**排除**在外(月初不可预测,数量极少)。
 - 分母在**月初锁定,月末不变。**
 

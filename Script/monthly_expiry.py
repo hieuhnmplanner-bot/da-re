@@ -31,8 +31,8 @@ OUT = BASE / "Output"; OUT.mkdir(parents=True, exist_ok=True)
 LOG = STATE / "daily_uid_log.csv"
 REG = STATE / "expiry_registry.csv"
 
-THRESH = 15        # remaining < 15 (chot voi sep 07/2026: <10 kho convert; gia hang 6th-1yr -> <15 hop ly)
-IDLE_NORMAL = 90   # cho remaining 1..14
+THRESH = 21        # remaining <= 20 (team sale 08/2026: <15 chua sat van hanh -> doi sang <=20). decide dung: rem >= THRESH -> loai.
+IDLE_NORMAL = 90   # cho remaining 1..20
 IDLE_ZERO = 10     # cho remaining == 0 (chi dung neu ADMIT_ZERO=True)
 # LOAI HAN nhom remaining==0 khoi "Den han": nhom nay la bien khong doan truoc dau thang,
 # rat it (chi ~7 case cham bien), va chay run_monthly buoi sang truoc gio hoc toi nen ho van con >=1 buoi.
