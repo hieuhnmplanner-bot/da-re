@@ -49,9 +49,14 @@ def load_state(run_date):
     if LOG.exists():
         lg = pd.read_csv(LOG, dtype=str)
         lg["snapshot_date"] = pd.to_datetime(lg["snapshot_date"], errors="coerce")
-        lg = lg[lg["snapshot_date"] <= run_date]
-        if len(lg):
-            asof = lg["snapshot_date"].max()
+        lg = lg.dropna(subset=["snapshot_date"])
+        # CHON MOC "dau thang": UU TIEN snapshot DAU TIEN >= dau thang (du lieu da settle sau dot kich hoat cuoi thang truoc).
+        # Neu chua co snapshot nao trong thang moi -> lay snapshot gan nhat TRUOC dau thang.
+        # (Snapshot cuoi thang truoc, vd 31/7, hay dinh data-lag: don vua kich hoat chua kip cong buoi vao tong UID.)
+        after = lg[lg["snapshot_date"] >= run_date]
+        before = lg[lg["snapshot_date"] <= run_date]
+        asof = after["snapshot_date"].min() if len(after) else (before["snapshot_date"].max() if len(before) else None)
+        if asof is not None:
             print(f"Dung snapshot log ngay {asof.date()} lam trang thai dau thang.")
             s = lg[lg["snapshot_date"] == asof].copy()
             # QUY TAC:
