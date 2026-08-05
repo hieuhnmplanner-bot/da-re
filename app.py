@@ -59,6 +59,8 @@ K = {
  "h_smgr":L("Sale quản lý","Managing sale","在管销售"),"h_tmgr":L("Team quản lý","Managing team","在管团队"),"h_teacher":L("Teacher","Teacher","老师"),
  "r_th1":L("Còn 1–20 buổi, đang học","1–20 left, active","剩1–20,在学"),"r_th2":L("Vừa hết buổi (≤10 ngày)","Just finished","刚上完"),
  "reason_f":L("Lý do vào list","Reason","入库原因"),
+ "uid_f":L("Tìm UID","Search UID","搜索UID"),
+ "updated":L("Dữ liệu cập nhật đến","Data updated to","数据更新至"),
  "r_frozen":L(" · Frozen"," · Frozen"," · 冻结"),"r_eact":L("Gia hạn sớm · đã kích hoạt","Early · activated","提前·已激活"),"r_epend":L("Gia hạn sớm · chưa kích hoạt","Early · not activated","提前·未激活"),
  "s_renewed":L("Đã gia hạn","Renewed","已续费"),"s_not":L("Chưa gia hạn","Not renewed","未续费"),"s_act":L("Đã kích hoạt","Activated","已激活"),"s_notact":L("Chưa kích hoạt","Not activated","未激活"),
  "view":L("Xem nhóm","View","查看"),"v_both":L("Cả hai","Both","全部"),"v_due":L("Đến hạn","Due","到期"),"v_early":L("Gia hạn sớm","Early","提前"),
@@ -251,6 +253,16 @@ if not early.empty:
 lang = st.sidebar.selectbox("🌐 Ngôn ngữ / Language / 语言", ["Tiếng Việt","English","中文"], index=0)
 T = TR(lang)
 st.title(T["title"])
+# Dong ghi thoi diem du lieu cap nhat moi nhat (lay tu cot run_date cua trang thai gia han)
+_upd = ""
+for _df in (exp, early):
+    if not _df.empty and "run_date" in _df.columns:
+        _v = pd.to_datetime(_df["run_date"], errors="coerce").max()
+        if pd.notna(_v):
+            _s = str(_v.date())
+            _upd = _s if (not _upd or _s > _upd) else _upd
+if _upd:
+    st.caption(f"🕒 {T['updated']}: **{_upd}**")
 if exp.empty and early.empty: st.warning(T["warn"]); st.stop()
 
 st.sidebar.header(T["filters"])
@@ -269,12 +281,14 @@ _reason_opts = [lbl for lbl,k in _rmap.items() if k in _present_keys]
 _reason_def = [lbl for lbl in _reason_opts if _rmap[lbl] != "th2"]
 sel_reasons = st.sidebar.multiselect(T["reason_f"], _reason_opts, default=_reason_def)
 sel_reason_keys = {_rmap[l] for l in sel_reasons}
+sel_uid = st.sidebar.text_input(T["uid_f"], "").strip()
 
 def filt(d):
     if d.empty: return d
     x = d[d["month"].isin(sel_months)] if "month" in d.columns else d
     if "team_sale_quan_ly" in x.columns and sel_teams: x = x[x["team_sale_quan_ly"].isin(sel_teams)]
     if "order_no_uid" in x.columns and sel_ono: x = x[pd.to_numeric(x["order_no_uid"], errors="coerce").isin(sel_ono)]
+    if sel_uid and "uid" in x.columns: x = x[x["uid"].astype(str).str.contains(sel_uid, case=False, na=False, regex=False)]
     if "reason_cat" in x.columns and sel_reason_keys:
         # chi loc theo th1/th2; cac reason_cat khac (vd "early" cho tab cu) khong bi anh huong
         x = x[x["reason_cat"].isin(sel_reason_keys) | ~x["reason_cat"].isin(["th1","th2"])]
