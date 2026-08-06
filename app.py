@@ -60,7 +60,7 @@ K = {
  "r_th1":L("Còn 1–20 buổi, đang học","1–20 left, active","剩1–20,在学"),"r_th2":L("Vừa hết buổi (≤10 ngày)","Just finished","刚上完"),
  "reason_f":L("Lý do vào list","Reason","入库原因"),
  "uid_f":L("Tìm UID","Search UID","搜索UID"),
- "updated":L("Dữ liệu cập nhật đến","Data updated to","数据更新至"),
+ "updated":L("Dữ liệu cập nhật đến hết ngày","Data updated through end of","数据更新至截止"),
  "r_frozen":L(" · Frozen"," · Frozen"," · 冻结"),"r_eact":L("Gia hạn sớm · đã kích hoạt","Early · activated","提前·已激活"),"r_epend":L("Gia hạn sớm · chưa kích hoạt","Early · not activated","提前·未激活"),
  "s_renewed":L("Đã gia hạn","Renewed","已续费"),"s_not":L("Chưa gia hạn","Not renewed","未续费"),"s_act":L("Đã kích hoạt","Activated","已激活"),"s_notact":L("Chưa kích hoạt","Not activated","未激活"),
  "view":L("Xem nhóm","View","查看"),"v_both":L("Cả hai","Both","全部"),"v_due":L("Đến hạn","Due","到期"),"v_early":L("Gia hạn sớm","Early","提前"),
@@ -259,7 +259,7 @@ for _df in (exp, early):
     if not _df.empty and "run_date" in _df.columns:
         _v = pd.to_datetime(_df["run_date"], errors="coerce").max()
         if pd.notna(_v):
-            _s = str(_v.date())
+            _s = str((_v - pd.Timedelta(days=1)).date())   # Metabase tong hop du lieu NGAY HOM TRUOC -> lui 1 ngay
             _upd = _s if (not _upd or _s > _upd) else _upd
 if _upd:
     st.caption(f"🕒 {T['updated']}: **{_upd}**")
