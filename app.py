@@ -22,6 +22,8 @@ K = {
  "t_old": L("📊 Gia hạn (hiện tại)","📊 Renewal (current)","📊 续费(现版)"),
  "t_new": L("🆕 Gia hạn (bản mới)","🆕 Renewal (new)","🆕 续费(新版)"),
  "t_detail": L("🧾 Chi tiết","🧾 Detail","🧾 明细"), "t_dorm": L("😴 Ngủ đông / Rời bỏ","😴 Dormant / Churn","😴 冻结/流失"), "t_defs": L("📖 Giải thích","📖 Definitions","📖 说明"),
+ "t_ops": L("🛠️ Vận hành (≤20)","🛠️ Operations (≤20)","🛠️ 运营(≤20)"),
+ "ops_note": L("Danh sách ≤20 buổi cho sale vận hành — KHÔNG loại trùng tháng trước (gồm cả khách cũ chưa xử lý). Chỉ để chăm sóc, KHÔNG dùng tính tỷ lệ.","≤20-lesson list for sales ops — NOT deduped vs prior months (incl. unresolved carry-overs). For outreach only, not for the rate.","≤20课时运营名单 — 不与上月去重(含未处理的结转)。仅用于跟进,不用于计算比率。"),
  # cards
  "due": L("Đến hạn","Due","到期"), "renewed": L("Đã gia hạn","Renewed","已续费"),
  "crr": L("CRR – Gia hạn KH","CRR – Customer","CRR-客户续费率"), "rrr": L("RRR – Gia hạn DT","RRR – Revenue","RRR-收入续费率"),
@@ -237,19 +239,30 @@ def load_dormant():
     except Exception: return pd.DataFrame()
     if "remaining" in d.columns: d["remaining"] = pd.to_numeric(d["remaining"], errors="coerce")
     return d
+@st.cache_data
+def load_operational():
+    d = _latest("operational_*_status_*.csv", required="gia_tri_don_cu")
+    if d.empty: return d
+    for c in ["da_gia_han_M90","da_gia_han_vo_han"]: d[c] = _truthy(d[c])
+    for c in ["gia_tri_don_cu","gia_tri_don_gia_han","remaining","order_no_uid","so_buoi_hien_tai"]:
+        if c in d.columns: d[c] = pd.to_numeric(d[c], errors="coerce")
+    return d
 
 def kpis_due(df, ren_col):
     n = len(df); ren = df[ren_col].fillna(False); rn = int(ren.sum())
     et = df["gia_tri_don_cu"].sum(); nr = df.loc[ren,"gia_tri_don_gia_han"].sum(); orr = df.loc[ren,"gia_tri_don_cu"].sum()
     return dict(due=n, renewed=rn, crr=(rn/n*100 if n else 0), rrr=(nr/et*100 if et else 0), upsell=(nr/orr*100 if orr else 0), revenue=nr)
 
-exp = load_expiry(); early = load_early(); mid = load_mid(); dorm = load_dormant()
+exp = load_expiry(); early = load_early(); mid = load_mid(); dorm = load_dormant(); ops = load_operational()
 # nhan loai "ly do" (canonical) de loc: th2 = vua het buoi (remaining=0), th1 = con 1-9 buoi, early = gia han som
 if not exp.empty:
     exp = exp.copy()
     exp["reason_cat"] = exp.get("ly_do_vao_list","").astype(str).apply(lambda s: "th2" if "remaining=0" in s else "th1")
 if not early.empty:
     early = early.copy(); early["reason_cat"] = "early"
+if not ops.empty:
+    ops = ops.copy()
+    ops["reason_cat"] = ops.get("ly_do_vao_list","").astype(str).apply(lambda s: "th2" if "remaining=0" in s else "th1")
 lang = st.sidebar.selectbox("🌐 Ngôn ngữ / Language / 语言", ["Tiếng Việt","English","中文"], index=0)
 T = TR(lang)
 st.title(T["title"])
@@ -293,7 +306,7 @@ def filt(d):
         # chi loc theo th1/th2; cac reason_cat khac (vd "early" cho tab cu) khong bi anh huong
         x = x[x["reason_cat"].isin(sel_reason_keys) | ~x["reason_cat"].isin(["th1","th2"])]
     return x
-fe = filt(exp); fr = filt(early); fm = filt(mid) if not mid.empty else mid
+fe = filt(exp); fr = filt(early); fm = filt(mid) if not mid.empty else mid; fops = filt(ops)
 
 def group_table(dim):
     rows = {}
@@ -309,7 +322,7 @@ def group_table(dim):
         T["crr"]:df["crr"].map(_pct), T["rrr"]:df["rrr"].map(_pct), T["early"]:df["early"],
         T["c_totren"]:df["renewed"]+df["early"], T["c_totrev"]:(df["revd"]+df["reve"]).map(_vnd)})
 
-tab_new, tab_detail, tab_dorm, tab_defs, tab_old = st.tabs([T["t_new"], T["t_detail"], T["t_dorm"], T["t_defs"], T["t_old"]])
+tab_new, tab_detail, tab_ops, tab_dorm, tab_defs, tab_old = st.tabs([T["t_new"], T["t_detail"], T["t_ops"], T["t_dorm"], T["t_defs"], T["t_old"]])
 
 # ---------------- TAB HIỆN TẠI ----------------
 with tab_old:
@@ -387,52 +400,54 @@ with tab_new:
     g = group_table(imap[isel])
     if not g.empty: st.dataframe(g, use_container_width=True, hide_index=True)
 
+# ---------------- Helper dung chung: bang chi tiet (per-UID) ----------------
+def _reason(r):
+    if r.get("nhom") == "Đến hạn":
+        base = T["r_th2"] if "remaining=0" in str(r.get("ly_do_vao_list","")) else T["r_th1"]
+        if str(r.get("tag","")) == "Frozen": base += T["r_frozen"]
+        return base
+    return T["r_eact"] if str(r.get("trang_thai_kich_hoat","")) == "Đã kích hoạt" else T["r_epend"]
+def _status(r, kind):
+    if kind == "due": return T["s_renewed"] if bool(r.get(REN)) else T["s_not"]
+    return T["s_act"] if str(r.get("trang_thai_kich_hoat","")) == "Đã kích hoạt" else T["s_notact"]
+def _timing(r):
+    if not bool(r.get(REN)): return ""                       # chua gia han (theo che do M+90/Real dang chon)
+    gh = pd.to_datetime(r.get("ngay_gia_han"), errors="coerce")
+    if pd.isna(gh): return ""
+    ghp = gh.to_period("M"); co = pd.Period(str(r.get("month")), "M")
+    if ghp < co: return T["tim_som"]
+    if ghp > co: return T["tim_muon"]
+    return T["tim_dung"]
+def _mny(x): return _vnd(x) if pd.notna(x) else ""
+def _row(r, kind):
+    rdate = r.get("ngay_gia_han") if kind=="due" else r.get("ngay_kich_hoat")
+    bdate = r.get("ngay_mua") if kind=="due" else r.get("pay_time")
+    def _int(x): return int(x) if pd.notna(x) and str(x)!="" else ""
+    return {
+        T["h_month"]:r.get("month"), T["h_group"]:r.get("nhom"), T["h_reason"]:_reason(r),
+        T["h_uid"]:r.get("uid"), T["h_oid"]:r.get("order_id"), T["h_ono"]:r.get("order_no_uid"),
+        T["h_remain"]:(_int(r.get("remaining")) if kind=="due" else ""),
+        T["h_remain_now"]:_int(r.get("so_buoi_hien_tai")),
+        T["h_buydate"]:bdate,
+        T["h_status"]:_status(r,kind), T["h_timing"]:_timing(r), T["h_oidnew"]:r.get("order_id_moi",""), T["h_rendate"]:rdate,
+        T["h_valold"]:_mny(r.get("gia_tri_don_cu")), T["h_valnew"]:_mny(r.get("gia_tri_don_gia_han")),
+        T["h_sban"]:r.get("sale_ban_don"), T["h_tban"]:r.get("team_sale_ban"),
+        T["h_smgr"]:r.get("sale_quan_ly"), T["h_tmgr"]:r.get("team_sale_quan_ly"), T["h_teacher"]:r.get("teacher")}
+def _render_detail(df, fname):
+    recs = [_row(r,"due") for _,r in df.iterrows()] if not df.empty else []
+    if not recs: st.info("—"); return
+    disp = pd.DataFrame(recs); st.write(f"{len(disp):,} {T['rows']}")
+    st.dataframe(disp, use_container_width=True, height=470, hide_index=True)
+    st.download_button(T["download"], disp.to_csv(index=False).encode("utf-8-sig"), fname, "text/csv", key="dl_"+fname)
+
 # ---------------- TAB CHI TIẾT ----------------
 with tab_detail:
-    def _reason(r):
-        if r.get("nhom") == "Đến hạn":
-            base = T["r_th2"] if "remaining=0" in str(r.get("ly_do_vao_list","")) else T["r_th1"]
-            if str(r.get("tag","")) == "Frozen": base += T["r_frozen"]
-            return base
-        return T["r_eact"] if str(r.get("trang_thai_kich_hoat","")) == "Đã kích hoạt" else T["r_epend"]
-    def _status(r, kind):
-        if kind == "due": return T["s_renewed"] if bool(r.get(REN)) else T["s_not"]
-        return T["s_act"] if str(r.get("trang_thai_kich_hoat","")) == "Đã kích hoạt" else T["s_notact"]
-    def _timing(r):
-        if not bool(r.get(REN)): return ""                       # chua gia han (theo che do M+90/Real dang chon)
-        gh = pd.to_datetime(r.get("ngay_gia_han"), errors="coerce")
-        if pd.isna(gh): return ""
-        ghp = gh.to_period("M"); co = pd.Period(str(r.get("month")), "M")
-        if ghp < co: return T["tim_som"]
-        if ghp > co: return T["tim_muon"]
-        return T["tim_dung"]
-    def _mny(x): return _vnd(x) if pd.notna(x) else ""
-    def _row(r, kind):
-        rdate = r.get("ngay_gia_han") if kind=="due" else r.get("ngay_kich_hoat")
-        bdate = r.get("ngay_mua") if kind=="due" else r.get("pay_time")
-        def _int(x): return int(x) if pd.notna(x) and str(x)!="" else ""
-        return {
-            # (1) Dinh danh
-            T["h_month"]:r.get("month"), T["h_group"]:r.get("nhom"), T["h_reason"]:_reason(r),
-            T["h_uid"]:r.get("uid"), T["h_oid"]:r.get("order_id"), T["h_ono"]:r.get("order_no_uid"),
-            # (2) So buoi & ngay mua
-            T["h_remain"]:(_int(r.get("remaining")) if kind=="due" else ""),
-            T["h_remain_now"]:_int(r.get("so_buoi_hien_tai")),
-            T["h_buydate"]:bdate,
-            # (3) Gia han
-            T["h_status"]:_status(r,kind), T["h_timing"]:_timing(r), T["h_oidnew"]:r.get("order_id_moi",""), T["h_rendate"]:rdate,
-            T["h_valold"]:_mny(r.get("gia_tri_don_cu")), T["h_valnew"]:_mny(r.get("gia_tri_don_gia_han")),
-            # (4) Phu trach
-            T["h_sban"]:r.get("sale_ban_don"), T["h_tban"]:r.get("team_sale_ban"),
-            T["h_smgr"]:r.get("sale_quan_ly"), T["h_tmgr"]:r.get("team_sale_quan_ly"), T["h_teacher"]:r.get("teacher")}
-    recs = []
-    if not fe.empty:
-        for _,r in fe.iterrows(): recs.append(_row(r,"due"))   # chi hien nhom Den han (bo "Gia han som")
-    if not recs: st.info("—")
-    else:
-        disp = pd.DataFrame(recs); st.write(f"{len(disp):,} {T['rows']}")
-        st.dataframe(disp, use_container_width=True, height=470, hide_index=True)
-        st.download_button(T["download"], disp.to_csv(index=False).encode("utf-8-sig"), "chi_tiet.csv","text/csv")
+    _render_detail(fe, "chi_tiet.csv")
+
+# ---------------- TAB VẬN HÀNH (cho sale, khong dedup) ----------------
+with tab_ops:
+    st.info(T["ops_note"])
+    _render_detail(fops, "van_hanh.csv")
 
 # ---------------- TAB NGỦ ĐÔNG ----------------
 with tab_dorm:

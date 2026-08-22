@@ -112,7 +112,9 @@ def main(exp_path, run_date=None):
             "run_date": run_date.date(),
         })
     out = pd.DataFrame(recs)
-    out_path = BASE/"Output"/f"expiry_{month}_status_{run_date.date()}.csv"
+    # Ten output theo TEN FILE INPUT: expiry_* -> expiry_*_status_*; operational_* -> operational_*_status_*
+    is_operational = exp_path.stem.startswith("operational")
+    out_path = BASE/"Output"/f"{exp_path.stem}_status_{run_date.date()}.csv"
     out.to_csv(out_path, index=False, encoding="utf-8-sig")
 
     N = len(out)
@@ -125,6 +127,8 @@ def main(exp_path, run_date=None):
     r90, crr90, rrr90, up90, rev90 = kpis("da_gia_han_M90")
     print(f"List {month} | {N} den han | CRR {crr90}% | RRR {rrr90}% | Upsell {up90}% | Rev {rev90:,.0f}d -> {out_path}")
 
+    if is_operational:
+        return   # danh sach van hanh: KHONG ghi vao tracking ty le (tranh lam sai KPI)
     track = BASE/"Output"/"renewal_rate_tracking.csv"
     line = pd.DataFrame([{"month":month,"run_date":str(run_date.date()),"list_size":N,
         "gia_han_M90":r90,"CRR_M90_%":crr90,"RRR_M90_%":rrr90,"Upsell_M90_%":up90,

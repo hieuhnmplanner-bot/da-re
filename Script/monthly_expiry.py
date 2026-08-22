@@ -104,7 +104,7 @@ def load_state(run_date):
     })
 
 
-def main(month):
+def main(month, operational=False):
     run_date = pd.Timestamp(month + "-01")
     st = load_state(run_date)
     st = st[st["uid"] != ""].copy()
@@ -129,6 +129,18 @@ def main(month):
     res = st.apply(decide, axis=1, result_type="expand")
     st["tag"], st["reason"] = res[0], res[1]
     elig = st[st["tag"] != ""].copy()
+
+    if operational:
+        # GOC NHIN VAN HANH (cho sale): danh sach ≤20 tai dau thang, PER-UID,
+        # KHONG dedup registry, KHONG witnessed-crossing, KHONG cap nhat registry.
+        # -> Giu ca carry-over thang truoc (khach cu chua xu ly van hien lai).
+        elig["month"] = month
+        out = elig[["latest_order_id", "uid", "remaining", "last_study", "idle", "is_frozen", "tag", "reason", "month"]]
+        out = out.rename(columns={"latest_order_id": "order_id"})
+        out_path = OUT / f"operational_{month}.csv"
+        out.to_csv(out_path, index=False, encoding="utf-8-sig")
+        print(f"OK Danh sach VAN HANH {month}: {len(out)} UID (KHONG dedup) -> {out_path}")
+        return
 
     # dedup voi registry
     if REG.exists():
@@ -181,4 +193,6 @@ def main(month):
 
 
 if __name__ == "__main__":
-    main(sys.argv[1] if len(sys.argv) > 1 else "2026-07")
+    m = sys.argv[1] if len(sys.argv) > 1 else "2026-07"
+    op = (len(sys.argv) > 2 and sys.argv[2].lower() in ("operational", "op"))
+    main(m, operational=op)
